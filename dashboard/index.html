@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NMDSI Faculty Explorer</title>
+<link rel="icon" href="assets/nmdsi-mark.svg" type="image/svg+xml">
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home" data-tab="search">
+<header>
+  <div class="bar">
+    <div class="brand" id="brand" title="Back to search"><img class="mark" src="assets/nmdsi-mark.svg" alt=""><div><h1>NMDSI Faculty Explorer</h1><p id="subtitle">Affiliated faculty</p></div></div>
+    <div id="searchSlot"><label class="search" id="searchBox">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search by name, research topic, class, or department" autocomplete="off" aria-label="Search faculty" autofocus>
+    </label></div>
+    <button class="btn filters-btn" id="filtersBtn" aria-expanded="false" aria-controls="sidebar">Filters</button>
+    <button class="btn" id="themeBtn" title="Switch light / dark mode">Theme: auto</button>
+  </div>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" data-tab="search" aria-selected="true"><span class="ti">⌕</span>Search</button>
+    <button role="tab" data-tab="match" aria-selected="false"><span class="ti">✦</span>Find an Expert</button>
+    <button role="tab" data-tab="network" aria-selected="false"><span class="ti">⋰</span>Collaboration Map</button>
+    <button role="tab" data-tab="shortlist" aria-selected="false"><span class="ti">★</span>Shortlist <span class="count-badge" id="shortCount" hidden>0</span></button>
+  </nav>
+</header>
+
+<!-- ============ SEARCH ============ -->
+<div class="view" id="view-search">
+<div class="hero-wrap">
+<section class="hero" id="hero">
+  <svg class="net" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g stroke="#81d3f1" stroke-opacity=".35" stroke-width="1.5" fill="none">
+      <path d="M60 300 L180 220 L300 270 L420 160 M180 220 L210 90 L360 60 M300 270 L330 370"/>
+      <path d="M1140 90 L1010 150 L900 90 L780 170 M1010 150 L1050 290 L930 330 M900 90 L860 20"/>
+    </g>
+    <g><circle cx="60" cy="300" r="6" fill="#81d3f1"/><circle cx="180" cy="220" r="9" fill="#fdb81b"/>
+      <circle cx="300" cy="270" r="5" fill="#bababa"/><circle cx="420" cy="160" r="7" fill="#81d3f1"/>
+      <circle cx="210" cy="90" r="5" fill="#81d3f1"/><circle cx="360" cy="60" r="8" fill="#fdb81b"/><circle cx="330" cy="370" r="6" fill="#81d3f1"/>
+      <circle cx="1140" cy="90" r="7" fill="#fdb81b"/><circle cx="1010" cy="150" r="9" fill="#81d3f1"/>
+      <circle cx="900" cy="90" r="5" fill="#bababa"/><circle cx="780" cy="170" r="7" fill="#fdb81b"/>
+      <circle cx="1050" cy="290" r="6" fill="#fdb81b"/><circle cx="930" cy="330" r="5" fill="#81d3f1"/><circle cx="860" cy="20" r="6" fill="#81d3f1"/></g>
+  </svg>
+  <div class="hero-inner">
+    <img class="big-mark" src="assets/nmdsi-mark.svg" alt="NMDSI logo">
+    <h2>Find NMDSI <em>faculty</em></h2>
+    <p id="heroSub">Search affiliated faculty by name, research topic, class, or department.</p>
+    <div id="heroSlot"></div>
+    <div class="hint">Try <button data-try="machine learning">machine learning</button><button data-try="fraud">fraud</button><button data-try="public health">public health</button></div>
+    <button class="hero-cta" data-tab="match">Have a project in mind? <strong>Find an expert →</strong></button>
+  </div>
+</section>
+<div class="home-body">
+  <div class="unis" id="uniCards"></div>
+  <div class="browse"><h3>Browse by research theme</h3><div class="tiles" id="themeChips"></div></div>
+  <div class="browse"><h3>Quick views</h3><div class="chips" id="viewChips"></div></div>
+</div>
+<footer>University logos are trademarks of their respective institutions.</footer>
+</div>
+
+<div class="layout">
+  <aside id="sidebar" aria-label="Filters"></aside>
+  <main>
+    <div class="toolbar">
+      <div id="count" aria-live="polite"></div>
+      <div class="pills" id="pills"></div>
+      <label class="sort">Sort
+        <select id="sort">
+          <option value="last">Best match / last name</option>
+          <option value="theme">Theme</option>
+          <option value="dept">Department</option>
+        </select>
+      </label>
+    </div>
+    <div class="related" id="related"></div>
+    <div id="cards"></div>
+  </main>
+</div>
+</div>
+
+<!-- ============ FIND AN EXPERT ============ -->
+<div class="view" id="view-match">
+  <section class="page-head">
+    <div class="page-inner">
+      <h2>Find an expert</h2>
+      <p>Describe a project, problem, or question in plain language. We'll rank faculty by how well their research,
+         tags, and classes fit, explain why each one matches, and suggest a small team.</p>
+      <form id="matchForm" class="match-form">
+        <textarea id="matchText" rows="3" placeholder="e.g. We want to use machine learning to detect fraudulent insurance claims and explain the results to regulators."></textarea>
+        <div class="mf-row">
+          <label class="mf-opt">Universities
+            <select id="matchUni"><option value="">Both</option><option value="UW-Milwaukee">UW-Milwaukee</option><option value="Marquette University">Marquette</option></select>
+          </label>
+          <span class="muted small">Ctrl + Enter to search</span>
+          <button class="go" type="submit">Find experts</button>
+        </div>
+      </form>
+      <div class="examples"><span>Examples:</span><div id="matchExamples"></div></div>
+    </div>
+  </section>
+  <div class="page-body" id="matchResults"></div>
+</div>
+
+<!-- ============ COLLABORATION MAP ============ -->
+<div class="view" id="view-network">
+  <div class="net-layout">
+    <div class="net-main">
+      <div class="net-toolbar">
+        <div>
+          <h2>Collaboration map</h2>
+          <p class="muted small">Each dot is a faculty member. Lines connect people whose research overlaps. <span class="gold-txt">Gold lines</span> cross between UWM and Marquette.</p>
+        </div>
+        <div class="net-controls">
+          <input id="netFind" list="netNames" placeholder="Find a person…" aria-label="Find a person on the map"><datalist id="netNames"></datalist>
+          <label>Color by <select id="netColor"><option value="theme">Research theme</option><option value="uni">University</option></select></label>
+          <label class="chk"><input type="checkbox" id="netCross"> Cross-campus links only</label>
+          <button class="chip" id="netReset">Reset view</button>
+        </div>
+      </div>
+      <div class="net-canvas" id="netCanvas"></div>
+      <div class="net-tip" id="netTip" hidden></div>
+      <div class="net-legend" id="netLegend"></div>
+    </div>
+    <aside class="net-side" id="netSide"></aside>
+  </div>
+</div>
+
+<!-- ============ SHORTLIST ============ -->
+<div class="view" id="view-shortlist">
+  <section class="page-head">
+    <div class="page-inner short-head">
+      <div><h2 id="shortTitle">Your shortlist</h2><p class="muted" id="shortMeta"></p></div>
+      <div class="short-actions">
+        <button class="chip" id="shortCsv">⬇ Export spreadsheet</button>
+        <button class="chip" id="shortPrint">🖨 Print / save PDF</button>
+        <button class="chip" id="shortShare">🔗 Copy share link</button>
+        <button class="chip ghost" id="shortClear">Clear</button>
+      </div>
+    </div>
+  </section>
+  <div class="page-body" id="shortList"></div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-name" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="printSheet" class="print-sheet"></div>
+
+<script src="js/synonyms.js"></script>
+<script src="js/textindex.js"></script>
+<script src="js/app.js"></script>
+<script src="js/shortlist.js"></script>
+<script src="js/match.js"></script>
+<script src="js/network.js"></script>
+</body>
+</html>

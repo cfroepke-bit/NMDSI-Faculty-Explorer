@@ -1,0 +1,200 @@
+id,url,status_code,result,notes
+ai-bo,https://uwm.edu/socialwelfare/directory/bo-ai/,200,fetched,
+aki-roberts,https://uwm.edu/sociology/department-life/people/roberts-aki/,404,http_error,
+aleksandra-j-snowden,https://www.marquette.edu/social-cultural-sciences/directory/aleksandra-snowden.php,200,fetched,
+alexander-dijo,https://uwm.edu/business/people/alexander-dijo/,200,fetched,redirected to https://uwm.edu/business/directory/alexander-dijo/
+alita-burmeister,https://uwm.edu/biology/people/burmeister-alita/,200,fetched,redirected to https://uwm.edu/biology/about/directory/burmeister-alita/
+deepak-babu,,,no_url,
+jacob-rice,,,no_url,
+laira-anne-stark,,,no_url,
+mumin-cebe,,,no_url,
+ai-bo,https://uwm.edu/socialwelfare/directory/bo-ai/,,cached,
+aki-roberts,https://uwm.edu/sociology/department-life/people/roberts-aki/,404,http_error,
+aleksandra-j-snowden,https://www.marquette.edu/social-cultural-sciences/directory/aleksandra-snowden.php,,cached,
+alexander-dijo,https://uwm.edu/business/people/alexander-dijo/,,cached,
+alita-burmeister,https://uwm.edu/biology/people/burmeister-alita/,,cached,
+ai-bo,https://uwm.edu/socialwelfare/directory/bo-ai/,,cached,
+aki-roberts,https://uwm.edu/sociology/department-life/people/roberts-aki/,404,http_error,
+aleksandra-j-snowden,https://www.marquette.edu/social-cultural-sciences/directory/aleksandra-snowden.php,,cached,
+alexander-dijo,https://uwm.edu/business/people/alexander-dijo/,,cached,
+alita-burmeister,https://uwm.edu/biology/people/burmeister-alita/,,cached,
+amir-a-alwan,https://uwm.edu/business/directory/alwan-amir-a/,200,fetched,
+amit-bhatnagar,https://uwm.edu/business/people/bhatnagar-amit/,200,fetched,redirected to https://uwm.edu/business/directory/bhatnagar-amit/
+amol-mali,https://uwm.edu/engineering/people/mali-amol/,200,fetched,redirected to https://uwm.edu/engineering/directory/mali-amol/
+andrew-g-meyer,https://www.marquette.edu/business/directory/andrew-meyer.php,200,fetched,
+anne-clough,https://www.marquette.edu/mathematical-and-statistical-sciences/directory/anne-clough.php,200,fetched,
+anthony-j-parolari,https://www.marquette.edu/civil-construction-environmental-engineering/directory/anthony-parolari.php,200,fetched,
+arjun-saha,https://uwm.edu/chemistry/people/saha-arjun/,200,fetched,redirected to https://uwm.edu/chemistry/about/directory/saha-arjun/
+avik-chakrabarti,https://uwm.edu/economics/people/chakrabarti-avik/,200,fetched,redirected to https://uwm.edu/economics/about/directory/chakrabarti-avik/
+ayesha-siddika-nipu,https://uwm.edu/engineering/directory/nipu-ayesha-siddika/,200,fetched,
+badar-al-lawati,https://www.marquette.edu/business/directory/badar-al-lawati.php,200,fetched,
+bhagwant-sindhu,https://uwm.edu/rehabilitation-sciences-technology/directory/sindhu-bhagwant/,200,fetched,
+bin-wang,https://www.marquette.edu/business/directory/bin-wang.php,200,fetched,
+bing-yu,https://mcw.marquette.edu/biomedical-engineering/directory/bing-yu.php,200,fetched,
+brooke-slavens,https://uwm.edu/engineering/people/slavens-brooke/,200,fetched,redirected to https://uwm.edu/engineering/directory/slavens-brooke/
+changshan-wu,https://uwm.edu/geography/people/wu-changshan/,200,fetched,redirected to https://uwm.edu/geography/about/directory/wu-changshan/
+chao-zhu,https://uwm.edu/math/people/zhu-chao/,200,fetched,redirected to https://uwm.edu/math/about/directory/zhu-chao/
+charles-franklin,https://law.marquette.edu/faculty-and-staff-directory/charles-franklin,200,fetched,
+chelsea-cook,https://www.marquette.edu/biology/directory/cook.php,200,fetched,
+cheng-han-yu,https://www.marquette.edu/mathematical-and-statistical-sciences/directory/chenghan-yu.php,200,fetched,
+chris-marshall,https://www.marquette.edu/biology/directory/marshall.php,200,fetched,
+chudamani-poudyal,https://uwm.edu/math/people/poudyal-chudamani/,404,http_error,
+clark-evans,https://uwm.edu/data-science/faculty-staff/evans-clark/,404,http_error,
+colleen-galambos,https://uwm.edu/socialwelfare/directory/galambos-colleen/,200,fetched,
+cristinel-ababei,https://www.marquette.edu/electrical-computer-engineering/directory/cristinel-ababei.php,200,fetched,
+daniel-cirkovic,https://www.marquette.edu/mathematical-and-statistical-sciences/directory/daniel-cirkovic.php,200,fetched,
+daniel-gervini,https://uwm.edu/data-science/faculty-staff/gervini-daniel/,404,http_error,
+darren-wheelock,https://www.marquette.edu/social-cultural-sciences/directory/darren-wheelock.php,200,fetched,
+david-krause,https://www.marquette.edu/business/directory/david-krause.php,404,http_error,
+david-spade,https://uwm.edu/math/people/spade-david/,200,fetched,redirected to https://uwm.edu/math/about/directory/spade-david/
+david-witzling,https://uwm.edu/arts/directory/witzling-david/,200,fetched,
+debbie-perouli,https://www.marquette.edu/computer-science/directory/debbie-perouli.php,200,fetched,
+derek-nazareth,https://uwm.edu/business/people/nazareth-derek/,200,fetched,redirected to https://uwm.edu/business/directory/nazareth-derek/
+dietmar-wolfram,https://uwm.edu/data-science/faculty-staff/wolfram-dietmar/,404,http_error,
+dmitri-babikov,https://www.marquette.edu/chemistry/directory/dmitri-babikov.php,200,fetched,
+edward-blumenthal,https://www.marquette.edu/arts-sciences/directory/edward-blumenthal.php,404,http_error,
+edward-f-levitas,https://uwm.edu/business/people/levitas-edward/,200,fetched,redirected to https://uwm.edu/business/directory/levitas-edward/
+elaine-spiller,https://www.marquette.edu/mathematical-and-statistical-sciences/directory/elaine-spiller.php,200,fetched,
+elsbeth-kalenderian,https://www.marquette.edu/leadership/ulc-kalenderian.php,200,fetched,
+emily-latch,https://uwm.edu/biology/people/latch-emily/,200,fetched,redirected to https://uwm.edu/biology/about/directory/latch-emily/
+emily-cramer,https://www.marquette.edu/communication/directory/emily-cramer.php,200,fetched,
+erin-ruppel,https://uwm.edu/communication/people/ruppel-erin/,200,fetched,redirected to https://uwm.edu/communication/about/directory/ruppel-erin/
+ethan-schmick,https://www.marquette.edu/business/directory/ethan-schmick.php,200,fetched,
+gabriel-velez,https://www.marquette.edu/education/directory/gabriel-velez.php,200,fetched,
+gerry-canavan,https://www.marquette.edu/english/directory/gerry-canavan.php,200,fetched,
+giorgo-sertsios,https://uwm.edu/business/people/sertsios-giorgo/,404,http_error,
+henry-duah,https://www.marquette.edu/nursing/directory/henry-dual.php,404,http_error,
+hunter-sandidge,https://www.marquette.edu/business/directory/hunter-sandidge.php,404,http_error,
+hyunkyoung-oh,https://uwm.edu/nursing/directory/oh-hyunkyoung/,404,http_error,
+inga-wang,https://uwm.edu/rehabilitation-sciences-technology/directory/wang-inga/,200,fetched,
+sheikh-iqbal-ahamed,https://www.marquette.edu/computer-science/directory/iqbal-ahamed.php,200,fetched,
+itzi-lazkano,https://uwm.edu/economics/people/lazkano-itziar/,200,fetched,redirected to https://uwm.edu/economics/about/directory/lazkano-itziar/
+j-dietenberger,https://uwm.edu/informationstudies/directory/dietenberger-j/,200,fetched,
+jacklynn-fitzgerald,https://www.marquette.edu/psychology/directory/jacklynn-fitzgerald.php,200,fetched,
+jake-luo,https://uwm.edu/engineering/people/luo-jake/,200,fetched,redirected to https://uwm.edu/engineering/directory/luo-jake/
+jangsu-yoon,https://uwm.edu/economics/people/yoon-jangsu/,404,http_error,
+jeanne-nicole-mellon-saint-laurent,https://www.marquette.edu/theology/directory/jeanne-nicole-saint-laurent.php,200,fetched,
+jeb-willenbring,https://uwm.edu/math/people/willenbring-jeb/,200,fetched,redirected to https://uwm.edu/math/about/directory/willenbring-jeb/
+jenna-green,https://www.marquette.edu/english/directory/jenna-green-azab.php,404,http_error,
+jeremy-lee,https://www.marquette.edu/business/directory/jeremy-lee.php,200,fetched,
+jim-pokrywczynski,https://www.marquette.edu/news-center/experts/business-advertising.php,404,http_error,
+joan-shapiro-beigh,https://uwm.edu/business/people/shapiro-beigh-joan/,200,fetched,redirected to https://uwm.edu/business/directory/shapiro-beigh-joan/
+john-roberts,https://uwm.edu/sociology/department-life/people/roberts-john/,404,http_error,
+jonah-gaster,https://uwm.edu/math/people/gaster-jonah/,200,fetched,redirected to https://uwm.edu/math/about/directory/gaster-jonah/
+joseph-retzer,https://uwm.edu/business/people/retzer-joseph/,200,fetched,redirected to https://uwm.edu/business/directory/retzer-joseph/
+joseph-matthes,https://www.marquette.edu/business/directory/joseph-matthes.php,200,fetched,
+joseph-a-lamanna,https://www.marquette.edu/biology/directory/lamanna.php,200,fetched,
+joseph-wall,https://www.marquette.edu/business/directory/joseph-wall.php,404,http_error,
+jun-zhang,https://uwm.edu/engineering/people/zhang-jun/,200,fetched,redirected to https://uwm.edu/engineering/directory/zhang-jun/
+kali-murray,https://law.marquette.edu/faculty-and-staff-directory/kali-murray,200,fetched,
+kanchan-chowdhury,https://www.marquette.edu/computer-science/directory/kanchan-chowdhury.php,200,fetched,
+karen-andeen,https://www.marquette.edu/physics/directory/karen-andeen.php,200,fetched,
+kate-rohit,https://uwm.edu/engineering/people/kate-rohit/,200,fetched,redirected to https://uwm.edu/engineering/directory/kate-rohit/
+keith-dookeran,https://uwm.edu/publichealth/directory/dookeran-keith/,404,http_error,
+kevin-trainor,https://www.marquette.edu/business/directory/kevin-trainor.php,404,http_error,
+kristian-o-connor,https://uwm.edu/publichealth/directory/oconnor-phd-kristian/,200,fetched,
+kristof-kipp,https://www.marquette.edu/physical-therapy/directory/kristof-kipp.php,200,fetched,
+larry-zhiming-xu,https://www.marquette.edu/business/directory/larry-xu.php,200,fetched,
+laura-roehl,https://uwm.edu/data-science/faculty-staff/roehl-laura/,404,http_error,
+layth-alwan,https://uwm.edu/business/people/alwan-layth-c/,200,fetched,redirected to https://uwm.edu/business/directory/alwan-layth-c/
+lei-fan,https://mcw.marquette.edu/biomedical-engineering/directory/lei-fan.php,404,http_error,
+lillian-campbell,https://www.marquette.edu/english/directory/lilly-campbell.php,404,http_error,
+linnea-laestadius,https://uwm.edu/publichealth/directory/laestadius-linnea/,200,fetched,
+lisa-n-petrella,https://www.marquette.edu/biology/directory/petrella.php,200,fetched,
+lu-he,https://uwm.edu/publichealth/directory/he-lu/,404,http_error,
+lynne-knobloch-fedders,https://www.marquette.edu/education/directory/lynne-knobloch-fedders.php,404,http_error,
+madhusudan-dey,https://uwm.edu/biology/people/dey-madhusudan/,200,fetched,redirected to https://uwm.edu/biology/about/directory/dey-madhusudan/
+majeed-hayat,https://www.marquette.edu/electrical-computer-engineering/directory/majeed-hayat.php,200,fetched,
+margaret-kipp,https://uwm.edu/informationstudies/directory/kipp-margaret/,200,fetched,
+maria-haigh,https://uwm.edu/data-science/faculty-staff/haigh-maria/,404,http_error,
+maria-goranova,https://uwm.edu/business/people/goranova-maria/,200,fetched,redirected to https://uwm.edu/business/directory/goranova-maria/
+maria-novotny,https://uwm.edu/english/our-people/novotny-maria/,404,http_error,
+mark-barratt,https://www.marquette.edu/business/directory/mark-barratt.php,200,fetched,
+mark-schwartz,https://uwm.edu/geography/people/schwartz-mark/,200,fetched,redirected to https://uwm.edu/geography/about/directory/schwartz-mark/
+matthew-petering,https://uwm.edu/engineering/people/petering-matthew/,200,fetched,redirected to https://uwm.edu/engineering/directory/petering-matthew/
+matthew-friedel,https://uwm.edu/informationstudies/directory/friedel-matthew/,200,fetched,
+matthew-mleczko,https://www.marquette.edu/political-science/directory/matthew-mleczko.php,200,fetched,
+mehdi-maadooliat,https://www.marquette.edu/mathematical-and-statistical-sciences/directory/mehdi-maadooliat.php,200,fetched,
+mengyun-zhang,https://www.marquette.edu/business/directory/mengyun-zhang.php,200,fetched,
+michael-zimmer,https://www.marquette.edu/computer-science/directory/michael-zimmer.php,200,fetched,
+michael-nosonovsky,https://uwm.edu/engineering/people/nosonovsky-michael/,200,fetched,redirected to https://uwm.edu/engineering/directory/nosonovsky-michael/
+min-wu,https://uwm.edu/publichealth/directory/wu-min/,200,fetched,
+min-sook-park,https://uwm.edu/data-science/faculty-staff/park-min-sook/,404,http_error,
+mohammad-habibur-rahman,https://uwm.edu/engineering/people/rahman-mohammad-habib/,200,fetched,redirected to https://uwm.edu/engineering/directory/rahman-mohammad-habib/
+n-kundan-kishor,https://uwm.edu/economics/people/kishor-kundan/,200,fetched,redirected to https://uwm.edu/economics/about/directory/kishor-kundan/
+nadiyah-johnson,https://www.marquette.edu/computer-science/directory/nadiyah-johnson.php,200,fetched,
+nasim-yahyasoltani,https://www.marquette.edu/computer-science/directory/nasim-yahyasoltani-1.php,200,fetched,
+nate-lemoine,https://www.marquette.edu/biology/directory/lemoine.php,200,fetched,
+nathaniel-stern,https://uwm.edu/arts/directory/stern-nathaniel/,200,fetched,
+naveen-bansal,https://www.marquette.edu/mathematical-and-statistical-sciences/directory/naveen-bansal.php,200,fetched,
+nicholas-jolly,https://www.marquette.edu/business/directory/nicholas-jolly.php,200,fetched,
+nicholas-j-reiter,https://www.marquette.edu/chemistry/directory/nick-reiter.php,200,fetched,
+odai-khasawneh,https://uwm.edu/business/people/khasawneh-odai/,200,fetched,redirected to https://uwm.edu/business/directory/khasawneh-odai/
+pallav-routh,https://uwm.edu/business/people/routh-pallav/,200,fetched,redirected to https://uwm.edu/business/directory/routh-pallav/
+patrick-mcnamara,https://www.marquette.edu/civil-construction-environmental-engineering/directory/patrick-mcnamara.php,200,fetched,
+paul-roebber,https://uwm.edu/freshwater/people/roebber-paul/,200,fetched,redirected to https://uwm.edu/freshwater/directory/roebber-paul/
+paula-papanek,https://www.marquette.edu/physical-therapy/directory/paula-papanek.php,200,fetched,
+peter-dunn,https://uwm.edu/biology/people/dunn-peter/,200,fetched,redirected to https://uwm.edu/biology/about/directory/dunn-peter/
+peter-hinow,https://uwm.edu/math/people/hinow-peter/,200,fetched,redirected to https://uwm.edu/math/about/directory/hinow-peter/
+phoenix-do,https://uwm.edu/publichealth/directory/do-d-phuong-phoenix/,200,fetched,
+praveen-madiraju,https://www.marquette.edu/computer-science/directory/praveen-madiraju.php,200,fetched,
+priya-deshpande,https://www.marquette.edu/electrical-computer-engineering/directory/priya-deshpand.php,200,fetched,
+priya-nambisan,https://uwm.edu/publichealth/directory/nambisan-priya/,200,fetched,
+purush-papatla,https://uwm.edu/business/people/papatla-purushottam/,200,fetched,ConnectionError; retry 1 after 12s; redirected to https://uwm.edu/business/directory/papatla-purushottam/
+rani-elhajjar,https://uwm.edu/engineering/directory/elhajjar-rani/,200,fetched,
+razia-azen,https://uwm.edu/education/directory/azen-razia/,200,fetched,
+rebecca-neumann,https://uwm.edu/economics/people/neumann-rebecca/,200,fetched,redirected to https://uwm.edu/economics/about/directory/neumann-rebecca/
+richard-j-povinelli,https://www.marquette.edu/electrical-computer-engineering/directory/richard-povinelli.php,200,fetched,
+rina-ghose,https://sites.uwm.edu/rghose/,200,fetched,
+sabirat-rubya,https://www.marquette.edu/computer-science/directory/sabirat-rubya.php,200,fetched,
+said-audi,https://mcw.marquette.edu/biomedical-engineering/directory/said-audi.php,200,fetched,
+samantha-majhor,https://www.marquette.edu/english/directory/samantha-majhor.php,404,http_error,
+sanjoy-ghose,https://uwm.edu/business/people/ghose-sanjoy/,200,fetched,redirected to https://uwm.edu/business/directory/ghose-sanjoy/
+satish-puri,https://today.marquette.edu/2022/03/professor-receives-nsf-career-grant-for-efficient-spatial-data-analytics-and-mining/,200,fetched,
+satya-aditya-akundi,https://uwm.edu/engineering/people/akundi-satya-aditya/,200,fetched,redirected to https://uwm.edu/engineering/directory/akundi-satya-aditya/
+scott-rex,https://www.marquette.edu/business/directory/scott-rex.php,200,fetched,
+sergey-kravtsov,https://uwm.edu/freshwater/people/kravtsov-sergey/,200,fetched,redirected to https://uwm.edu/freshwater/directory/kravtsov-sergey/
+shana-ponelis,https://uwm.edu/engineering/people/ponelis-shana/,404,http_error,
+shengtong-han,https://uwm.edu/data-science/faculty-staff/han-shengtong/,404,http_error,
+somesh-roy,https://www.marquette.edu/mechanical-engineering/directory/somesh-roy.php,200,fetched,
+stephen-j-guastello,https://www.marquette.edu/psychology/directory/stephen-guastello.php,200,fetched,
+susan-mcroy,https://uwm.edu/engineering/people/mcroy-susan/,200,fetched,redirected to https://uwm.edu/engineering/directory/mcroy-susan/
+suzanne-boyd,https://uwm.edu/math/people/boyd-suzanne/,200,fetched,redirected to https://uwm.edu/math/about/directory/boyd-suzanne/
+swapnil-tripathi,https://uwm.edu/generalstudies/directory/tripathi-swapnil/,200,fetched,redirected to https://uwm.edu/generalstudies/about/waukesha-closure/
+taly-gilat-schmidt,https://www.marquette.edu/electrical-computer-engineering/directory/taly-gilat-schmidt.php,200,fetched,
+tanya-joosten,https://uwm.edu/academicaffairs/people/joosten-tanya/,404,http_error,
+thomas-schwarz,https://www.marquette.edu/computer-science/directory/thomas-schwarz.php,404,http_error,
+thomas-holbrook,https://uwm.edu/political-science/people/holbrook-thomas/,200,fetched,redirected to https://uwm.edu/political-science/about/directory/holbrook-thomas/
+thomas-kaczmarek,https://www.marquette.edu/news-center/experts/technology-engineering-computer-science-the-internet.php#:~:text=Thomas%20Kaczmarek%2C%20Adjunct%20Assistant%20Professor,404,http_error,
+tian-zhao,https://uwm.edu/engineering/people/zhao-tian/,200,fetched,redirected to https://uwm.edu/engineering/directory/zhao-tian/
+tony-gamble,https://www.marquette.edu/biology/directory/gamble.php,200,fetched,
+vytaras-brazauskas,https://uwm.edu/actuarial-science/program-life/people/brazauskas-vytaras/,404,http_error,
+walter-bialkowski,https://www.marquette.edu/computer-science/directory/walter-bialkowski.php,,fetch_error,ConnectionError; retry 1 after 11s; ConnectionError; retry 2 after 22s; ConnectionError
+walter-mcdonald,https://www.marquette.edu/civil-construction-environmental-engineering/directory/walter-mcdonald.php,200,fetched,
+wan-chen-lee,https://uwm.edu/informationstudies/directory/lee-wan-chen/,200,fetched,
+wilkistar-otieno,https://uwm.edu/engineering/people/otieno-wilkistar/,200,fetched,redirected to https://uwm.edu/engineering/directory/otieno-wilkistar/
+woonsup-choi,https://uwm.edu/geography/people/choi-woonsup/,200,fetched,redirected to https://uwm.edu/geography/about/directory/choi-woonsup/
+xiangming-mu,https://uwm.edu/data-science/faculty-staff/mu-xiangming/,404,http_error,
+xiaohan-yan,https://www.marquette.edu/library/directory/sean-yan.php,200,fetched,
+xin-luo,https://www.marquette.edu/business/directory/xin-luo.php,200,fetched,
+yuanyuan-april-song,https://www.marquette.edu/business/directory/april-song.php,200,fetched,
+zeyun-yu,https://uwm.edu/engineering/people/yu-zeyun/,200,fetched,redirected to https://uwm.edu/engineering/directory/yu-zeyun/
+zhen-zeng,https://uwm.edu/engineering/people/zeng-zhen/,200,fetched,redirected to https://uwm.edu/engineering/directory/zeng-zhen/
+rina-ghose,https://sites.uwm.edu/rghose/sample-page/about/,200,fetched,
+walter-bialkowski,https://www.marquette.edu/computer-science/directory/walter-bialkowski.php,200,fetched,
+aki-roberts,https://uwm.edu/sociology/about/directory/roberts-aki/,200,fetched,
+clark-evans,https://uwm.edu/freshwater/directory/evans-clark/,200,fetched,
+daniel-gervini,https://uwm.edu/math/about/directory/gervini-daniel/,200,fetched,
+dietmar-wolfram,https://uwm.edu/informationstudies/directory/wolfram-dietmar/,200,fetched,
+edward-blumenthal,https://www.marquette.edu/biology/directory/blumenthal.php,200,fetched,
+henry-duah,https://www.marquette.edu/nursing/directory/henry-duah.php,200,fetched,
+hyunkyoung-oh,https://uwm.edu/nursing/directory/oh-hyunkyoung-young/,200,fetched,
+jenna-green,https://www.marquette.edu/english/directory/jenna-green.php,200,fetched,
+jim-pokrywczynski,https://www.marquette.edu/communication/directory/james-pokrywczynski.php,200,fetched,
+john-roberts,https://uwm.edu/sociology/about/directory/roberts-john/,200,fetched,
+maria-haigh,https://uwm.edu/informationstudies/directory/haigh-maria/,200,fetched,
+maria-novotny,https://uwm.edu/english/about/directory/novotny-maria/,200,fetched,
+shana-ponelis,https://uwm.edu/informationstudies/directory/ponelis-shana/,200,fetched,
+shengtong-han,https://www.marquette.edu/dentistry/directory/shengtong-han.php,200,fetched,
+vytaras-brazauskas,https://uwm.edu/math/about/directory/brazauskas-vytaras/,200,fetched,
+xiangming-mu,https://uwm.edu/informationstudies/directory/mu-xiangming-simon/,200,fetched,

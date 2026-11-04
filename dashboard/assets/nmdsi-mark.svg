@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 76" role="img" aria-label="NMDSI">
+  <line x1="0" y1="38" x2="22" y2="38" stroke="#bababa" stroke-width="3"/>
+  <line x1="58" y1="38" x2="80" y2="38" stroke="#bababa" stroke-width="3"/>
+  <line x1="30" y1="38" x2="48" y2="19" stroke="#0d497a" stroke-width="3.2"/>
+  <line x1="30" y1="38" x2="48" y2="57" stroke="#0d497a" stroke-width="3.2"/>
+  <circle cx="30" cy="38" r="8" fill="#0d497a"/>
+  <circle cx="48" cy="19" r="8" fill="#fdb81b"/>
+  <circle cx="48" cy="57" r="8" fill="#81d3f1"/>
+</svg>

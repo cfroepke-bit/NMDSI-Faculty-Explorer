@@ -1,0 +1,2129 @@
+{
+  "by_university": {
+    "UW-Milwaukee": {
+      "count": 90,
+      "ids": [
+        "ai-bo",
+        "aki-roberts",
+        "alexander-dijo",
+        "alita-burmeister",
+        "amir-a-alwan",
+        "amit-bhatnagar",
+        "amol-mali",
+        "arjun-saha",
+        "avik-chakrabarti",
+        "ayesha-siddika-nipu",
+        "bhagwant-sindhu",
+        "brooke-slavens",
+        "changshan-wu",
+        "chao-zhu",
+        "chudamani-poudyal",
+        "clark-evans",
+        "colleen-galambos",
+        "daniel-gervini",
+        "david-spade",
+        "david-witzling",
+        "deepak-babu",
+        "derek-nazareth",
+        "dietmar-wolfram",
+        "edward-f-levitas",
+        "emily-latch",
+        "erin-ruppel",
+        "giorgo-sertsios",
+        "hyunkyoung-oh",
+        "inga-wang",
+        "itzi-lazkano",
+        "j-dietenberger",
+        "jake-luo",
+        "jangsu-yoon",
+        "jeb-willenbring",
+        "joan-shapiro-beigh",
+        "john-roberts",
+        "jonah-gaster",
+        "joseph-retzer",
+        "jun-zhang",
+        "kate-rohit",
+        "keith-dookeran",
+        "kristian-o-connor",
+        "laira-anne-stark",
+        "laura-roehl",
+        "layth-alwan",
+        "linnea-laestadius",
+        "lu-he",
+        "madhusudan-dey",
+        "margaret-kipp",
+        "maria-haigh",
+        "maria-goranova",
+        "maria-novotny",
+        "mark-schwartz",
+        "matthew-petering",
+        "matthew-friedel",
+        "michael-nosonovsky",
+        "min-wu",
+        "min-sook-park",
+        "mohammad-habibur-rahman",
+        "n-kundan-kishor",
+        "nathaniel-stern",
+        "odai-khasawneh",
+        "pallav-routh",
+        "paul-roebber",
+        "peter-dunn",
+        "peter-hinow",
+        "phoenix-do",
+        "priya-nambisan",
+        "purush-papatla",
+        "rani-elhajjar",
+        "razia-azen",
+        "rebecca-neumann",
+        "rina-ghose",
+        "sanjoy-ghose",
+        "satya-aditya-akundi",
+        "sergey-kravtsov",
+        "shana-ponelis",
+        "susan-mcroy",
+        "suzanne-boyd",
+        "swapnil-tripathi",
+        "tanya-joosten",
+        "thomas-holbrook",
+        "tian-zhao",
+        "vytaras-brazauskas",
+        "wan-chen-lee",
+        "wilkistar-otieno",
+        "woonsup-choi",
+        "xiangming-mu",
+        "zeyun-yu",
+        "zhen-zeng"
+      ],
+      "colleges": {
+        "Helen Bader School of Social Welfare": {
+          "count": 2,
+          "ids": [
+            "ai-bo",
+            "colleen-galambos"
+          ],
+          "departments": {
+            "Department of Social Work": {
+              "count": 1,
+              "ids": [
+                "ai-bo"
+              ]
+            },
+            "Office of Applied Gerontology, Helen Bader School of Social Welfare": {
+              "count": 1,
+              "ids": [
+                "colleen-galambos"
+              ]
+            }
+          }
+        },
+        "College of Letters & Science": {
+          "count": 29,
+          "ids": [
+            "aki-roberts",
+            "alita-burmeister",
+            "arjun-saha",
+            "avik-chakrabarti",
+            "changshan-wu",
+            "chao-zhu",
+            "chudamani-poudyal",
+            "daniel-gervini",
+            "david-spade",
+            "emily-latch",
+            "erin-ruppel",
+            "itzi-lazkano",
+            "jangsu-yoon",
+            "jeb-willenbring",
+            "john-roberts",
+            "jonah-gaster",
+            "madhusudan-dey",
+            "maria-novotny",
+            "mark-schwartz",
+            "n-kundan-kishor",
+            "paul-roebber",
+            "peter-dunn",
+            "peter-hinow",
+            "rebecca-neumann",
+            "rina-ghose",
+            "suzanne-boyd",
+            "thomas-holbrook",
+            "vytaras-brazauskas",
+            "woonsup-choi"
+          ],
+          "departments": {
+            "Department of Sociology": {
+              "count": 2,
+              "ids": [
+                "aki-roberts",
+                "john-roberts"
+              ]
+            },
+            "Biological Sciences": {
+              "count": 2,
+              "ids": [
+                "alita-burmeister",
+                "madhusudan-dey"
+              ]
+            },
+            "Department of Chemistry and Biochemistry": {
+              "count": 1,
+              "ids": [
+                "arjun-saha"
+              ]
+            },
+            "Department of Economics": {
+              "count": 4,
+              "ids": [
+                "avik-chakrabarti",
+                "itzi-lazkano",
+                "jangsu-yoon",
+                "n-kundan-kishor"
+              ]
+            },
+            "Department of Geography": {
+              "count": 4,
+              "ids": [
+                "changshan-wu",
+                "mark-schwartz",
+                "rina-ghose",
+                "woonsup-choi"
+              ]
+            },
+            "Department of Mathematical Sciences": {
+              "count": 8,
+              "ids": [
+                "chao-zhu",
+                "chudamani-poudyal",
+                "daniel-gervini",
+                "david-spade",
+                "jeb-willenbring",
+                "jonah-gaster",
+                "suzanne-boyd",
+                "vytaras-brazauskas"
+              ]
+            },
+            "Department of Biological Sciences": {
+              "count": 2,
+              "ids": [
+                "emily-latch",
+                "peter-dunn"
+              ]
+            },
+            "(no department listed)": {
+              "count": 2,
+              "ids": [
+                "erin-ruppel",
+                "peter-hinow"
+              ]
+            },
+            "Department of English": {
+              "count": 1,
+              "ids": [
+                "maria-novotny"
+              ]
+            },
+            "Freshwater Sciences Department of Atmospheric Science": {
+              "count": 1,
+              "ids": [
+                "paul-roebber"
+              ]
+            },
+            "College of Economics": {
+              "count": 1,
+              "ids": [
+                "rebecca-neumann"
+              ]
+            },
+            "Department of Political Science": {
+              "count": 1,
+              "ids": [
+                "thomas-holbrook"
+              ]
+            }
+          }
+        },
+        "Lubar College of Business": {
+          "count": 15,
+          "ids": [
+            "alexander-dijo",
+            "amir-a-alwan",
+            "amit-bhatnagar",
+            "derek-nazareth",
+            "edward-f-levitas",
+            "giorgo-sertsios",
+            "joan-shapiro-beigh",
+            "joseph-retzer",
+            "laura-roehl",
+            "layth-alwan",
+            "maria-goranova",
+            "odai-khasawneh",
+            "pallav-routh",
+            "purush-papatla",
+            "sanjoy-ghose"
+          ],
+          "departments": {
+            "Information Technology Management Program": {
+              "count": 1,
+              "ids": [
+                "alexander-dijo"
+              ]
+            },
+            "(no department listed)": {
+              "count": 2,
+              "ids": [
+                "amir-a-alwan",
+                "laura-roehl"
+              ]
+            },
+            "Department of Marketing": {
+              "count": 4,
+              "ids": [
+                "amit-bhatnagar",
+                "pallav-routh",
+                "purush-papatla",
+                "sanjoy-ghose"
+              ]
+            },
+            "Department of Information Technology": {
+              "count": 1,
+              "ids": [
+                "derek-nazareth"
+              ]
+            },
+            "Department of Organizations and Strategic Management": {
+              "count": 3,
+              "ids": [
+                "edward-f-levitas",
+                "joan-shapiro-beigh",
+                "maria-goranova"
+              ]
+            },
+            "Department of Finance": {
+              "count": 1,
+              "ids": [
+                "giorgo-sertsios"
+              ]
+            },
+            "Department Supply Chain, Operations Management & Business Statistics": {
+              "count": 1,
+              "ids": [
+                "joseph-retzer"
+              ]
+            },
+            "Department of Supply Chain, Operations Management & Business Statistics": {
+              "count": 1,
+              "ids": [
+                "layth-alwan"
+              ]
+            },
+            "Department of Information Technology Management": {
+              "count": 1,
+              "ids": [
+                "odai-khasawneh"
+              ]
+            }
+          }
+        },
+        "College of Engineering & Applied Science": {
+          "count": 17,
+          "ids": [
+            "amol-mali",
+            "ayesha-siddika-nipu",
+            "brooke-slavens",
+            "jake-luo",
+            "jun-zhang",
+            "kate-rohit",
+            "matthew-petering",
+            "michael-nosonovsky",
+            "mohammad-habibur-rahman",
+            "nathaniel-stern",
+            "rani-elhajjar",
+            "satya-aditya-akundi",
+            "susan-mcroy",
+            "tian-zhao",
+            "wilkistar-otieno",
+            "zeyun-yu",
+            "zhen-zeng"
+          ],
+          "departments": {
+            "Department of Computer Science": {
+              "count": 7,
+              "ids": [
+                "amol-mali",
+                "ayesha-siddika-nipu",
+                "kate-rohit",
+                "nathaniel-stern",
+                "tian-zhao",
+                "zeyun-yu",
+                "zhen-zeng"
+              ]
+            },
+            "Department of Biomedical Engineering": {
+              "count": 1,
+              "ids": [
+                "brooke-slavens"
+              ]
+            },
+            "Joseph J. Zilber College of Public Health Department of Health Care Informatics": {
+              "count": 1,
+              "ids": [
+                "jake-luo"
+              ]
+            },
+            "Department of Electrical Engineering and Computer Science": {
+              "count": 1,
+              "ids": [
+                "jun-zhang"
+              ]
+            },
+            "Department of Industrial and Manufacturing Engineering": {
+              "count": 2,
+              "ids": [
+                "matthew-petering",
+                "satya-aditya-akundi"
+              ]
+            },
+            "Department of Mechanical Engineering": {
+              "count": 1,
+              "ids": [
+                "michael-nosonovsky"
+              ]
+            },
+            "Department of Business Statistics": {
+              "count": 1,
+              "ids": [
+                "mohammad-habibur-rahman"
+              ]
+            },
+            "Department of Civil and Environmental Engineering": {
+              "count": 1,
+              "ids": [
+                "rani-elhajjar"
+              ]
+            },
+            "(no department listed)": {
+              "count": 1,
+              "ids": [
+                "susan-mcroy"
+              ]
+            },
+            "Industrial and Manufacturing Engineering": {
+              "count": 1,
+              "ids": [
+                "wilkistar-otieno"
+              ]
+            }
+          }
+        },
+        "School of Rehabilitation Sciences and Technology": {
+          "count": 2,
+          "ids": [
+            "bhagwant-sindhu",
+            "inga-wang"
+          ],
+          "departments": {
+            "Programs in Occupational Therapy, Science, and Technology": {
+              "count": 1,
+              "ids": [
+                "bhagwant-sindhu"
+              ]
+            },
+            "Department of Occupational Therapy/ Department of Science and Technology": {
+              "count": 1,
+              "ids": [
+                "inga-wang"
+              ]
+            }
+          }
+        },
+        "School of Freshwater Sciences": {
+          "count": 2,
+          "ids": [
+            "clark-evans",
+            "sergey-kravtsov"
+          ],
+          "departments": {
+            "Department of Atmospheric Science": {
+              "count": 2,
+              "ids": [
+                "clark-evans",
+                "sergey-kravtsov"
+              ]
+            }
+          }
+        },
+        "Peck School of the Arts": {
+          "count": 1,
+          "ids": [
+            "david-witzling"
+          ],
+          "departments": {
+            "Department of Film, Video, Animation, and New Genres": {
+              "count": 1,
+              "ids": [
+                "david-witzling"
+              ]
+            }
+          }
+        },
+        "(no college listed)": {
+          "count": 2,
+          "ids": [
+            "deepak-babu",
+            "laira-anne-stark"
+          ],
+          "departments": {
+            "(no department listed)": {
+              "count": 2,
+              "ids": [
+                "deepak-babu",
+                "laira-anne-stark"
+              ]
+            }
+          }
+        },
+        "College of Community Engagement and Professions": {
+          "count": 10,
+          "ids": [
+            "dietmar-wolfram",
+            "j-dietenberger",
+            "margaret-kipp",
+            "maria-haigh",
+            "matthew-friedel",
+            "min-sook-park",
+            "razia-azen",
+            "shana-ponelis",
+            "wan-chen-lee",
+            "xiangming-mu"
+          ],
+          "departments": {
+            "School of Information Studies": {
+              "count": 9,
+              "ids": [
+                "dietmar-wolfram",
+                "j-dietenberger",
+                "margaret-kipp",
+                "maria-haigh",
+                "matthew-friedel",
+                "min-sook-park",
+                "shana-ponelis",
+                "wan-chen-lee",
+                "xiangming-mu"
+              ]
+            },
+            "School of Education": {
+              "count": 1,
+              "ids": [
+                "razia-azen"
+              ]
+            }
+          }
+        },
+        "College of Nursing": {
+          "count": 1,
+          "ids": [
+            "hyunkyoung-oh"
+          ],
+          "departments": {
+            "(no department listed)": {
+              "count": 1,
+              "ids": [
+                "hyunkyoung-oh"
+              ]
+            }
+          }
+        },
+        "Zilber College of Public Health": {
+          "count": 7,
+          "ids": [
+            "keith-dookeran",
+            "kristian-o-connor",
+            "linnea-laestadius",
+            "lu-he",
+            "min-wu",
+            "phoenix-do",
+            "priya-nambisan"
+          ],
+          "departments": {
+            "Department of Epidemiology": {
+              "count": 1,
+              "ids": [
+                "keith-dookeran"
+              ]
+            },
+            "Department of Kinesiology": {
+              "count": 1,
+              "ids": [
+                "kristian-o-connor"
+              ]
+            },
+            "(no department listed)": {
+              "count": 2,
+              "ids": [
+                "linnea-laestadius",
+                "min-wu"
+              ]
+            },
+            "Department of Health Care Informatics": {
+              "count": 1,
+              "ids": [
+                "lu-he"
+              ]
+            },
+            "Department of Public Health Policy/ Epidemiology": {
+              "count": 1,
+              "ids": [
+                "phoenix-do"
+              ]
+            },
+            "Biostatistics and Health Informatics,": {
+              "count": 1,
+              "ids": [
+                "priya-nambisan"
+              ]
+            }
+          }
+        },
+        "College of General Studies": {
+          "count": 1,
+          "ids": [
+            "swapnil-tripathi"
+          ],
+          "departments": {
+            "(no department listed)": {
+              "count": 1,
+              "ids": [
+                "swapnil-tripathi"
+              ]
+            }
+          }
+        },
+        "Academic Affairs": {
+          "count": 1,
+          "ids": [
+            "tanya-joosten"
+          ],
+          "departments": {
+            "(no department listed)": {
+              "count": 1,
+              "ids": [
+                "tanya-joosten"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Marquette University": {
+      "count": 81,
+      "ids": [
+        "aleksandra-j-snowden",
+        "andrew-g-meyer",
+        "anne-clough",
+        "anthony-j-parolari",
+        "badar-al-lawati",
+        "bin-wang",
+        "bing-yu",
+        "charles-franklin",
+        "chelsea-cook",
+        "cheng-han-yu",
+        "chris-marshall",
+        "cristinel-ababei",
+        "daniel-cirkovic",
+        "darren-wheelock",
+        "david-krause",
+        "debbie-perouli",
+        "dmitri-babikov",
+        "edward-blumenthal",
+        "elaine-spiller",
+        "elsbeth-kalenderian",
+        "emily-cramer",
+        "ethan-schmick",
+        "gabriel-velez",
+        "gerry-canavan",
+        "henry-duah",
+        "hunter-sandidge",
+        "sheikh-iqbal-ahamed",
+        "jacklynn-fitzgerald",
+        "jacob-rice",
+        "jeanne-nicole-mellon-saint-laurent",
+        "jenna-green",
+        "jeremy-lee",
+        "jim-pokrywczynski",
+        "joseph-matthes",
+        "joseph-a-lamanna",
+        "joseph-wall",
+        "kali-murray",
+        "kanchan-chowdhury",
+        "karen-andeen",
+        "kevin-trainor",
+        "kristof-kipp",
+        "larry-zhiming-xu",
+        "lei-fan",
+        "lillian-campbell",
+        "lisa-n-petrella",
+        "lynne-knobloch-fedders",
+        "majeed-hayat",
+        "mark-barratt",
+        "matthew-mleczko",
+        "mehdi-maadooliat",
+        "mengyun-zhang",
+        "michael-zimmer",
+        "mumin-cebe",
+        "nadiyah-johnson",
+        "nasim-yahyasoltani",
+        "nate-lemoine",
+        "naveen-bansal",
+        "nicholas-jolly",
+        "nicholas-j-reiter",
+        "patrick-mcnamara",
+        "paula-papanek",
+        "praveen-madiraju",
+        "priya-deshpande",
+        "richard-j-povinelli",
+        "sabirat-rubya",
+        "said-audi",
+        "samantha-majhor",
+        "satish-puri",
+        "scott-rex",
+        "shengtong-han",
+        "somesh-roy",
+        "stephen-j-guastello",
+        "taly-gilat-schmidt",
+        "thomas-schwarz",
+        "thomas-kaczmarek",
+        "tony-gamble",
+        "walter-bialkowski",
+        "walter-mcdonald",
+        "xiaohan-yan",
+        "xin-luo",
+        "yuanyuan-april-song"
+      ],
+      "colleges": {
+        "Klingler College of Arts and Sciences": {
+          "count": 39,
+          "ids": [
+            "aleksandra-j-snowden",
+            "anne-clough",
+            "chelsea-cook",
+            "cheng-han-yu",
+            "chris-marshall",
+            "daniel-cirkovic",
+            "darren-wheelock",
+            "debbie-perouli",
+            "dmitri-babikov",
+            "edward-blumenthal",
+            "elaine-spiller",
+            "gerry-canavan",
+            "sheikh-iqbal-ahamed",
+            "jacklynn-fitzgerald",
+            "jeanne-nicole-mellon-saint-laurent",
+            "jenna-green",
+            "joseph-a-lamanna",
+            "kanchan-chowdhury",
+            "karen-andeen",
+            "lillian-campbell",
+            "lisa-n-petrella",
+            "matthew-mleczko",
+            "mehdi-maadooliat",
+            "michael-zimmer",
+            "mumin-cebe",
+            "nadiyah-johnson",
+            "nasim-yahyasoltani",
+            "nate-lemoine",
+            "naveen-bansal",
+            "nicholas-j-reiter",
+            "praveen-madiraju",
+            "sabirat-rubya",
+            "samantha-majhor",
+            "satish-puri",
+            "stephen-j-guastello",
+            "thomas-schwarz",
+            "thomas-kaczmarek",
+            "tony-gamble",
+            "walter-bialkowski"
+          ],
+          "departments": {
+            "Department of Social and Cultural Sciences": {
+              "count": 2,
+              "ids": [
+                "aleksandra-j-snowden",
+                "darren-wheelock"
+              ]
+            },
+            "Department of Mathematical and Statistical Sciences": {
+              "count": 6,
+              "ids": [
+                "anne-clough",
+                "cheng-han-yu",
+                "daniel-cirkovic",
+                "elaine-spiller",
+                "mehdi-maadooliat",
+                "naveen-bansal"
+              ]
+            },
+            "Department of Biological Sciences": {
+              "count": 7,
+              "ids": [
+                "chelsea-cook",
+                "chris-marshall",
+                "edward-blumenthal",
+                "joseph-a-lamanna",
+                "lisa-n-petrella",
+                "nate-lemoine",
+                "tony-gamble"
+              ]
+            },
+            "Department of Computer Science": {
+              "count": 12,
+              "ids": [
+                "debbie-perouli",
+                "sheikh-iqbal-ahamed",
+                "michael-zimmer",
+                "mumin-cebe",
+                "nadiyah-johnson",
+                "nasim-yahyasoltani",
+                "praveen-madiraju",
+                "sabirat-rubya",
+                "satish-puri",
+                "thomas-schwarz",
+                "thomas-kaczmarek",
+                "walter-bialkowski"
+              ]
+            },
+            "Department of Chemistry": {
+              "count": 2,
+              "ids": [
+                "dmitri-babikov",
+                "nicholas-j-reiter"
+              ]
+            },
+            "Department of English": {
+              "count": 4,
+              "ids": [
+                "gerry-canavan",
+                "jenna-green",
+                "lillian-campbell",
+                "samantha-majhor"
+              ]
+            },
+            "Department of Psychology": {
+              "count": 2,
+              "ids": [
+                "jacklynn-fitzgerald",
+                "stephen-j-guastello"
+              ]
+            },
+            "Department of Theology": {
+              "count": 1,
+              "ids": [
+                "jeanne-nicole-mellon-saint-laurent"
+              ]
+            },
+            "Department of Computer Sciences": {
+              "count": 1,
+              "ids": [
+                "kanchan-chowdhury"
+              ]
+            },
+            "Physics": {
+              "count": 1,
+              "ids": [
+                "karen-andeen"
+              ]
+            },
+            "(no department listed)": {
+              "count": 1,
+              "ids": [
+                "matthew-mleczko"
+              ]
+            }
+          }
+        },
+        "College of Business Administration": {
+          "count": 16,
+          "ids": [
+            "andrew-g-meyer",
+            "badar-al-lawati",
+            "bin-wang",
+            "david-krause",
+            "ethan-schmick",
+            "hunter-sandidge",
+            "jeremy-lee",
+            "joseph-matthes",
+            "joseph-wall",
+            "kevin-trainor",
+            "mark-barratt",
+            "mengyun-zhang",
+            "nicholas-jolly",
+            "scott-rex",
+            "xin-luo",
+            "yuanyuan-april-song"
+          ],
+          "departments": {
+            "Department of Economics": {
+              "count": 3,
+              "ids": [
+                "andrew-g-meyer",
+                "ethan-schmick",
+                "nicholas-jolly"
+              ]
+            },
+            "Department of Management": {
+              "count": 5,
+              "ids": [
+                "badar-al-lawati",
+                "jeremy-lee",
+                "mark-barratt",
+                "scott-rex",
+                "yuanyuan-april-song"
+              ]
+            },
+            "Department of Finance": {
+              "count": 2,
+              "ids": [
+                "bin-wang",
+                "david-krause"
+              ]
+            },
+            "(no department listed)": {
+              "count": 2,
+              "ids": [
+                "hunter-sandidge",
+                "mengyun-zhang"
+              ]
+            },
+            "Department of Marketing": {
+              "count": 2,
+              "ids": [
+                "joseph-matthes",
+                "kevin-trainor"
+              ]
+            },
+            "Department of Accounting, AIM": {
+              "count": 1,
+              "ids": [
+                "joseph-wall"
+              ]
+            },
+            "Department of Accounting": {
+              "count": 1,
+              "ids": [
+                "xin-luo"
+              ]
+            }
+          }
+        },
+        "Opus College of Engineering": {
+          "count": 13,
+          "ids": [
+            "anthony-j-parolari",
+            "bing-yu",
+            "cristinel-ababei",
+            "jacob-rice",
+            "lei-fan",
+            "majeed-hayat",
+            "patrick-mcnamara",
+            "priya-deshpande",
+            "richard-j-povinelli",
+            "said-audi",
+            "somesh-roy",
+            "taly-gilat-schmidt",
+            "walter-mcdonald"
+          ],
+          "departments": {
+            "Department of Civil, Construction, and Environmental Engineering": {
+              "count": 3,
+              "ids": [
+                "anthony-j-parolari",
+                "patrick-mcnamara",
+                "walter-mcdonald"
+              ]
+            },
+            "Department of Biomedical Engineering": {
+              "count": 2,
+              "ids": [
+                "bing-yu",
+                "taly-gilat-schmidt"
+              ]
+            },
+            "Department of Electrical and Computer Engineering": {
+              "count": 4,
+              "ids": [
+                "cristinel-ababei",
+                "majeed-hayat",
+                "priya-deshpande",
+                "richard-j-povinelli"
+              ]
+            },
+            "Department of Mechanical Engineering": {
+              "count": 2,
+              "ids": [
+                "jacob-rice",
+                "somesh-roy"
+              ]
+            },
+            "Joint Department of Biomedical Engineer": {
+              "count": 1,
+              "ids": [
+                "lei-fan"
+              ]
+            },
+            "Department Biomedical Engineering": {
+              "count": 1,
+              "ids": [
+                "said-audi"
+              ]
+            }
+          }
+        },
+        "Law School": {
+          "count": 2,
+          "ids": [
+            "charles-franklin",
+            "kali-murray"
+          ],
+          "departments": {
+            "(no department listed)": {
+              "count": 2,
+              "ids": [
+                "charles-franklin",
+                "kali-murray"
+              ]
+            }
+          }
+        },
+        "School of Dentistry": {
+          "count": 2,
+          "ids": [
+            "elsbeth-kalenderian",
+            "shengtong-han"
+          ],
+          "departments": {
+            "(no department listed)": {
+              "count": 2,
+              "ids": [
+                "elsbeth-kalenderian",
+                "shengtong-han"
+              ]
+            }
+          }
+        },
+        "Diederich College of Communication": {
+          "count": 3,
+          "ids": [
+            "emily-cramer",
+            "jim-pokrywczynski",
+            "larry-zhiming-xu"
+          ],
+          "departments": {
+            "Department of Communications Studies": {
+              "count": 1,
+              "ids": [
+                "emily-cramer"
+              ]
+            },
+            "Department of Strategic Communication": {
+              "count": 1,
+              "ids": [
+                "jim-pokrywczynski"
+              ]
+            },
+            "Department of Strategic Communication, Department of Information Systems": {
+              "count": 1,
+              "ids": [
+                "larry-zhiming-xu"
+              ]
+            }
+          }
+        },
+        "College of Education": {
+          "count": 2,
+          "ids": [
+            "gabriel-velez",
+            "lynne-knobloch-fedders"
+          ],
+          "departments": {
+            "Department of Educational Policy and Leadership": {
+              "count": 1,
+              "ids": [
+                "gabriel-velez"
+              ]
+            },
+            "Department of Counselor Education and Counseling Psychology": {
+              "count": 1,
+              "ids": [
+                "lynne-knobloch-fedders"
+              ]
+            }
+          }
+        },
+        "College of Nursing": {
+          "count": 1,
+          "ids": [
+            "henry-duah"
+          ],
+          "departments": {
+            "(no department listed)": {
+              "count": 1,
+              "ids": [
+                "henry-duah"
+              ]
+            }
+          }
+        },
+        "College of Health Sciences": {
+          "count": 2,
+          "ids": [
+            "kristof-kipp",
+            "paula-papanek"
+          ],
+          "departments": {
+            "Department of Physical Therapy": {
+              "count": 1,
+              "ids": [
+                "kristof-kipp"
+              ]
+            },
+            "Department of Exercise Science": {
+              "count": 1,
+              "ids": [
+                "paula-papanek"
+              ]
+            }
+          }
+        },
+        "Raynor Library": {
+          "count": 1,
+          "ids": [
+            "xiaohan-yan"
+          ],
+          "departments": {
+            "(no department listed)": {
+              "count": 1,
+              "ids": [
+                "xiaohan-yan"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "by_theme": {
+    "AI/ML & NLP": {
+      "count": 32,
+      "ids": [
+        "alexander-dijo",
+        "amol-mali",
+        "ayesha-siddika-nipu",
+        "hunter-sandidge",
+        "hyunkyoung-oh",
+        "sheikh-iqbal-ahamed",
+        "jacob-rice",
+        "jeremy-lee",
+        "jun-zhang",
+        "kanchan-chowdhury",
+        "kate-rohit",
+        "laira-anne-stark",
+        "laura-roehl",
+        "margaret-kipp",
+        "matthew-friedel",
+        "michael-zimmer",
+        "mohammad-habibur-rahman",
+        "nadiyah-johnson",
+        "nasim-yahyasoltani",
+        "nathaniel-stern",
+        "praveen-madiraju",
+        "rani-elhajjar",
+        "sabirat-rubya",
+        "satish-puri",
+        "susan-mcroy",
+        "thomas-schwarz",
+        "thomas-kaczmarek",
+        "tian-zhao",
+        "walter-bialkowski",
+        "yuanyuan-april-song",
+        "zeyun-yu",
+        "zhen-zeng"
+      ]
+    },
+    "Finance & Economics": {
+      "count": 20,
+      "ids": [
+        "amit-bhatnagar",
+        "avik-chakrabarti",
+        "bin-wang",
+        "david-krause",
+        "edward-f-levitas",
+        "ethan-schmick",
+        "giorgo-sertsios",
+        "itzi-lazkano",
+        "jangsu-yoon",
+        "joseph-matthes",
+        "joseph-wall",
+        "kevin-trainor",
+        "n-kundan-kishor",
+        "nicholas-jolly",
+        "pallav-routh",
+        "purush-papatla",
+        "rebecca-neumann",
+        "sanjoy-ghose",
+        "scott-rex",
+        "xin-luo"
+      ]
+    },
+    "Statistics & Mathematics": {
+      "count": 20,
+      "ids": [
+        "anne-clough",
+        "chao-zhu",
+        "cheng-han-yu",
+        "chudamani-poudyal",
+        "daniel-cirkovic",
+        "daniel-gervini",
+        "david-spade",
+        "elaine-spiller",
+        "jeb-willenbring",
+        "jonah-gaster",
+        "joseph-retzer",
+        "joseph-a-lamanna",
+        "karen-andeen",
+        "majeed-hayat",
+        "mehdi-maadooliat",
+        "naveen-bansal",
+        "peter-hinow",
+        "suzanne-boyd",
+        "swapnil-tripathi",
+        "vytaras-brazauskas"
+      ]
+    },
+    "Social Science & Policy": {
+      "count": 19,
+      "ids": [
+        "ai-bo",
+        "aki-roberts",
+        "aleksandra-j-snowden",
+        "badar-al-lawati",
+        "charles-franklin",
+        "colleen-galambos",
+        "darren-wheelock",
+        "gabriel-velez",
+        "jacklynn-fitzgerald",
+        "joan-shapiro-beigh",
+        "john-roberts",
+        "lynne-knobloch-fedders",
+        "maria-haigh",
+        "maria-goranova",
+        "razia-azen",
+        "stephen-j-guastello",
+        "tanya-joosten",
+        "thomas-holbrook",
+        "wan-chen-lee"
+      ]
+    },
+    "Biology & Biomedical": {
+      "count": 18,
+      "ids": [
+        "alita-burmeister",
+        "arjun-saha",
+        "bing-yu",
+        "brooke-slavens",
+        "chelsea-cook",
+        "chris-marshall",
+        "dmitri-babikov",
+        "edward-blumenthal",
+        "emily-latch",
+        "lei-fan",
+        "lisa-n-petrella",
+        "madhusudan-dey",
+        "nate-lemoine",
+        "nicholas-j-reiter",
+        "peter-dunn",
+        "said-audi",
+        "taly-gilat-schmidt",
+        "tony-gamble"
+      ]
+    },
+    "Health Informatics": {
+      "count": 17,
+      "ids": [
+        "bhagwant-sindhu",
+        "elsbeth-kalenderian",
+        "henry-duah",
+        "inga-wang",
+        "jake-luo",
+        "keith-dookeran",
+        "kristian-o-connor",
+        "kristof-kipp",
+        "linnea-laestadius",
+        "lu-he",
+        "min-wu",
+        "min-sook-park",
+        "paula-papanek",
+        "phoenix-do",
+        "priya-nambisan",
+        "shengtong-han",
+        "xiangming-mu"
+      ]
+    },
+    "Humanities & Communication": {
+      "count": 15,
+      "ids": [
+        "david-witzling",
+        "dietmar-wolfram",
+        "emily-cramer",
+        "erin-ruppel",
+        "gerry-canavan",
+        "jeanne-nicole-mellon-saint-laurent",
+        "jenna-green",
+        "jim-pokrywczynski",
+        "kali-murray",
+        "larry-zhiming-xu",
+        "lillian-campbell",
+        "maria-novotny",
+        "matthew-mleczko",
+        "samantha-majhor",
+        "xiaohan-yan"
+      ]
+    },
+    "Climate & Environment": {
+      "count": 13,
+      "ids": [
+        "andrew-g-meyer",
+        "anthony-j-parolari",
+        "changshan-wu",
+        "clark-evans",
+        "mark-schwartz",
+        "michael-nosonovsky",
+        "patrick-mcnamara",
+        "paul-roebber",
+        "rina-ghose",
+        "sergey-kravtsov",
+        "somesh-roy",
+        "walter-mcdonald",
+        "woonsup-choi"
+      ]
+    },
+    "Security & Systems": {
+      "count": 10,
+      "ids": [
+        "cristinel-ababei",
+        "debbie-perouli",
+        "deepak-babu",
+        "derek-nazareth",
+        "j-dietenberger",
+        "mumin-cebe",
+        "odai-khasawneh",
+        "priya-deshpande",
+        "richard-j-povinelli",
+        "shana-ponelis"
+      ]
+    },
+    "Operations & Supply Chain": {
+      "count": 7,
+      "ids": [
+        "amir-a-alwan",
+        "layth-alwan",
+        "mark-barratt",
+        "matthew-petering",
+        "mengyun-zhang",
+        "satya-aditya-akundi",
+        "wilkistar-otieno"
+      ]
+    }
+  },
+  "by_industry": {
+    "Technology & Cybersecurity": {
+      "count": 62,
+      "ids": [
+        "ai-bo",
+        "alexander-dijo",
+        "amir-a-alwan",
+        "amol-mali",
+        "arjun-saha",
+        "ayesha-siddika-nipu",
+        "badar-al-lawati",
+        "chudamani-poudyal",
+        "cristinel-ababei",
+        "daniel-cirkovic",
+        "debbie-perouli",
+        "deepak-babu",
+        "derek-nazareth",
+        "dmitri-babikov",
+        "henry-duah",
+        "hunter-sandidge",
+        "hyunkyoung-oh",
+        "inga-wang",
+        "sheikh-iqbal-ahamed",
+        "j-dietenberger",
+        "jake-luo",
+        "jeremy-lee",
+        "joseph-wall",
+        "kanchan-chowdhury",
+        "kate-rohit",
+        "laira-anne-stark",
+        "larry-zhiming-xu",
+        "laura-roehl",
+        "lei-fan",
+        "majeed-hayat",
+        "mark-barratt",
+        "matthew-friedel",
+        "mehdi-maadooliat",
+        "michael-zimmer",
+        "min-sook-park",
+        "mohammad-habibur-rahman",
+        "mumin-cebe",
+        "nadiyah-johnson",
+        "nasim-yahyasoltani",
+        "odai-khasawneh",
+        "pallav-routh",
+        "paul-roebber",
+        "praveen-madiraju",
+        "priya-deshpande",
+        "purush-papatla",
+        "rani-elhajjar",
+        "richard-j-povinelli",
+        "rina-ghose",
+        "sabirat-rubya",
+        "satish-puri",
+        "scott-rex",
+        "shengtong-han",
+        "stephen-j-guastello",
+        "susan-mcroy",
+        "thomas-schwarz",
+        "thomas-kaczmarek",
+        "tian-zhao",
+        "walter-bialkowski",
+        "xiangming-mu",
+        "yuanyuan-april-song",
+        "zeyun-yu",
+        "zhen-zeng"
+      ]
+    },
+    "Healthcare": {
+      "count": 49,
+      "ids": [
+        "ai-bo",
+        "amol-mali",
+        "anne-clough",
+        "arjun-saha",
+        "ayesha-siddika-nipu",
+        "badar-al-lawati",
+        "bhagwant-sindhu",
+        "bing-yu",
+        "brooke-slavens",
+        "changshan-wu",
+        "colleen-galambos",
+        "derek-nazareth",
+        "edward-f-levitas",
+        "elsbeth-kalenderian",
+        "emily-cramer",
+        "erin-ruppel",
+        "henry-duah",
+        "hyunkyoung-oh",
+        "inga-wang",
+        "jacklynn-fitzgerald",
+        "jake-luo",
+        "jeremy-lee",
+        "kate-rohit",
+        "keith-dookeran",
+        "kristian-o-connor",
+        "kristof-kipp",
+        "lei-fan",
+        "linnea-laestadius",
+        "lu-he",
+        "maria-novotny",
+        "min-wu",
+        "min-sook-park",
+        "mohammad-habibur-rahman",
+        "nicholas-jolly",
+        "nicholas-j-reiter",
+        "paula-papanek",
+        "phoenix-do",
+        "praveen-madiraju",
+        "priya-deshpande",
+        "priya-nambisan",
+        "rina-ghose",
+        "sabirat-rubya",
+        "said-audi",
+        "shengtong-han",
+        "stephen-j-guastello",
+        "susan-mcroy",
+        "taly-gilat-schmidt",
+        "walter-bialkowski",
+        "xiangming-mu"
+      ]
+    },
+    "(none matched)": {
+      "count": 32,
+      "ids": [
+        "alita-burmeister",
+        "cheng-han-yu",
+        "daniel-gervini",
+        "david-witzling",
+        "dietmar-wolfram",
+        "edward-blumenthal",
+        "elaine-spiller",
+        "jangsu-yoon",
+        "jeanne-nicole-mellon-saint-laurent",
+        "jeb-willenbring",
+        "jenna-green",
+        "jonah-gaster",
+        "jun-zhang",
+        "karen-andeen",
+        "lillian-campbell",
+        "lisa-n-petrella",
+        "madhusudan-dey",
+        "margaret-kipp",
+        "maria-haigh",
+        "maria-goranova",
+        "matthew-mleczko",
+        "naveen-bansal",
+        "peter-hinow",
+        "samantha-majhor",
+        "shana-ponelis",
+        "somesh-roy",
+        "suzanne-boyd",
+        "swapnil-tripathi",
+        "tanya-joosten",
+        "tony-gamble",
+        "wan-chen-lee",
+        "xiaohan-yan"
+      ]
+    },
+    "Energy & Environment": {
+      "count": 30,
+      "ids": [
+        "andrew-g-meyer",
+        "anthony-j-parolari",
+        "bin-wang",
+        "changshan-wu",
+        "chelsea-cook",
+        "chris-marshall",
+        "clark-evans",
+        "cristinel-ababei",
+        "david-spade",
+        "dmitri-babikov",
+        "emily-latch",
+        "gerry-canavan",
+        "itzi-lazkano",
+        "joseph-a-lamanna",
+        "mark-barratt",
+        "mark-schwartz",
+        "mengyun-zhang",
+        "michael-nosonovsky",
+        "nate-lemoine",
+        "nathaniel-stern",
+        "patrick-mcnamara",
+        "paul-roebber",
+        "peter-dunn",
+        "priya-nambisan",
+        "rani-elhajjar",
+        "rina-ghose",
+        "sergey-kravtsov",
+        "walter-mcdonald",
+        "wilkistar-otieno",
+        "woonsup-choi"
+      ]
+    },
+    "Public Sector & Policy": {
+      "count": 26,
+      "ids": [
+        "ai-bo",
+        "aki-roberts",
+        "aleksandra-j-snowden",
+        "andrew-g-meyer",
+        "changshan-wu",
+        "charles-franklin",
+        "colleen-galambos",
+        "darren-wheelock",
+        "gabriel-velez",
+        "jake-luo",
+        "john-roberts",
+        "joseph-a-lamanna",
+        "kali-murray",
+        "keith-dookeran",
+        "kristian-o-connor",
+        "linnea-laestadius",
+        "lu-he",
+        "matthew-petering",
+        "min-wu",
+        "n-kundan-kishor",
+        "phoenix-do",
+        "priya-nambisan",
+        "purush-papatla",
+        "rina-ghose",
+        "shengtong-han",
+        "thomas-holbrook"
+      ]
+    },
+    "Education": {
+      "count": 20,
+      "ids": [
+        "aki-roberts",
+        "alexander-dijo",
+        "amol-mali",
+        "andrew-g-meyer",
+        "badar-al-lawati",
+        "colleen-galambos",
+        "david-spade",
+        "debbie-perouli",
+        "ethan-schmick",
+        "gabriel-velez",
+        "jeremy-lee",
+        "joan-shapiro-beigh",
+        "kevin-trainor",
+        "lynne-knobloch-fedders",
+        "mark-barratt",
+        "min-wu",
+        "purush-papatla",
+        "razia-azen",
+        "wilkistar-otieno",
+        "zhen-zeng"
+      ]
+    },
+    "Manufacturing & Supply Chain": {
+      "count": 18,
+      "ids": [
+        "amir-a-alwan",
+        "amol-mali",
+        "avik-chakrabarti",
+        "debbie-perouli",
+        "inga-wang",
+        "jacob-rice",
+        "joseph-retzer",
+        "joseph-matthes",
+        "joseph-a-lamanna",
+        "layth-alwan",
+        "mark-barratt",
+        "matthew-petering",
+        "mengyun-zhang",
+        "mohammad-habibur-rahman",
+        "rani-elhajjar",
+        "rina-ghose",
+        "satya-aditya-akundi",
+        "wilkistar-otieno"
+      ]
+    },
+    "Finance & Insurance": {
+      "count": 15,
+      "ids": [
+        "avik-chakrabarti",
+        "bin-wang",
+        "chao-zhu",
+        "chudamani-poudyal",
+        "david-krause",
+        "edward-f-levitas",
+        "giorgo-sertsios",
+        "jeremy-lee",
+        "joseph-wall",
+        "odai-khasawneh",
+        "rebecca-neumann",
+        "scott-rex",
+        "stephen-j-guastello",
+        "vytaras-brazauskas",
+        "xin-luo"
+      ]
+    },
+    "Marketing & Retail": {
+      "count": 13,
+      "ids": [
+        "amir-a-alwan",
+        "amit-bhatnagar",
+        "jeremy-lee",
+        "jim-pokrywczynski",
+        "joseph-retzer",
+        "joseph-matthes",
+        "kevin-trainor",
+        "mengyun-zhang",
+        "pallav-routh",
+        "priya-nambisan",
+        "purush-papatla",
+        "sanjoy-ghose",
+        "scott-rex"
+      ]
+    }
+  },
+  "by_funding": {
+    "unknown": {
+      "count": 144,
+      "ids": [
+        "ai-bo",
+        "aki-roberts",
+        "aleksandra-j-snowden",
+        "alexander-dijo",
+        "alita-burmeister",
+        "amir-a-alwan",
+        "amit-bhatnagar",
+        "amol-mali",
+        "andrew-g-meyer",
+        "anne-clough",
+        "arjun-saha",
+        "avik-chakrabarti",
+        "ayesha-siddika-nipu",
+        "badar-al-lawati",
+        "bhagwant-sindhu",
+        "bin-wang",
+        "changshan-wu",
+        "chao-zhu",
+        "charles-franklin",
+        "cheng-han-yu",
+        "chris-marshall",
+        "chudamani-poudyal",
+        "clark-evans",
+        "cristinel-ababei",
+        "daniel-cirkovic",
+        "daniel-gervini",
+        "darren-wheelock",
+        "david-krause",
+        "david-spade",
+        "david-witzling",
+        "debbie-perouli",
+        "deepak-babu",
+        "derek-nazareth",
+        "dietmar-wolfram",
+        "dmitri-babikov",
+        "emily-latch",
+        "emily-cramer",
+        "erin-ruppel",
+        "ethan-schmick",
+        "gabriel-velez",
+        "gerry-canavan",
+        "giorgo-sertsios",
+        "henry-duah",
+        "hunter-sandidge",
+        "sheikh-iqbal-ahamed",
+        "itzi-lazkano",
+        "j-dietenberger",
+        "jacklynn-fitzgerald",
+        "jacob-rice",
+        "jake-luo",
+        "jangsu-yoon",
+        "jeanne-nicole-mellon-saint-laurent",
+        "jenna-green",
+        "jeremy-lee",
+        "jim-pokrywczynski",
+        "joan-shapiro-beigh",
+        "john-roberts",
+        "jonah-gaster",
+        "joseph-retzer",
+        "joseph-matthes",
+        "joseph-a-lamanna",
+        "joseph-wall",
+        "jun-zhang",
+        "kali-murray",
+        "kanchan-chowdhury",
+        "karen-andeen",
+        "kate-rohit",
+        "keith-dookeran",
+        "kevin-trainor",
+        "kristof-kipp",
+        "laira-anne-stark",
+        "larry-zhiming-xu",
+        "laura-roehl",
+        "layth-alwan",
+        "lei-fan",
+        "lillian-campbell",
+        "linnea-laestadius",
+        "lisa-n-petrella",
+        "lu-he",
+        "lynne-knobloch-fedders",
+        "madhusudan-dey",
+        "majeed-hayat",
+        "margaret-kipp",
+        "maria-haigh",
+        "maria-goranova",
+        "maria-novotny",
+        "mark-barratt",
+        "matthew-petering",
+        "matthew-friedel",
+        "mehdi-maadooliat",
+        "mengyun-zhang",
+        "michael-nosonovsky",
+        "min-wu",
+        "min-sook-park",
+        "mohammad-habibur-rahman",
+        "mumin-cebe",
+        "n-kundan-kishor",
+        "nadiyah-johnson",
+        "nasim-yahyasoltani",
+        "naveen-bansal",
+        "nicholas-jolly",
+        "odai-khasawneh",
+        "pallav-routh",
+        "paul-roebber",
+        "paula-papanek",
+        "peter-dunn",
+        "peter-hinow",
+        "phoenix-do",
+        "praveen-madiraju",
+        "priya-deshpande",
+        "priya-nambisan",
+        "purush-papatla",
+        "rani-elhajjar",
+        "razia-azen",
+        "rebecca-neumann",
+        "richard-j-povinelli",
+        "sabirat-rubya",
+        "samantha-majhor",
+        "sanjoy-ghose",
+        "scott-rex",
+        "sergey-kravtsov",
+        "shana-ponelis",
+        "shengtong-han",
+        "somesh-roy",
+        "stephen-j-guastello",
+        "susan-mcroy",
+        "swapnil-tripathi",
+        "taly-gilat-schmidt",
+        "tanya-joosten",
+        "thomas-schwarz",
+        "thomas-holbrook",
+        "thomas-kaczmarek",
+        "tian-zhao",
+        "tony-gamble",
+        "vytaras-brazauskas",
+        "walter-bialkowski",
+        "wilkistar-otieno",
+        "woonsup-choi",
+        "xiangming-mu",
+        "xiaohan-yan",
+        "xin-luo",
+        "yuanyuan-april-song",
+        "zeyun-yu",
+        "zhen-zeng"
+      ]
+    },
+    "NSF": {
+      "count": 17,
+      "ids": [
+        "anthony-j-parolari",
+        "chelsea-cook",
+        "edward-blumenthal",
+        "edward-f-levitas",
+        "elaine-spiller",
+        "hyunkyoung-oh",
+        "jeb-willenbring",
+        "mark-schwartz",
+        "michael-zimmer",
+        "nate-lemoine",
+        "nathaniel-stern",
+        "patrick-mcnamara",
+        "rina-ghose",
+        "satish-puri",
+        "satya-aditya-akundi",
+        "suzanne-boyd",
+        "walter-mcdonald"
+      ]
+    },
+    "NIH": {
+      "count": 11,
+      "ids": [
+        "bing-yu",
+        "brooke-slavens",
+        "chelsea-cook",
+        "colleen-galambos",
+        "edward-blumenthal",
+        "elsbeth-kalenderian",
+        "hyunkyoung-oh",
+        "inga-wang",
+        "kristian-o-connor",
+        "nicholas-j-reiter",
+        "said-audi"
+      ]
+    },
+    "internal": {
+      "count": 7,
+      "ids": [
+        "bing-yu",
+        "colleen-galambos",
+        "hyunkyoung-oh",
+        "inga-wang",
+        "matthew-mleczko",
+        "suzanne-boyd",
+        "wan-chen-lee"
+      ]
+    },
+    "Other federal": {
+      "count": 2,
+      "ids": [
+        "anthony-j-parolari",
+        "chelsea-cook"
+      ]
+    },
+    "DoD": {
+      "count": 1,
+      "ids": [
+        "walter-mcdonald"
+      ]
+    },
+    "industry partner": {
+      "count": 1,
+      "ids": [
+        "michael-zimmer"
+      ]
+    }
+  },
+  "by_scrape_status": {
+    "ok": {
+      "count": 144,
+      "ids": [
+        "ai-bo",
+        "aki-roberts",
+        "aleksandra-j-snowden",
+        "alexander-dijo",
+        "alita-burmeister",
+        "amir-a-alwan",
+        "amit-bhatnagar",
+        "amol-mali",
+        "andrew-g-meyer",
+        "anne-clough",
+        "anthony-j-parolari",
+        "arjun-saha",
+        "avik-chakrabarti",
+        "ayesha-siddika-nipu",
+        "badar-al-lawati",
+        "bhagwant-sindhu",
+        "bin-wang",
+        "bing-yu",
+        "brooke-slavens",
+        "changshan-wu",
+        "chao-zhu",
+        "charles-franklin",
+        "chelsea-cook",
+        "cheng-han-yu",
+        "chris-marshall",
+        "colleen-galambos",
+        "cristinel-ababei",
+        "daniel-cirkovic",
+        "daniel-gervini",
+        "darren-wheelock",
+        "david-spade",
+        "david-witzling",
+        "debbie-perouli",
+        "derek-nazareth",
+        "dietmar-wolfram",
+        "dmitri-babikov",
+        "edward-blumenthal",
+        "edward-f-levitas",
+        "elaine-spiller",
+        "elsbeth-kalenderian",
+        "emily-latch",
+        "emily-cramer",
+        "erin-ruppel",
+        "ethan-schmick",
+        "gabriel-velez",
+        "gerry-canavan",
+        "henry-duah",
+        "hyunkyoung-oh",
+        "inga-wang",
+        "sheikh-iqbal-ahamed",
+        "itzi-lazkano",
+        "j-dietenberger",
+        "jacklynn-fitzgerald",
+        "jake-luo",
+        "jeanne-nicole-mellon-saint-laurent",
+        "jeb-willenbring",
+        "jenna-green",
+        "jeremy-lee",
+        "jim-pokrywczynski",
+        "joan-shapiro-beigh",
+        "john-roberts",
+        "jonah-gaster",
+        "joseph-retzer",
+        "joseph-matthes",
+        "joseph-a-lamanna",
+        "jun-zhang",
+        "kali-murray",
+        "kanchan-chowdhury",
+        "karen-andeen",
+        "kate-rohit",
+        "kristian-o-connor",
+        "kristof-kipp",
+        "larry-zhiming-xu",
+        "layth-alwan",
+        "linnea-laestadius",
+        "lisa-n-petrella",
+        "madhusudan-dey",
+        "majeed-hayat",
+        "margaret-kipp",
+        "maria-haigh",
+        "maria-goranova",
+        "maria-novotny",
+        "mark-barratt",
+        "mark-schwartz",
+        "matthew-petering",
+        "matthew-friedel",
+        "matthew-mleczko",
+        "mehdi-maadooliat",
+        "mengyun-zhang",
+        "michael-zimmer",
+        "michael-nosonovsky",
+        "min-wu",
+        "mohammad-habibur-rahman",
+        "n-kundan-kishor",
+        "nasim-yahyasoltani",
+        "nate-lemoine",
+        "nathaniel-stern",
+        "naveen-bansal",
+        "nicholas-jolly",
+        "nicholas-j-reiter",
+        "odai-khasawneh",
+        "pallav-routh",
+        "patrick-mcnamara",
+        "paul-roebber",
+        "paula-papanek",
+        "peter-dunn",
+        "peter-hinow",
+        "phoenix-do",
+        "praveen-madiraju",
+        "priya-deshpande",
+        "priya-nambisan",
+        "purush-papatla",
+        "rani-elhajjar",
+        "razia-azen",
+        "rebecca-neumann",
+        "richard-j-povinelli",
+        "rina-ghose",
+        "sabirat-rubya",
+        "said-audi",
+        "sanjoy-ghose",
+        "satish-puri",
+        "satya-aditya-akundi",
+        "scott-rex",
+        "sergey-kravtsov",
+        "shana-ponelis",
+        "shengtong-han",
+        "somesh-roy",
+        "stephen-j-guastello",
+        "susan-mcroy",
+        "suzanne-boyd",
+        "thomas-holbrook",
+        "tian-zhao",
+        "tony-gamble",
+        "vytaras-brazauskas",
+        "walter-bialkowski",
+        "walter-mcdonald",
+        "wan-chen-lee",
+        "wilkistar-otieno",
+        "woonsup-choi",
+        "xiangming-mu",
+        "xin-luo",
+        "yuanyuan-april-song",
+        "zeyun-yu",
+        "zhen-zeng"
+      ]
+    },
+    "http_error": {
+      "count": 18,
+      "ids": [
+        "chudamani-poudyal",
+        "david-krause",
+        "giorgo-sertsios",
+        "hunter-sandidge",
+        "jangsu-yoon",
+        "joseph-wall",
+        "keith-dookeran",
+        "kevin-trainor",
+        "laura-roehl",
+        "lei-fan",
+        "lillian-campbell",
+        "lu-he",
+        "lynne-knobloch-fedders",
+        "min-sook-park",
+        "samantha-majhor",
+        "tanya-joosten",
+        "thomas-schwarz",
+        "thomas-kaczmarek"
+      ]
+    },
+    "no_url": {
+      "count": 4,
+      "ids": [
+        "deepak-babu",
+        "jacob-rice",
+        "laira-anne-stark",
+        "mumin-cebe"
+      ]
+    },
+    "parsed_empty": {
+      "count": 4,
+      "ids": [
+        "clark-evans",
+        "nadiyah-johnson",
+        "taly-gilat-schmidt",
+        "xiaohan-yan"
+      ]
+    },
+    "redirected_away": {
+      "count": 1,
+      "ids": [
+        "swapnil-tripathi"
+      ]
+    }
+  },
+  "presets": {
+    "Ops/Supply Chain + AI": {
+      "count": 40,
+      "ids": [
+        "alexander-dijo",
+        "amir-a-alwan",
+        "amol-mali",
+        "ayesha-siddika-nipu",
+        "hunter-sandidge",
+        "hyunkyoung-oh",
+        "sheikh-iqbal-ahamed",
+        "jacob-rice",
+        "jeremy-lee",
+        "jun-zhang",
+        "kanchan-chowdhury",
+        "kate-rohit",
+        "laira-anne-stark",
+        "laura-roehl",
+        "layth-alwan",
+        "margaret-kipp",
+        "mark-barratt",
+        "matthew-petering",
+        "matthew-friedel",
+        "mengyun-zhang",
+        "michael-zimmer",
+        "mohammad-habibur-rahman",
+        "nadiyah-johnson",
+        "nasim-yahyasoltani",
+        "nathaniel-stern",
+        "pallav-routh",
+        "praveen-madiraju",
+        "rani-elhajjar",
+        "sabirat-rubya",
+        "satish-puri",
+        "satya-aditya-akundi",
+        "susan-mcroy",
+        "thomas-schwarz",
+        "thomas-kaczmarek",
+        "tian-zhao",
+        "walter-bialkowski",
+        "wilkistar-otieno",
+        "yuanyuan-april-song",
+        "zeyun-yu",
+        "zhen-zeng"
+      ],
+      "rule": {
+        "themes": [
+          "Operations & Supply Chain",
+          "AI/ML & NLP"
+        ],
+        "keywords": [
+          "supply chain",
+          "operations management",
+          "operations research",
+          "logistics",
+          "inventory",
+          "scheduling",
+          "queueing",
+          "manufacturing",
+          "production planning"
+        ]
+      }
+    }
+  }
+}

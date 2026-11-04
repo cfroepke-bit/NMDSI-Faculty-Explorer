@@ -1,0 +1,63 @@
+<!doctype html><meta charset="utf-8"><title>NMDSI dashboard UI tests</title>
+<!-- Open http://localhost:8000/dashboard/tests/ui-test.html to run. Your saved shortlist is restored afterwards. -->
+<pre id="o">running</pre>
+<iframe id="f" style="width:1300px;height:900px"></iframe>
+<script>
+const log = []; const ok = (c, m) => log.push((c ? "PASS " : "FAIL ") + m);
+const wait = ms => new Promise(r => setTimeout(r, ms));
+// Start from an empty shortlist; put the user's saved one back when done.
+const saved = [localStorage.getItem("nmdsi-shortlist"), localStorage.getItem("nmdsi-shortlist-notes")];
+localStorage.removeItem("nmdsi-shortlist"); localStorage.removeItem("nmdsi-shortlist-notes");
+window._restore = () => {
+  saved[0] ? localStorage.setItem("nmdsi-shortlist", saved[0]) : localStorage.removeItem("nmdsi-shortlist");
+  saved[1] ? localStorage.setItem("nmdsi-shortlist-notes", saved[1]) : localStorage.removeItem("nmdsi-shortlist-notes");
+};
+document.getElementById("f").onload = async () => {
+  const w = document.getElementById("f").contentWindow, d = w.document;
+  const errs = []; w.addEventListener("error", e => errs.push(e.message));
+  try {
+    await wait(1500);
+    const cards = d.querySelectorAll("#cards .card");
+    ok(cards.length > 5, `search "ai" shows ${cards.length} cards`);
+    ok(d.getElementById("related").textContent.includes("machine learning"), "related-terms hint mentions machine learning: " + d.getElementById("related").textContent.trim().slice(0, 90));
+    ok(d.querySelectorAll("#cards .why").length > 0, "cards show 'Matched:' reasons");
+    const first = cards[0].dataset.id;
+    cards[0].querySelector(".star").click(); await wait(100);
+    ok(w.eval("Shortlist").has(first), "star adds to shortlist");
+    ok(d.getElementById("shortCount").textContent === "1", "tab badge shows 1");
+    cards[1].querySelector(".card-open").click(); await wait(300);
+    ok(d.getElementById("drawer").classList.contains("show"), "card click opens profile drawer");
+    d.querySelector("#drawer [data-star]").click(); await wait(100);
+    ok(w.eval("Shortlist").ids().length === 2, "drawer button adds second person");
+    d.getElementById("closeDrawer").click(); await wait(300);
+    d.querySelector('button[data-tab="match"]').click(); await wait(200);
+    ok(d.body.dataset.tab === "match", "switch to Find an Expert tab");
+    d.getElementById("matchText").value = "forecast demand in the supply chain with machine learning";
+    d.querySelector("#matchForm .go").click(); await wait(400);
+    const rows = d.querySelectorAll(".m-row");
+    ok(rows.length >= 5, `matcher returns ${rows.length} rows; top: ${rows[0]?.querySelector("strong")?.textContent}`);
+    ok(!!d.getElementById("teamAdd"), "suggested team shown: " + [...d.querySelectorAll(".team-card strong")].map(x => x.textContent).join(", "));
+    d.getElementById("teamAdd")?.click(); await wait(100);
+    ok(w.eval("Shortlist").ids().length >= 3, `team added; shortlist now ${w.eval("Shortlist").ids().length}`);
+    d.getElementById("matchUni").value = "Marquette University"; d.getElementById("matchUni").dispatchEvent(new Event("change")); await wait(300);
+    ok([...d.querySelectorAll(".m-row .uni")].every(u => u.textContent === "Marquette"), "university filter limits to Marquette");
+    d.querySelector('button[data-tab="network"]').click(); await wait(1500);
+    const nodes = d.querySelectorAll(".node");
+    ok(nodes.length > 100, `map draws ${nodes.length} nodes, ${d.querySelectorAll(".link").length} links`);
+    nodes[0].dispatchEvent(new MouseEvent("click", { bubbles: true })); await wait(200);
+    ok(d.querySelectorAll(".node.dim").length > 0 && d.getElementById("netSide").textContent.includes("research connection"), "clicking a node focuses it and lists connections");
+    d.getElementById("netCross").click(); await wait(100);
+    ok(d.querySelectorAll(".link.hidden").length > 0, "cross-campus-only toggle hides same-campus links");
+    d.querySelector('button[data-tab="shortlist"]').click(); await wait(200);
+    ok(d.querySelectorAll(".s-row").length === w.eval("Shortlist").ids().length, `shortlist tab lists ${d.querySelectorAll(".s-row").length}`);
+    const note = d.querySelector(".note"); note.value = "Call next week"; note.dispatchEvent(new Event("input")); 
+    ok(JSON.parse(w.localStorage.getItem("nmdsi-shortlist-notes"))[note.dataset.note] === "Call next week", "notes are saved");
+    d.querySelector('button[data-tab="search"]').click(); await wait(300);
+    ok(d.querySelectorAll("#cards .star.on").length >= 1, "stars stay filled after switching back");
+    window._restore();
+  } catch (e) { log.push("EXCEPTION " + e.stack); }
+  log.push("page errors: " + (errs.join(" | ") || "none"));
+  document.getElementById("o").textContent = log.join("\n");
+};
+document.getElementById("f").src = "../index.html?q=ai";
+</script>

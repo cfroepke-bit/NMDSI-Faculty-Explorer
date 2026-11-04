@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Not published: source PDF and saved copies of university web pages
+nmdsi_directory.pdf
+cache/
+scrape_run.txt
+
+# Local / OS
+.vercel/
+.DS_Store
+Thumbs.db
+desktop.ini
