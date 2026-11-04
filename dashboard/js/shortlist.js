@@ -53,9 +53,9 @@ const Shortlist = (() => {
     }
     el.innerHTML = list.map((p, i) => {
       const url = safeUrl(p.profile_url);
-      return `<article class="s-row" style="--tc:${themeColor(p.theme)}">
+      return `<article class="s-row">
         <div class="s-num">${i + 1}</div>
-        <div class="avatar" aria-hidden="true">${esc(initials(p))}</div>
+        ${avatar(p)}
         <div class="s-main">
           <div class="s-head">
             <button class="linkish" data-open="${esc(p.id)}"><strong>${esc(p.name)}</strong></button>

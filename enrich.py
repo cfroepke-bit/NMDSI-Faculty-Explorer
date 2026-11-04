@@ -15,6 +15,7 @@ DIRECTORY = Path("data/directory_raw.json")
 SCRAPED = Path("data/scraped.json")
 OUT = Path("faculty.json")
 GROUPS = Path("data/groupings.json")
+PHOTOS = Path("data/photos.json")  # from photos.py; optional
 
 
 def keyword_regex(keyword):
@@ -209,7 +210,7 @@ def score_theme(research_text, org_text):
     return best, "inferred", evidence[best]
 
 
-def enrich(person, scraped):
+def enrich(person, scraped, photos=None):
     entry = scraped.get(person["id"], {})
     parsed = entry.get("parsed") or {}
     profile_research = [l for l in parsed.get("research", []) if not NOT_RESEARCH.search(l)]
@@ -247,6 +248,7 @@ def enrich(person, scraped):
         "college_source": college_source,
         "department": department,
         "profile_url": person["profile_url"],
+        "photo_url": (photos or {}).get(person["id"]),
         "directory_research": person["directory_research"],
         "research_summary": summary,
         "research_summary_source": summary_source,
@@ -300,7 +302,8 @@ def build_groupings(records):
 def main():
     people = json.loads(DIRECTORY.read_text(encoding="utf-8"))
     scraped = json.loads(SCRAPED.read_text(encoding="utf-8")) if SCRAPED.exists() else {}
-    records = [enrich(p, scraped) for p in people]
+    photos = json.loads(PHOTOS.read_text(encoding="utf-8")) if PHOTOS.exists() else {}
+    records = [enrich(p, scraped, photos) for p in people]
     OUT.write_text(json.dumps(records, indent=2, ensure_ascii=False), encoding="utf-8")
     groupings = build_groupings(records)
     GROUPS.write_text(json.dumps(groupings, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -311,6 +314,7 @@ def main():
     print("Industry:", {k: v["count"] for k, v in groupings["by_industry"].items()})
     print("Funding:", {k: v["count"] for k, v in groupings["by_funding"].items()})
     print(f"Classes listed: {sum(1 for r in records if r['classes'])} people")
+    print(f"Photos: {sum(1 for r in records if r['photo_url'])} people")
     print(f"Research summary from profile: {sum(1 for r in records if r['research_summary_source'] == 'profile')}")
     print(f"Preset '{rules.PRESET_NAME}': {groupings['presets'][rules.PRESET_NAME]['count']} people")
     few = [r["id"] for r in records if len(r["research_tags"]) < rules.MIN_TAGS]

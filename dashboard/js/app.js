@@ -8,6 +8,11 @@ const UNI_LOGO = { "UW-Milwaukee": "assets/uwm-logo.svg", "Marquette University"
 const uniBadge = u => `<span class="uni ${UNI_CLASS[u] || "other"}">${esc(UNI_SHORT[u] || u)}</span>`;
 const initials = p => p.name.replace(/\b(Dr|Jr|Sr|II|III)\b\.?/g, "").split(/\s+/).filter(Boolean)
   .filter((w, i, a) => i === 0 || i === a.length - 1).map(w => w[0]).join("").toUpperCase();
+// Headshot from the university's own site (loaded only when visible); initials show if it's missing or fails.
+const avatar = (p, tag = "div") => p.photo_url
+  ? `<${tag} class="avatar has-photo" aria-hidden="true">${esc(initials(p))}<img src="${esc(p.photo_url)}" alt="" loading="lazy"
+      decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.classList.remove('has-photo');this.remove()"></${tag}>`
+  : `<${tag} class="avatar" aria-hidden="true">${esc(initials(p))}</${tag}>`;
 const FUNDING_LABEL = { unknown: "Not stated", internal: "Internal / university", "industry partner": "Industry partner" };
 const STATUS_LABEL = { ok: "Profile read", http_error: "Profile link broken", no_url: "No profile link",
                        parsed_empty: "Profile had no details", redirected_away: "Profile link redirects elsewhere" };
@@ -212,7 +217,7 @@ function card(p, { why } = {}) {
     <button class="card-open" data-open="${esc(p.id)}" aria-haspopup="dialog" aria-label="Open profile: ${esc(p.name)}"></button>
     ${starBtn(p)}
     <div class="top">
-      <div class="avatar" aria-hidden="true">${esc(initials(p))}</div>
+      ${avatar(p)}
       <div>
         <div class="name">${esc(p.name)}${p.credentials ? ` <span class="cred">${esc(p.credentials)}</span>` : ""}</div>
         <div class="role">${esc(p.title || "Title not listed")}</div>
@@ -345,7 +350,7 @@ function openDrawer(id) {
   const d = document.getElementById("drawer");
   d.innerHTML = `
     <div class="d-head" style="--tc:${themeColor(p.theme)}">
-      <div class="avatar" aria-hidden="true" style="--tc:${themeColor(p.theme)}">${esc(initials(p))}</div>
+      ${avatar(p)}
       <div class="who">
         <h2 id="d-name">${esc(p.name)}${p.credentials ? ` <span class="cred">${esc(p.credentials)}</span>` : ""}</h2>
         <div class="role">${esc(p.title || "Title not listed")}</div>

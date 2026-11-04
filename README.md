@@ -27,6 +27,7 @@ project root to rerun `extract.py`) and `cache/` (saved profile pages; `scrape.p
 |---|---|---|
 | 1. Extract the PDF | `python extract.py` | `data/directory_raw.json` + a parse report |
 | 2. Scrape profiles | `python scrape.py --limit 5` (trial), then `python scrape.py` | `cache/<id>.html`, `scrape_log.csv`, `data/scraped.json` |
+| 2b. Find headshots | `python photos.py` (reads the saved pages; no new fetching) | `data/photos.json` |
 | 3–4. Enrich + group | `python enrich.py` | `faculty.json`, `data/groupings.json` + a report |
 | 5. Dashboard | `python -m http.server 8000`, then open <http://localhost:8000/dashboard/> | |
 
@@ -41,7 +42,7 @@ Four tabs, all running in the browser (no server-side code, no paid APIs):
 |---|---|---|
 | **Search** | Opens on a search page; results appear after 2+ characters, a theme/quick view, or "See all faculty". Smart search ranks by topic relevance and adds related terms ("fraud" also matches "forensic accounting"; "AI" also matches "machine learning"). Each card shows why it matched. Untick "Include related terms" for exact matching. | `js/app.js` |
 | **Find an Expert** | Paste a project description in plain language. Faculty are ranked with a match strength and reasons (matching tags, classes they teach, words in their research). A **suggested team** of up to 3 people covers the most of the request, preferring both universities. | `js/match.js` |
-| **Collaboration Map** | Network of faculty linked by shared research, grouped by theme. Gold lines connect UWM and Marquette. Click anyone to see their connections; the side panel lists the top cross-campus opportunities. | `js/network.js` |
+| **Collaboration Map** | Live, draggable network of faculty linked by shared research, grouped by theme. Gold lines connect UWM and Marquette. Drag anyone to pull their connections along, click to see who they link to; the side panel lists the top cross-campus opportunities. | `js/network.js` |
 | **Shortlist** | Star people anywhere. Add notes, export a spreadsheet (CSV), print or save a one-page PDF, or copy a share link. Saved in the browser. | `js/shortlist.js` |
 
 How matching works (`js/textindex.js`): text is split into stemmed words and two-word phrases, weighted by field
@@ -54,7 +55,13 @@ Shareable links: a search (`/dashboard/?q=supply%20chain`), an expert query (`/d
 a shortlist (`/dashboard/?tab=shortlist&ids=joseph-wall,layth-alwan`), or a profile (`/dashboard/#satya-aditya-akundi`).
 
 Tests: with the server running, open <http://localhost:8000/dashboard/tests/ui-test.html>. It clicks through every tab
-and prints PASS/FAIL for 18 checks. Your own shortlist is restored afterwards.
+and prints PASS/FAIL for 23 checks. Your own shortlist is restored afterwards.
+
+Faculty photos: `photos.py` picks the headshot on each saved profile page. It requires a name match in the image
+file or description (or UWM's marked featured image) and skips logos, placeholders, banners and lab-group photos.
+It found 142 of the 144 readable profiles; everyone else shows initials. The dashboard loads each photo from the
+university's own server (lazy-loaded, no referrer), so no photos are copied into this repo. If a university removes a
+photo, the initials come back automatically.
 
 Libraries load from a CDN: Fuse.js (typo-tolerant name search) and d3 (the map), so the map needs an internet connection.
 

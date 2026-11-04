@@ -325,13 +325,19 @@
   .team p { margin: 2px 0 12px; }
   .team-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
   .team-card { display: flex; gap: 10px; text-align: left; align-items: flex-start; border: 1px solid var(--border); background: var(--bg);
-               border-radius: 12px; padding: 12px; cursor: pointer; border-left: 4px solid var(--tc); }
-  .team-card:hover { box-shadow: var(--shadow-hover); }
+               border-radius: 12px; padding: 12px; cursor: pointer; }
+  .team-card:hover { box-shadow: var(--shadow-hover); border-color: var(--border-strong); }
   .tc-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
   .m-list-title { font-size: 13px; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); margin: 0 0 10px; }
   .m-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
   .m-row { display: grid; grid-template-columns: 28px 42px 1fr 150px; gap: 12px; align-items: start; background: var(--surface);
-           border: 1px solid var(--border); border-left: 4px solid var(--tc); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); }
+           border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow);
+           position: relative; transition: border-color .12s, box-shadow .12s; }
+  .m-row:hover { border-color: var(--border-strong); box-shadow: var(--shadow-hover); }
+  .m-row:hover .m-name { color: var(--link); text-decoration: underline; }
+  .row-open { position: absolute; inset: 0; border: 0; background: none; cursor: pointer; border-radius: 12px; z-index: 1; }
+  .row-open:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .m-row .star { position: relative; z-index: 2; }
   .rank { font-size: 20px; font-weight: 800; color: var(--accent); text-align: center; padding-top: 6px; }
   .m-main { min-width: 0; }
   .s-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; font-size: 15px; }
@@ -368,12 +374,14 @@
   .net-canvas { margin-top: 10px; border-radius: 10px; background:
                 radial-gradient(circle at 50% 45%, var(--surface) 0%, var(--bg) 100%); overflow: hidden; }
   .net-canvas svg { display: block; width: 100%; height: auto; max-height: calc(100vh - 260px); cursor: grab; }
-  .link { stroke: var(--border-strong); stroke-opacity: .7; }
-  .link.cross { stroke: var(--gold); stroke-opacity: .85; }
-  .link.dim { stroke-opacity: .07; }
-  .link.hot { stroke-opacity: 1; }
+  .link { stroke: var(--muted); stroke-opacity: .22; stroke-linecap: round; transition: stroke-opacity .2s; }
+  .link.cross { stroke: var(--gold); stroke-opacity: .5; }
+  .link.dim { stroke-opacity: .04; }
+  .link.hot { stroke-opacity: .95; }
+  .node { cursor: grab; }
+  .node:active { cursor: grabbing; }
   .link.hidden { display: none; }
-  .node circle { stroke-width: 2.2; cursor: pointer; transition: opacity .15s; }
+  .node circle { stroke-width: 2; transition: opacity .15s; }
   .node:focus { outline: none; }
   .node:focus circle, .node.sel circle { stroke-width: 4; }
   .node.dim { opacity: .15; }
@@ -418,7 +426,7 @@
   .short-actions .chip.ghost { border-color: transparent; }
   #shortList { display: flex; flex-direction: column; gap: 12px; }
   .s-row { display: grid; grid-template-columns: 24px 42px 1fr auto; gap: 12px; background: var(--surface); border: 1px solid var(--border);
-           border-left: 4px solid var(--tc); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); align-items: start; }
+           border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); align-items: start; }
   .s-num { font-weight: 800; color: var(--accent); padding-top: 9px; text-align: center; }
   .s-main { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
   .s-side { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
@@ -467,3 +475,12 @@
   }
   .region { font-size: 13px; font-weight: 800; text-anchor: middle; pointer-events: none; opacity: .85;
             paint-order: stroke; stroke: var(--surface); stroke-width: 4px; letter-spacing: .02em; }
+
+  /* Faculty photos: cover the initials circle; initials remain underneath as the fallback */
+  .avatar { position: relative; overflow: hidden; }
+  .avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;
+                background: var(--surface-2); }
+  .avatar.has-photo { background: var(--surface-2); color: transparent; box-shadow: 0 0 0 1px var(--border); }
+  .d-head .avatar.has-photo { box-shadow: none; }
+  .tip-photo { float: left; width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: 50% 20%;
+               margin: 0 8px 2px 0; }

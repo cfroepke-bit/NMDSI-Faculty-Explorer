@@ -54,8 +54,8 @@ const Match = (() => {
           <button class="chip primary" id="teamAdd">☆ Add team to shortlist</button>
         </div>
         <div class="team-row">${team.map(r => `
-          <button class="team-card" data-open="${esc(r.p.id)}" style="--tc:${themeColor(r.p.theme)}">
-            <span class="avatar" aria-hidden="true">${esc(initials(r.p))}</span>
+          <button class="team-card" data-open="${esc(r.p.id)}" aria-haspopup="dialog">
+            ${avatar(r.p, "span")}
             <span class="tc-body"><strong>${esc(r.p.name)}</strong>
               <span class="small muted">${uniBadge(r.p.university)}${esc(r.p.department || r.p.college || "")}</span>
               <span class="small">Brings: ${esc(lookingFor(text, r.brings).join(", ") || "related expertise")}</span></span>
@@ -93,11 +93,12 @@ const Match = (() => {
       ...w.classes.map(c => `<span class="reason class-r">Teaches ${esc(c.code ? c.code + " " : "")}${esc(c.title)}</span>`),
       ...w.words.map(x => `<span class="reason word-r">mentions “${esc(x)}”</span>`),
     ];
-    return `<li class="m-row" style="--tc:${themeColor(p.theme)}">
+    return `<li class="m-row">
+      <button class="row-open" data-open="${esc(p.id)}" aria-haspopup="dialog" aria-label="Open profile: ${esc(p.name)}"></button>
       <div class="rank">${i + 1}</div>
-      <div class="avatar" aria-hidden="true">${esc(initials(p))}</div>
+      ${avatar(p)}
       <div class="m-main">
-        <div class="s-head"><button class="linkish" data-open="${esc(p.id)}"><strong>${esc(p.name)}</strong></button>
+        <div class="s-head"><strong class="m-name">${esc(p.name)}</strong>
           ${p.credentials ? `<span class="cred">${esc(p.credentials)}</span>` : ""}${uniBadge(p.university)}</div>
         <div class="muted small">${esc(p.title || "")}${p.title ? " · " : ""}${esc(orgLine(p))}</div>
         <div class="reasons"><span class="why-label">Why:</span>${reasons.join("") || `<span class="muted small">Related research text</span>`}</div>

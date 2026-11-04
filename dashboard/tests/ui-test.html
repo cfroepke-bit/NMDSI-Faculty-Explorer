@@ -21,6 +21,11 @@ document.getElementById("f").onload = async () => {
     ok(cards.length > 5, `search "ai" shows ${cards.length} cards`);
     ok(d.getElementById("related").textContent.includes("machine learning"), "related-terms hint mentions machine learning: " + d.getElementById("related").textContent.trim().slice(0, 90));
     ok(d.querySelectorAll("#cards .why").length > 0, "cards show 'Matched:' reasons");
+    ok(d.querySelectorAll("#cards .avatar.has-photo img").length > 10, `faculty photos shown on ${d.querySelectorAll("#cards .avatar.has-photo").length} cards`);
+    const probe = d.querySelector("#cards .avatar.has-photo img"); const holder = probe.parentNode;
+    probe.src = "https://invalid.example/missing.jpg"; await wait(1500);
+    ok(!holder.classList.contains("has-photo") && !holder.querySelector("img") && holder.textContent.trim().length >= 2,
+       "a broken photo falls back to initials");
     const first = cards[0].dataset.id;
     cards[0].querySelector(".star").click(); await wait(100);
     ok(w.eval("Shortlist").has(first), "star adds to shortlist");
@@ -37,6 +42,13 @@ document.getElementById("f").onload = async () => {
     const rows = d.querySelectorAll(".m-row");
     ok(rows.length >= 5, `matcher returns ${rows.length} rows; top: ${rows[0]?.querySelector("strong")?.textContent}`);
     ok(!!d.getElementById("teamAdd"), "suggested team shown: " + [...d.querySelectorAll(".team-card strong")].map(x => x.textContent).join(", "));
+    rows[2].querySelector(".row-open").click(); await wait(300);
+    ok(d.getElementById("drawer").classList.contains("show") && d.getElementById("d-name").textContent.includes(rows[2].querySelector(".m-name").textContent),
+       "clicking a numbered match opens that person's profile");
+    d.getElementById("closeDrawer").click(); await wait(300);
+    rows[0].querySelector(".star").click(); await wait(100);
+    ok(!d.getElementById("drawer").classList.contains("show"), "star on a match row doesn't open the profile");
+    rows[0].querySelector(".star").click(); await wait(100);
     d.getElementById("teamAdd")?.click(); await wait(100);
     ok(w.eval("Shortlist").ids().length >= 3, `team added; shortlist now ${w.eval("Shortlist").ids().length}`);
     d.getElementById("matchUni").value = "Marquette University"; d.getElementById("matchUni").dispatchEvent(new Event("change")); await wait(300);
@@ -44,6 +56,10 @@ document.getElementById("f").onload = async () => {
     d.querySelector('button[data-tab="network"]').click(); await wait(1500);
     const nodes = d.querySelectorAll(".node");
     ok(nodes.length > 100, `map draws ${nodes.length} nodes, ${d.querySelectorAll(".link").length} links`);
+    // Reheat the layout and confirm positions actually change (the map is live, not a fixed picture).
+    // The layout is a live simulation: Reset gives it energy again so people re-settle.
+    d.getElementById("netReset").click(); await wait(50);
+    ok(w.eval("Network").energy() > 0.3, `map layout is live (simulation energy after reset: ${w.eval("Network").energy().toFixed(2)})`);
     nodes[0].dispatchEvent(new MouseEvent("click", { bubbles: true })); await wait(200);
     ok(d.querySelectorAll(".node.dim").length > 0 && d.getElementById("netSide").textContent.includes("research connection"), "clicking a node focuses it and lists connections");
     d.getElementById("netCross").click(); await wait(100);
