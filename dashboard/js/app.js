@@ -366,7 +366,9 @@ function awardList(list, max = 8) {
   const row = a => `<li class="award">
       <span class="ag ${esc(a.agency.toLowerCase())}">${esc(a.agency)}</span>
       <span class="aw-main"><a href="${esc(safeUrl(a.url) || "#")}" target="_blank" rel="noopener noreferrer">${esc(a.title)}</a>
-        <span class="small muted">${[a.role, awardYears(a), money(a.amount), a.directorate || a.program].filter(Boolean).map(esc).join(" · ")}</span></span>
+        <span class="small muted">${[a.role, awardYears(a), money(a.amount), a.directorate || a.program].filter(Boolean).map(esc).join(" · ")}${
+          a.publications && safeUrl(a.publications_url) ? ` · <a href="${esc(a.publications_url)}" target="_blank" rel="noopener noreferrer">${a.publications} paper${a.publications > 1 ? "s" : ""} ↗</a>` : ""}</span>
+        ${a.abstract ? `<details class="aw-abs"><summary>Abstract</summary><p class="small">${esc(a.abstract)}</p></details>` : ""}</span>
     </li>`;
   const more = list.length - max;
   return `<ul class="awards">${list.slice(0, max).map(row).join("")}</ul>${more > 0 ? `<p class="small muted">+ ${more} more on record</p>` : ""}`;

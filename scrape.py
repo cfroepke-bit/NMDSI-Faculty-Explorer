@@ -60,6 +60,15 @@ URL_OVERRIDES = {
     "mark-schwartz": "https://uwm.edu/geography/people/schwartz-mark/",  # list's link 404s
     "kristian-o-connor": "https://uwm.edu/publichealth/directory/oconnor-phd-kristian/",  # list's page blocked by robots.txt
     "elsbeth-kalenderian": "https://www.marquette.edu/leadership/ulc-kalenderian.php",  # list: whole dental directory
+    # List links that are broken, missing or login-only (MCW's Faculty Collaboration Database); found Nov 2026.
+    "ravit-boger": "https://www.mcw.edu/departments/pediatrics/divisions/infectious-diseases/people/ravit-boger-md",
+    "jon-ellison": "https://www.mcw.edu/departments/urology/people/jonathan-s-ellison-md",
+    "denise-uyar": "https://obgyn.mcw.edu/people/uyar/",
+    "gary-mouradian": "https://www.mcw.edu/departments/physiology/people/gary-mouradian",  # list: lab page
+    "suhas-sreehari": "https://www.mcw.edu/news/mcw-data-science-institute-welcomes-dr-suhas-sreehari",  # new hire, no profile yet
+    "john-ladisa": "https://www.marquette.edu/engineering/facilities/compuational-cardiovascular-lab.php",  # MCW page 404s
+    "hunter-sandidge": "https://today.marquette.edu/2025/04/hunter-sandidge-announced-as-new-co-director-of-northwestern-mutual-data-science-institute/",
+    "zhiyang-zhou": "https://sites.uwm.edu/zhou67/",  # directory page is a contact card
 }
 MSOE_PROFILE = re.compile(r"^https?://(www\.)?msoe\.edu/directory/profile/([^/?#]+)/?$", re.I)
 

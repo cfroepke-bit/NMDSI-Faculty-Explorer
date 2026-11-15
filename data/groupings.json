@@ -3899,7 +3899,7 @@
       ]
     },
     "Education": {
-      "count": 94,
+      "count": 95,
       "ids": [
         "aki-roberts",
         "satya-aditya-akundi",
@@ -3923,6 +3923,7 @@
         "min-wu",
         "zhen-zeng",
         "sudeshna-roy",
+        "john-ladisa",
         "colleen-galambos",
         "amol-mali",
         "joan-shapiro-beigh",
@@ -4249,7 +4250,7 @@
   },
   "by_funding": {
     "unknown": {
-      "count": 538,
+      "count": 536,
       "ids": [
         "amir-a-alwan",
         "aki-roberts",
@@ -4287,7 +4288,6 @@
         "maria-goranova",
         "lu-he",
         "thomas-holbrook",
-        "hunter-sandidge",
         "jacklynn-fitzgerald",
         "jacob-rice",
         "jake-luo",
@@ -4383,7 +4383,6 @@
         "george-mackinnon",
         "yiyang-wang",
         "fabrizio-marinelli",
-        "denise-uyar",
         "constance-shumba",
         "maharaj-singh",
         "suhas-sreehari",
@@ -4898,9 +4897,10 @@
       ]
     },
     "internal": {
-      "count": 7,
+      "count": 8,
       "ids": [
         "bing-yu",
+        "hunter-sandidge",
         "suzanne-boyd",
         "wan-chen-lee",
         "larry-zhiming-xu",
@@ -4910,21 +4910,23 @@
       ]
     },
     "foundation": {
-      "count": 5,
+      "count": 6,
       "ids": [
         "guangbo-bill-chen",
         "brock-polnaszek",
         "sara-sabbagh",
+        "denise-uyar",
         "sarah-lerret",
         "ruth-barratt"
       ]
     },
     "industry partner": {
-      "count": 5,
+      "count": 6,
       "ids": [
         "michael-zimmer",
         "janet-rader",
         "kimberly-gecsi",
+        "denise-uyar",
         "icaro-dos-santos",
         "kristin-shebesta"
       ]
@@ -4952,7 +4954,7 @@
   },
   "by_scrape_status": {
     "ok": {
-      "count": 471,
+      "count": 479,
       "ids": [
         "amir-a-alwan",
         "ai-bo",
@@ -5003,6 +5005,7 @@
         "maria-goranova",
         "peter-hinow",
         "thomas-holbrook",
+        "hunter-sandidge",
         "jacklynn-fitzgerald",
         "jake-luo",
         "jim-pokrywczynski",
@@ -5087,6 +5090,7 @@
         "m-mahmun-hossain",
         "yasamin-hadavi",
         "maria-novotny",
+        "zhiyang-zhou",
         "elizabeth-liedhegner",
         "hyerin-bak",
         "roshan-d-souza",
@@ -5095,6 +5099,7 @@
         "danilo-tolusso",
         "sudeshna-roy",
         "lanqing-du",
+        "john-ladisa",
         "rodney-sparapani",
         "ziqing-liu",
         "michael-zimmermann",
@@ -5127,8 +5132,10 @@
         "sara-sabbagh",
         "kimberly-gecsi",
         "vytaras-brazauskas",
+        "ravit-boger",
         "george-mackinnon",
         "carlos-figueroa-castro",
+        "gary-mouradian",
         "yiyang-wang",
         "fabrizio-marinelli",
         "nicholas-semenkovich",
@@ -5136,9 +5143,12 @@
         "gordon-gauchat",
         "istvan-lauko",
         "kwang-woo-ahn",
+        "jon-ellison",
+        "denise-uyar",
         "michael-martens",
         "constance-shumba",
         "maharaj-singh",
+        "suhas-sreehari",
         "kevin-terry",
         "victor-jin",
         "anthony-peressini",
@@ -5428,11 +5438,9 @@
       ]
     },
     "no_url": {
-      "count": 131,
+      "count": 129,
       "ids": [
         "amy-burger",
-        "denise-uyar",
-        "suhas-sreehari",
         "gul-afshan",
         "mahmoud-algazzar",
         "bayan-alqam",
@@ -5564,39 +5572,33 @@
       ]
     },
     "parsed_empty": {
-      "count": 16,
+      "count": 12,
       "ids": [
         "clark-evans",
         "jacob-rice",
         "nadiyah-johnson",
         "taly-gilat-schmidt",
-        "zhiyang-zhou",
         "ramani-ramchandran",
         "xiaohan-yan",
         "patrick-kennelly",
         "anai-kothari",
         "katie-carlton",
-        "ravit-boger",
-        "gary-mouradian",
         "ashima-singh",
-        "jon-ellison",
         "angela-steineck",
         "martha-kliebenstein"
       ]
     },
     "http_error": {
-      "count": 11,
+      "count": 9,
       "ids": [
         "david-krause",
         "lu-he",
-        "hunter-sandidge",
         "lillian-campbell",
         "lynne-knobloch-fedders",
         "mumin-cebe",
         "giorgo-sertsios",
         "tanya-joosten",
         "swapnil-tripathi",
-        "john-ladisa",
         "joseph-wall"
       ]
     },

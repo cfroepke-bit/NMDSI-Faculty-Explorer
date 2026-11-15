@@ -34,7 +34,7 @@ FIRST_YEAR = 2010
 
 NSF_URL = "https://api.nsf.gov/services/v1/awards.json"
 NSF_FIELDS = ("id,title,piFirstName,piLastName,coPDPI,startDate,expDate,fundsObligatedAmt,estimatedTotalAmt,"
-              "awardeeName,fundProgramName,dirAbbr")
+              "awardeeName,fundProgramName,dirAbbr,abstractText")
 NSF_AWARDEES = {  # NSF awardee name -> our university name
     "Marquette University": "Marquette University",
     "University of Wisconsin-Milwaukee": "UW-Milwaukee",
@@ -50,7 +50,25 @@ NIH_ORGS = {  # RePORTER organization name -> our university name
     "MILWAUKEE SCHOOL OF ENGINEERING": "Milwaukee School of Engineering",
 }
 NIH_FIELDS = ["ApplId", "CoreProjectNum", "ProjectTitle", "PrincipalInvestigators", "FiscalYear", "AwardAmount",
-              "ActivityCode", "Organization", "AgencyIcAdmin", "ProjectStartDate", "ProjectEndDate"]
+              "ActivityCode", "Organization", "AgencyIcAdmin", "ProjectStartDate", "ProjectEndDate", "AbstractText"]
+NIH_PUBS_URL = "https://api.reporter.nih.gov/v2/publications/search"
+ABSTRACT_MAX = 900  # characters kept from each abstract: enough for search and a preview
+
+
+def nih_publications(cores, refresh):
+    """{core project number: [PMID, ...]} for papers NIH links to each project (/v2/publications/search)."""
+    pmids, cores = {}, sorted(cores)
+    for start in range(0, len(cores), 50):
+        batch, offset = cores[start:start + 50], 0
+        while True:
+            data = get_json("POST", NIH_PUBS_URL, f"nihpubs_{start}_{offset}.json", refresh,
+                            json_body={"criteria": {"core_project_nums": batch}, "offset": offset, "limit": 500})
+            for r in data.get("results", []):
+                pmids.setdefault(r["coreproject"], []).append(r["pmid"])
+            offset += 500
+            if offset >= data["meta"]["total"] or offset >= 9500:
+                break
+    return pmids
 # A few common nicknames, so "Tony" on an award matches "Anthony" on the list.
 NICKNAMES = {"tony": "anthony", "mike": "michael", "nick": "nicholas", "bill": "william", "bob": "robert",
              "jim": "james", "joe": "joseph", "dan": "daniel", "dave": "david", "tom": "thomas", "steve": "stephen",
@@ -145,6 +163,8 @@ def nsf_awards(people, refresh):
                             "start": iso(a.get("startDate")), "end": iso(a.get("expDate")),
                             "amount": int(a.get("estimatedTotalAmt") or a.get("fundsObligatedAmt") or 0) or None,
                             "role": role, "institution": university,
+                            "abstract": (lambda t: t[:ABSTRACT_MAX] + ("…" if len(t) > ABSTRACT_MAX else "") if t else None)(
+                                " ".join((a.get("abstractText") or "").split())),
                             "url": f"https://www.nsf.gov/awardsearch/showAward?AWD_ID={a['id']}",
                         })
             offset += 25
@@ -169,6 +189,7 @@ def nih_awards(records, people, refresh):
             if offset >= data["meta"]["total"]:
                 break
     found = {}
+    pubs = nih_publications(projects.keys(), refresh)
     for core, years in projects.items():
         years.sort(key=lambda p: p["fiscal_year"])
         latest = years[-1]
@@ -187,6 +208,14 @@ def nih_awards(records, people, refresh):
             "institution": university,
             "url": f"https://reporter.nih.gov/project-details/{latest['appl_id']}",
         }
+        abstract = " ".join((latest.get("abstract_text") or "").split())
+        if abstract:
+            award["abstract"] = abstract[:ABSTRACT_MAX] + ("…" if len(abstract) > ABSTRACT_MAX else "")
+        papers = sorted(set(pubs.get(core, [])), reverse=True)
+        if papers:
+            award["publications"] = len(papers)
+            # PubMed lists comma-separated PMIDs as a result set (newest 200)
+            award["publications_url"] = "https://pubmed.ncbi.nlm.nih.gov/?term=" + ",".join(map(str, papers[:200]))
         for pi in latest.get("principal_investigators", []):
             pid = people.find(university, pi.get("first_name", ""), pi.get("last_name", ""))
             if pid:

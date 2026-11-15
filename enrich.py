@@ -18,7 +18,8 @@ OUT = Path("faculty.json")
 GROUPS = Path("data/groupings.json")
 PHOTOS = Path("data/photos.json")  # from photos.py; optional
 AWARDS = Path("data/awards.json")  # from funding.py (NSF + NIH); optional
-AWARD_FIELDS = ("agency", "id", "title", "program", "directorate", "activity", "start", "end", "fiscal_years",
+AWARD_FIELDS = ("agency", "id", "title", "program", "directorate", "activity", "start", "end", "fiscal_years", "abstract",
+                "publications", "publications_url",
                 "amount", "role", "url")
 
 
@@ -286,7 +287,8 @@ def enrich(person, scraped, photos=None, awards=None):
         "theme": theme,
         "theme_source": theme_source,
         "theme_evidence": theme_evidence,
-        "bio": " ".join(parsed.get("bio", []))[:1500] or None,
+        # a "bio" of a few words is page chrome ("View Profile"), not a biography
+        "bio": (lambda b: b[:1500] if len(b) >= 60 else None)(" ".join(parsed.get("bio", []))),
         "scrape_status": entry.get("scrape_status", "not_attempted"),
         "last_scraped": entry.get("last_scraped"),
     }

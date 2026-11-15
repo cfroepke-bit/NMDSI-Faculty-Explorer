@@ -53,6 +53,7 @@
     [p => p.classes.map(c => c.title).join(" ; "), 1.5],
     [p => p.department, 1],
     [p => (p.awards || []).map(a => a.title).join(" ; "), 1.2],   // NSF/NIH award titles: areas already funded
+    [p => (p.awards || []).map(a => a.abstract || "").join(" ; "), 0.4],   // award abstracts: long, so weighted low
   ];
 
   class TextIndex {

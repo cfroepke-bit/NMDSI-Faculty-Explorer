@@ -149,6 +149,8 @@ const Network = (() => {
         ${b ? `<span class="muted">↔</span> <button class="linkish" data-net="${b.i}">${esc(b.p.name)}</button> ${uniBadge(b.p.university)}` : ""}
       </div>
       <div class="small muted">Shared: ${esc(l.topics.join(", ") || "related research")}</div>
+      ${l.cross && l.topics.length ? `<button class="chip pair-fund" data-fund="${esc(l.source.p.id)},${esc(l.target.p.id)}"
+        data-topics="${esc(l.topics.join(", "))}" title="Find federal grants and a ROADS plan for this pair">Plan a grant together →</button>` : ""}
     </li>`;
   }
 
@@ -182,6 +184,7 @@ const Network = (() => {
         ${opts.allMsoe ? "" : `<p class="small muted">Showing NMDSI affiliates. Tick “Add other MSOE faculty” to include MSOE's full directory.</p>`}`;
     }
     el.querySelectorAll("[data-net]").forEach(b => b.onclick = () => focusNode(nodes.find(d => d.i === +b.dataset.net)));
+    el.querySelectorAll("[data-fund]").forEach(b => b.onclick = () => Match.runTeam(b.dataset.fund.split(","), b.dataset.topics));
   }
 
   function focusNode(d) {

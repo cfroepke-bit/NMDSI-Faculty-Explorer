@@ -27,7 +27,14 @@ const Match = (() => {
   const input = () => document.getElementById("matchText");
   function focus() { if (!last) setTimeout(() => input().focus(), 50); }
 
-  function run() {
+  // From the Collaboration Map: plan funding for a chosen pair, with their shared topics as the request.
+  function runTeam(ids, text) {
+    setTab("match");
+    input().value = text;
+    run({ fixed: ids });
+  }
+
+  function run({ fixed = null } = {}) {
     const text = input().value.trim();
     const out = document.getElementById("matchResults");
     if (text.length < 3) { out.innerHTML = `<p class="muted">Describe what you're working on in a sentence or two.</p>`; return; }
@@ -42,8 +49,7 @@ const Match = (() => {
     }
     const top = pool[0].score;
     const list = pool.slice(0, 10);
-    const team = suggestTeam(pool.slice(0, 15), concepts, conceptWeight);
-    const conceptLabel = c => ix.display(c);
+    const team = fixed ? fixedTeam(fixed, results, concepts) : suggestTeam(pool.slice(0, 15), concepts, conceptWeight);
 
     out.innerHTML = `
       <div class="m-understood">
@@ -53,7 +59,7 @@ const Match = (() => {
       </div>
       ${team.length > 1 ? `<section class="team">
         <div class="team-head">
-          <div><h3>Suggested team</h3><p class="muted small">Together they cover ${esc(team.coveredLabel)}${team.nUnis > 1 ? ` · spans ${team.nUnis} institutions` : ""}.</p></div>
+          <div><h3>${fixed ? "Your pair from the Collaboration Map" : "Suggested team"}</h3><p class="muted small">Together they cover ${esc(team.coveredLabel)}${team.nUnis > 1 ? ` · spans ${team.nUnis} institutions` : ""}.</p></div>
           <button class="chip primary" id="teamAdd">☆ Add team to shortlist</button>
         </div>
         <div class="team-row">${team.map(r => `
@@ -66,10 +72,12 @@ const Match = (() => {
           </button>`).join("")}</div>
       </section>` : ""}
       <div id="fundBox"></div>
+      <div id="grantSearch"></div>
       <h3 class="m-list-title">Top matches</h3>
       <ol class="m-list">${list.map((r, i) => matchRow(r, i, top)).join("")}</ol>`;
     document.getElementById("teamAdd")?.addEventListener("click", () => Shortlist.addMany(team.map(r => r.p.id)));
     Plan.render(document.getElementById("fundBox"), text, team.length > 1 ? team : list.slice(0, 1));
+    GrantSearch.render(document.getElementById("grantSearch"), searchTerms(text, concepts, conceptWeight));
   }
 
   // Has this person been federally funded for the part of the request they bring? If not, the request is a
@@ -129,6 +137,24 @@ const Match = (() => {
     </li>`;
   }
 
+  // The request's most distinctive ideas for an NSF/NIH keyword search: known phrases kept whole
+  // ("machine learning"), rarest first.
+  function searchTerms(text, concepts, cWeight) {
+    const weight = ph => Math.max(0, ...textTerms(ph).filter(k => !k.includes(" ")).map(k => cWeight.get(k) ?? ix.idf(k)));
+    return lookingFor(text, concepts).filter(t => t.length >= 3).sort((a, b) => weight(b) - weight(a)).slice(0, 3);
+  }
+
+  // A team chosen elsewhere (the map): what each person brings is the request ideas their text covers.
+  function fixedTeam(ids, results, concepts) {
+    const team = ids.map(id => results.find(r => r.p.id === id) || { p: byId[id], covered: [], score: 0 }).filter(r => r.p);
+    const covered = new Set();
+    team.forEach(r => { r.brings = r.covered.filter(c => concepts.includes(c) && !covered.has(c)); r.covered.forEach(c => covered.add(c)); });
+    const got = concepts.filter(c => covered.has(c));
+    team.coveredLabel = got.length === concepts.length ? "every part of the request" : lookingFor(last, got).join(", ") || "the shared topics";
+    team.nUnis = new Set(team.map(r => r.p.university)).size;
+    return team;
+  }
+
   // Greedy pick of up to 3 people that cover the most (rarity-weighted) request concepts,
   // with a small bonus for adding another institution.
   function suggestTeam(cands, concepts, cWeight) {
@@ -154,5 +180,5 @@ const Match = (() => {
     return chosen;
   }
 
-  return { init, focus, run };
+  return { init, focus, run, runTeam };
 })();

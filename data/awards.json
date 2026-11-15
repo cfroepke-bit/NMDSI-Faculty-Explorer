@@ -1,6 +1,6 @@
 {
  "meta": {
-  "retrieved": "2026-11-13",
+  "retrieved": "2026-11-15",
   "first_year": 2010,
   "sources": {
    "NSF": "https://api.nsf.gov/services/v1/awards.json",
@@ -8,21 +8,6 @@
   }
  },
  "awards": {
-  "majeed-hayat": [
-   {
-    "agency": "NSF",
-    "id": "2553935",
-    "title": "Collaborative Research: Configurable Smart Spectral Imager for Data-compression and Classification",
-    "program": "CSCS: Circuits and Systems for",
-    "directorate": "ENG",
-    "start": "2026-10-01",
-    "end": "2029-09-30",
-    "amount": 288964,
-    "role": "PI",
-    "institution": "Marquette University",
-    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2553935"
-   }
-  ],
   "praveen-madiraju": [
    {
     "agency": "NSF",
@@ -35,6 +20,7 @@
     "amount": 462108,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "The Data Science Across Disciplines Research Experiences for Undergraduates Site addresses the national scarcity of a skilled workforce capable of applying computational and data science techniques to complex, real-world problems. By immersing undergraduate students in an intensive research and mentoring environment, the program bridges the gap between classroom theory and interdisciplinary practice. The project’s novelties are its diverse range of research applications, stretching from healthcare to the societal impacts of artificial intelligence, and the Site’s long-standing recruitment network that connects students from small colleges with limited research resources to high-impact projects. The project's broader significance and importance are found in its commitment to strengthening the scientific workforce and its ability to empower students to solve problems in fields as varied as…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2548034"
    },
    {
@@ -48,7 +34,24 @@
     "amount": 404683,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "It is now well established that there is a critical need for researchers who can think creatively to solve problems in data science in various interdisciplinary fields. Further, there is a scarcity of workforce and opportunities to train the next generation of researchers to tackle the problems in data science. To address the scarcity, this Data Science Across Disciplines Research Experiences for Undergraduates (DSAD-REU) Site will immerse undergraduate students in an interdisciplinary research-intensive training and mentoring program. The impacts of this site will extend beyond the project duration in a number of ways. First, students will be exposed to a variety of data science research projects that are bound to stimulate passion for data science research and help them seek either industry careers and/or graduate degrees in this area. Second, the site students will serve as peer mento…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1950826"
+   }
+  ],
+  "majeed-hayat": [
+   {
+    "agency": "NSF",
+    "id": "2553935",
+    "title": "Collaborative Research: Configurable Smart Spectral Imager for Data-compression and Classification",
+    "program": "CSCS: Circuits and Systems for",
+    "directorate": "ENG",
+    "start": "2026-10-01",
+    "end": "2029-09-30",
+    "amount": 288964,
+    "role": "PI",
+    "institution": "Marquette University",
+    "abstract": "Continuous increases in the spectral bands and pixel count of hyperspectral imaging sensors have led to prohibitively large amounts of data produced by these sensors that must be transmitted, stored, and analyzed in the cloud or on powerful local servers. This, in turn, has resulted in increased communication traffic, latencies and power consumption. As such, there is strong interest in novel software-hardware co-design approaches to (1) sense only the spectral bands that are relevant to a given application and (2) perform most of the sensor data processing and analysis as close as possible to the sensor array. These requirements will render a device that transmits only outcomes (e.g., occurrences of events of interest), thereby significantly reducing communication traffic and power consumption while improving speed, privacy and performance. Such a solution would offer a much better trad…",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2553935"
    }
   ],
   "cristinel-ababei": [
@@ -63,6 +66,7 @@
     "amount": 189426,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Modern scientific enterprises generate enormous volumes of data, as many scientific fields have transitioned from being data poor to data rich recently. To make sense of this data, the scientific enterprise relies on new computational methods and computing infrastructure to realize new insights. In other words, the computational methods used for large scale data analysis are now tools of the scientific community as they are central to the knowledge generation process. This project aims to address a major limitation in large scale data analysis by designing and implementing novel methods that employ computational storage devices, which combine the storage inside of a computer with a configurable processor that resides on the storage device itself. This project will yield new insights into the efficient use of these computational storage devices and will demonstrate how they can be used to…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2504717"
    },
    {
@@ -76,6 +80,7 @@
     "amount": 376717,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "There has never been a higher urgency for addressing environmental problems, many caused by human activity and emerging climate change. Thus, the main theme of this Research Experiences for Undergraduates (REU) Site project is the development of a holistic approach for water and air quality monitoring. Participating faculty from three different departments, Electrical and Computer Engineering, Mechanical Engineering, and Civil Construction and Environmental Engineering will work with students to contribute to active research on underwater and aerial drones, water and air quality sensors, embedded algorithms for sensor fusion, navigation and control, sensor technologies, wireless communications, 3D printing and mechanical design of drone hulls, and environmental engineering. By recruiting students nationally and from those at Marquette and local community colleges - with a particular focu…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1950082"
    },
    {
@@ -89,6 +94,7 @@
     "amount": 166650,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "The building sector is the largest energy consumer in the world, and in the United States it accounts for more than 40 percent of the total energy consumption and greenhouse gas emissions. Therefore, it is economically, socially, and environmentally important to reduce the energy consumption of this sector. The goal of this collaborative proposal is to develop novel machine learning based algorithms to address the problem of energy optimization at the building and district levels. These algorithms are integrated within a simulation framework that combines user behavior with the collaboration between buildings equipped with photovoltaic arrays, energy storage systems, and smart grid meters. The proposed research is expected to lay the foundation for robust multi-objective optimization for next generation district level distribution systems. The proposed research is closely integrated with…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1936494"
    },
    {
@@ -102,6 +108,7 @@
     "amount": 251068,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Future embedded systems will contain tens and projected hundreds of heterogeneous cores. The increased complexity and heterogeneity, however, come with new design and optimization challenges including increased design uncertainties due to process, voltage, and temperature variations and poor reliability due to elevated rates of faults. Therefore, it is imperative to rethink existing embedded system design approaches in order to directly consider these issues during the design and optimization processes. To address these challenges, this research develops a new design method to address the increased uncertainties and to improve reliability and performance of future complex embedded systems. This new design method is developed with both general probabilistic and non-probabilistic uncertainty models. These uncertainty models are used to develop a multi-objective computer-aided design automa…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1524909"
    },
    {
@@ -115,6 +122,7 @@
     "amount": 173316,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Future integrated circuits will contain tens, hundreds, or even thousand cores per chip. However, technology downscaling that can make this possible may also make the underlying hardware less reliable due to an increasing number of defects and wear out mechanisms. Therefore, one of the major problems facing the design of multiprocessor systems-on-chip is reliability. Because either the cores or the network-on-chip (used for communication between the cores) can become a reliability bottleneck for these systems, it is imperative that the reliability be addressed in a unified manner. To address the reliability challenge, this research develops a novel unified theoretical lifetime reliability modeling framework. This framework is based on efficient Monte Carlo methods to treat multiprocessor systems-on-chip as a combination of computation and communication units. The goal of this research is…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1360439"
    }
   ],
@@ -130,6 +138,7 @@
     "amount": 1167919,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "To provide faculty more time to devote to research activities, the Marquette University Post-Award Optimization for Strategic Transformation (MU-POST) project focuses on process improvements that reduce the administrative burden associated with sponsored award management. Small and mid-sized universities often lack robust research support and service infrastructure. With defined resources and effective processes supporting them, faculty can dedicate more time to their research, complete milestones on schedule, collaborate with colleagues, mentor students, and increase their publication rate. Reducing administrative burden through process improvements lessens the organizational complexities that come with having a grant and ultimately fosters growth in the nation’s research capacity. MU-POST develops strategies, processes, and models that can be utilized by small to mid-size institutions …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2426787"
    }
   ],
@@ -145,6 +154,7 @@
     "amount": 79418,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Researchers working in computer, information, and data science regularly extract huge amounts of data from online platforms like YouTube, Facebook, and Reddit to study people and their activities. We call this pervasive data—rich information generated about people through their digital interactions with social and mobile media, wearables, and more. Pervasive data spans multiple domains of people’s lives and is often gathered through digital interactions hidden from end users’ full awareness. Notably, the collection and use of pervasive data often does not fall into the category of “human subjects research,” meaning it is often not overseen by university ethics review boards. This leaves researchers on their own to make decisions about appropriate data collection, storage, sharing, and analysis practices. At the same time, many researchers have not received much—if any—training on how to …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2419005"
    },
    {
@@ -158,6 +168,7 @@
     "amount": 145615,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Internet-of-Things (IoT) devices are increasingly used in shared spaces (e.g., homes, apartments, schools, hospitals, workplaces, and cities), turning these spaces into smart environments. Different stakeholders in these environments, including both direct users of smart devices and non-users such as visitors or bystanders, have unique privacy needs and expectations. Although prior research shows evidence of conflicts among stakeholders, there has been less investigation regarding how stakeholders resolve such conflicts and negotiate their privacy options. This interdisciplinary project is investigating different stakeholders’ privacy negotiation behaviors in smart environments by designing, developing, and deploying an interactive system to collect people’s real-world privacy negotiation behaviors. The project is contributing solutions that help people manage and negotiate their privacy…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2232654"
    },
    {
@@ -171,6 +182,7 @@
     "amount": 276945,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "This project promotes the progress of science and technology development by providing the empirical knowledge needed to advance fair, just computational research. Big, pervasive data about people enables fundamentally new computational research, but also raises new ethical challenges, such as accounting for distributed harms at scale, protecting against the risks of unpredictable future uses of data, and ensuring fairness in automated decision-making. National debates have erupted over online experiments, leaked datasets, and the definition of \"public\" data. Investigators struggle to advise students on engaging vulnerable populations or navigating terms of service. Regulators debate how to translate traditional ethical principles into workable policy guidance. Research addressing these challenges has hit roadblocks caused by a lack of empirical knowledge about emerging norms and expectat…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1947754"
    }
   ],
@@ -186,6 +198,7 @@
     "amount": 797576,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Non-technical Abstract: One of the long-thought applications of quantum computers is to simulate quantum systems, such as molecules and materials, at the atomistic level. Several algorithms exist for the calculations of molecular electronic structure (called quantum chemistry) using either gate-based quantum computers with only a few tens of qubits, such as Sycamore, IBM Q-machines, or using quantum annealers with a larger number of qubits, such as the D-Wave systems. Another essential component of chemical modeling is the propagation of the equations of motion for constituent atoms in time and space (e.g., along the reaction path), called molecular dynamics. Molecular dynamics simulations play a pivotal role not only in guiding and analyzing experiments, but also as an interdisciplinary computational tool capable of reaching far beyond experimental conditions in a variety of research to…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2328489"
    },
    {
@@ -199,6 +212,7 @@
     "amount": 398179,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Dmitri Babikov of Marquette University is supported by an award from the Chemical Theory, Models and Computational Methods program in the Division of Chemistry to predict the collisional quenching rates of several molecules important for astrochemical applications. These data, obtained for the relevant broad range of temperatures, will be delivered to the scientific community at large, and especially to astronomers, by means of publishing these data in the database BASECOL. Being incorporated into the radiation transfer codes presently in use in the astrophysics community, this information will enable astronomers to quantify the abundance of these molecules in pre-stellar cores and proto-stellar jets. The standard quantum calculations of rotationally inelastic collisions become prohibitively demanding at higher collision energies and for heavier molecules, such as the interstellar comple…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2102465"
    },
    {
@@ -212,6 +226,7 @@
     "amount": 404106,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "This project is to improve understanding of the fundamental details for the reaction forming ozone from a combination of molecular oxygen and atomic oxygen and how it effects the distribution of heavy isotopes of oxygen (17O and 18O). The rate and distribution of products in this reaction impact ozone's chemistry, production, lifetime and loss in the atmosphere, and the effect ozone has on global climate change. The team will calculate the influence of the Coriolis effect on energies and lifetimes of symmetric and asymmetric ozone molecules and to predict the energies of quantized rotational vibrational states in symmetric and asymmetric ozone molecules. Finally, this theory will be applied to isotope effects in other similar molecules. These calculations and insight into the isotopic distribution or the mass-independent fractionation (MIF) will be used to understand chemical processes o…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1920523"
    },
    {
@@ -225,6 +240,7 @@
     "amount": 38188,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "This project will examine how energy is processed by collisional energy transfer through rotational and vibrational states of water and other small organic molecules. These fundamental processes, which are at the core of many chemical phenomena, are very poorly understood and are not amenable to simple experimental analysis. In collaboration with a leading computational expert at the University of Pierre and Marie Curie in Paris, France, the researchers will conduct benchmark calculations for these processes. The data from this study has the potential to have a profound impact on the fields of astrophysics and astrochemistry. Understanding energy transfer in a molecule as important as water will provide a clearer understanding of how energy is processed, in both terrestrial and astrophysical environments. This study has the potential to yield insight on the early history of the Earth?s a…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1338885"
    },
    {
@@ -238,6 +254,7 @@
     "amount": 305139,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "This project will investigate the mass-independent fractionation (MIF) effect that leads to enrichment of stratospheric ozone in heavy isotopes of oxygen (17O and 18O). The theory for treating this ozone forming reaction will be further developed using a mixed quantum/classical method to characterize the collisional energy transfer without using reduced-dimension approximations. The use of several atmospheric bath gases will be studied as quenchers for the reaction. The MIF of oxygen in the ozone-forming reaction has been shown to disappear when a very efficient molecular quencher, such as SF6, is used. The emphasis of the project will be on moving from the analytic model to a master-equation treatment of the kinetics. The project will also include the first-ever quantum dynamic calculations for the formation of ozone on surfaces. The mass-independent fractionation (MIF) of O3 has a sign…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1252486"
    },
    {
@@ -251,6 +268,7 @@
     "amount": 480482,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Dmitri Babikov of Marquette University and Martin Gruebele of the University of Illinois, Urbana-Champaign are supported by an award from the Theory, Models and Computational Methods program of the Chemistry division to develop computational methodologies to study the problem of encoding information in vibrational wave packets by entangling polyatomic vibrations. The PI's goal is to assess whether molecules or molecular ions could help quantum information processing. Some of the theoretical predictions are tested using experiments carried out on jets of neutral molecules at low temperature. Although these test experiments do not correspond to true quantum computing, they allow achieving and utilizing a high degree of coherence. They also give rise to important information on how the coherent vibrational wave packets evolve as well as the effect of various sources of dephasing. Theory and…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1012075"
    }
   ],
@@ -266,6 +284,7 @@
     "amount": 440000,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Understanding how species interactions affect biological diversity has long been of interest to ecologists. Ecological theory and observations have shown that negative interactions between adult trees and seedlings of the same species stabilize populations, prevent local extinction, and maintain biological diversity. Alternatively, adult trees can increase the growth and survival of younger seedlings of the same species, particularly in stressful environments, which in turn can lead to lower levels of biological diversity. However, the role of pathogens and mutualists in mediating these interactions and giving rise to variation in plant diversity across environmental gradients remains unknown. This research funds a collaboration between plant and fungal population and community ecologists to uncover the role of positive and negative above and below ground plant-microbial interactions in …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2310100"
    },
    {
@@ -279,6 +298,7 @@
     "amount": 222051,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "The Authentic Research Experience for Teachers at NSF’s Long Term Ecological Research sites (ARET@LTER) project engages high-school teachers in conducting field and laboratory research focused on the impact of emerging environmental stressors such as floods, droughts, and heat waves, on local biodiversity across diverse ecosystems. Pairs of teachers will be recruited from schools with large populations of students from marginalized groups in science, technology, engineering, and math (STEM) and stationed at each of three LTER research locations. Over an 18-month period, pairs of selected teachers will work with faculty and graduate students to conduct research and compare their experiences with colleagues stationed at other LTER sites through virtual meetings and chats. This cohort approach will allow teachers to support and learn from one another. The three included LTER sites span dive…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2147136"
    },
    {
@@ -292,6 +312,7 @@
     "amount": 99471,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "To conserve plant diversity, scientists must first understand how individuals and species affect their neighbors. There are many processes that drive these neighborly interactions and they are related to each other in confusing ways. This award will support a series of workshops with the goal helping scientists understand one particularly important process that maintains plant diversity. When plants of the same type grow too close together, many of them die from shared disease or intense competition. Those deaths create opportunities for plants of different types to move in, enhancing diversity. In short, this process prevents one species from growing everywhere and taking over everything. Although this may seem like common sense, scientists disagree a lot about how to measure it and what it really means for diversity. This award will bring many of those scientists together to figure out…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2024903"
    }
   ],
@@ -307,6 +328,7 @@
     "amount": 16000,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "This conference proposal requests funds to support student participation in the IEEE International Conference on Digital Health (ICDH), scheduled for July 2-8, 2023, in Chicago. ICDH brings together leading researchers, community leaders and visionaries from academia and industry, end-users, and healthcare professionals, in the area of digital health to share their research, practical experience, and visions of the future of sustainable health and social care transformations. The funds will be used to provide travel support for eight students, cover registration fees for 30 students, and prizes for a student research project competition. This support will serve both societal goals around broadening participation, enrich the intellectual diversity of the conference, improve dissemination of the latest results around digital health to a wider population, and further the training of the nex…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2313255"
    },
    {
@@ -320,6 +342,7 @@
     "amount": 12968,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "This proposal provides support for students, mentors, speakers, and postdoctoral attendees for professional development activities in conjunction with the IEEE International Conference on Digital Health (ICDH). ICDH and its associated activities will take place virtually, between September 5 and 10, 2021. The funds will be used to fund about 40 students’ registration fees, research competition prizes, and small stipends for faculty mentors, distinguished speakers, and postdoctoral scholars, with the goal of providing high-quality mentoring experiences and broadening participation in the conference to include more members of groups historically underrepresented in STEM fields. Doing this will serve both societal goals around broadening participation, enrich the intellectual diversity of the conference, improve dissemination of the latest results around digital health to a wider population…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2135031"
    },
    {
@@ -338,6 +361,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/9746774",
+    "abstract": "PROJECT SUMMARY/ABSTRACT In Bangladesh, social-cultural-financial constraints and a scarcity of mental health care practitioners has deprived families raising children with Autism Spectrum Disorder (ASD) from regular monitoring, care, and support. However, the overwhelming adoption (~80%) of mobile phones in Bangladesh in recent years has created an opportunity to improve the existing practice of care using affordable mobile applications. We propose to design, build, deploy, and study the impact of mCARE, a mobile application that will introduce Experience Sampling Method (ESM) (an established and effective method of monitoring the progress of mental health) to the existing practice by allowing the caregivers to routinely report the behavioral progress of children with ASD, and work as an evidence-based and data-driven remote behavioral monitoring platform for the care practitioners. The…",
+    "publications": 3,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=34725409,33984830,33791439",
     "role": "PI"
    }
   ],
@@ -353,6 +379,7 @@
     "amount": 753407,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Animals, whether behaviorally or physiologically, manage daily and seasonal environmental fluctuations, such as temperature changes, by using receptors on their bodies. For social animals, individuals often work together in a group to manage these fluctuations much more effectively, such as through huddling, yet little is known about exactly how animals accomplish this. Honeybees, for example, are an excellent model system to study social temperature regulation because they engage in a cooling behavior called fanning, in which a group of bees fan their wings to circulate air in the colony. If they do not cool effectively, the colony can die. This project will identify the mechanisms that honeybees use to sense environmental fluctuations, how their brains change in response to this information, how they communicate this information to each other, and how entire colonies regulate temperatu…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2212640"
    }
   ],
@@ -373,6 +400,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/11009982",
+    "abstract": "Functional genomic tools, such as CRISPR/cas genome editing, are critical for investigating the biology of genes and have transformed our understanding of genotype-to-phenotype relationships. However, the limited number of species with genome modification methods presents a major bottleneck in implementing comprehensive, comparative studies of gene function. For instance, squamates (lizard and snakes) include more than 11,000 described species and comprise 40% of all amniote species. Yet basic gene editing methods are only available in a single species, the brown anole lizard (Anolis sagrei). Here, we propose to: 1) establish CRISPR/cas gene editing in a second lizard group, the geckos; 2) develop advanced gene editing methods for the introduction of precise sequence substitutions, insertions, and deletions in lizards (in both Anolis and geckos); and 3) disseminate lizard gene editing te…",
+    "publications": 5,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42449365,40744728,40744727,39576177,33818124",
     "role": "PI"
    },
    {
@@ -386,6 +416,7 @@
     "amount": 1165299,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Sex chromosomes play an important role in the embryonic development of many animal species by controlling an individual's sex. However, the sex chromosomes of most animals remain unidentified limiting our understanding of broad patterns of sex chromosome evolution. This project will advance the study of sex chromosome evolution by investigating lizards and snakes. These reptiles have a variety of sex-determining systems with numerous evolutionary transitions among them. Each of these independently derived systems can act as a replicate evolutionary “experiment” to test the general principles and processes that govern sex chromosome evolution. This research will fill gaps in our knowledge by identifying sex chromosomes in these under-studied reptiles and then use these data to characterize some general properties of sex chromosome evolution. The research will train a postdoctoral research…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2151318"
    },
    {
@@ -399,6 +430,7 @@
     "amount": 343493,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Traits of species that evolved to serve one function but were later modified by evolution to serve a new function are known as exaptations. While there are many examples of such traits, the process by which they evolve is still poorly understood. This project will advance our understanding of how evolution reshapes the genetic blueprint of species traits to create new, novel innovations. Traits associated with gliding and flying, like feathers, are some of the most notable examples of exaptations. Unfortunately, most gliding species are already highly specialized, making it difficult to study the process by which exaptation has occurred. Geckos, which are the focus of this research project, are an exception. Geckos have evolved gliding structures multiple times from flaps of skin used in camouflage and there are multiple species that together represent the complete transition from genera…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1657662"
    }
   ],
@@ -414,6 +446,7 @@
     "amount": 173184,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "This award is funded in whole or in part under the American Rescue Plan Act of 2021 (Public Law 117-2). Modern image processing relies heavily on pixel representations of images. However, in the context of computational imaging, working with pixel representations requires making approximations which may bias the image-estimation process and therefore negatively impact image quality as a result. This project seeks to overcome these limitations through a new type of image representation based on neural networks that is more compatible with standard computational imaging models. The main research aims are to develop a theory quantifying the expected accuracy of computational imaging techniques using these neural-network image representations, and to derive efficient estimation algorithms applicable to practical high-resolution imaging problems. This research has foreseeable applications in …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2153371"
    }
   ],
@@ -429,6 +462,7 @@
     "amount": 549699,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "This award is funded in whole or in part under the American Rescue Plan Act of 2021 (Public Law 117-2). Soot, a carbonaceous particulate matter formed during incomplete combustion, has significant adverse effects on public health and welfare and is an important forcing agent in climate change. To accurately understand and mitigate the effects of soot, we need to understand all the processes related to soot formation and growth - from the inception of soot at an atomic level (aka atomic scale) to its maturation in real-world combustion systems at the device level (aka device scale). Unfortunately, such detailed multiscale modeling remains a daunting task. This leads to a significant gap of knowledge and significant uncertainty in the prediction and control of the emission of soot and its effects on the climate and public health. This project will create a framework of models to combine sm…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2144290"
    },
    {
@@ -442,6 +476,7 @@
     "amount": 174951,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Combustion has been an important source of energy for ages and will continue to be so for considerable future. With the help of high-performance computing (HPC), predictive and accurate combustion simulations have a tremendous potential to emerge as a cost-effective and reliable design, assessment, and decision-making tool for practical systems (e.g., gas turbines, internal combustion engines, furnaces, etc.). Detailed predictive modeling of combustion system requires, among other things, detailed and accurate modeling of thermal radiation. However, models for thermal radiation used in combustion simulations are usually over-simplified. The main bottlenecks in using detailed radiation model are its high computational cost and poor parallel efficiency in HPC. This project explores several novel ideas to increase efficiency and robustness of a high-fidelity radiation solver in HPC combusti…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1756005"
    }
   ],
@@ -457,6 +492,7 @@
     "amount": 860782,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "This award is funded in part under the American Rescue Plan Act of 2021 (Public Law 117-2) For more than 100 years we have known that cosmic rays constantly bombard our atmosphere and affect our daily lives on Earth. Cosmic rays are thought to be produced in the far reaches of the universe in some of the most violent observed astrophysical processes. Yet key information regarding the processes of cosmic ray creation, acceleration, and propagation through the universe is lacking. However, candidate theoretical models have been developed that make testable predictions about cosmic ray parameters that are observable at Earth. To test these models, precise and accurate experimental measurements of the individual elemental spectra of cosmic rays are needed from a single observatory across a wide range in energy. This project seeks to advance knowledge of the energy-dependent cosmic ray compos…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2146511"
    },
    {
@@ -470,6 +506,7 @@
     "amount": 125000,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Cosmic rays constantly bombard the atmosphere, yet key information regarding the processes of cosmic ray creation, acceleration, and propagation is lacking. However, candidate theoretical models have been developed to make testable predictions about cosmic ray parameters that are observable at Earth. In order to test these models, precise experimental measurements of multiple elemental spectra of cosmic rays are needed from a single experiment across the full energy range. Using the IceCube Neutrino Observatory (ICNO), the IceCube group at Marquette University will provide the cosmic ray community with the first measurement of the elemental spectra from four distinct mass groups from the 'knee' to the 'ankle' in the cosmic ray energy spectrum using six years of IceCube data, new post-LHC simulations, novel methods for event selection, reduced systematic errors, new software algorithms, a…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1806942"
    }
   ],
@@ -485,6 +522,7 @@
     "amount": 100000,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Increasingly, mathematical modeling of complex scientific systems plays a crucial role both in understanding and in making predictions about these systems. To understand the effects of different model assumptions and parameter values, one might need millions of computational simulations to fully probe a system's behavior. This computational burden is compounded by the fact that many complex systems are modeled not by just one computational model or algorithm, but rather by sets of sub-models and codes that need to interact with each other. This project aims to develop efficient and flexible approximations to such coupled computational models, to take the computational bottleneck out of the mathematical modeling-based scientific discovery process. The research will focus on a prototype coupled model of fluid flow and mechanical deformation that can be adapted to model both hydraulic fract…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2053872"
    },
    {
@@ -498,6 +536,7 @@
     "amount": 39490,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "Better prediction of natural hazards could save lives and mitigate destruction of property. This conference will address the question of uncertainty in coupled mathematical models of physical systems and the impact of this uncertainty on hazard prediction. It will provide a venue to introduce young geoscientists, computational mathematicians, and statisticians to each other and to senior researchers. It will identify specific problems of interest and new collaborations focused around the challenges of coupled hazard models. Uncertainty analysis in mathematical models of physical systems is still in development. Only recently has the effect of uncertainty been incorporated into hazard predictions. However, most hazards are the consequences of a cascade of effects. For example, rain weakens soil on a fire-scorched hillside, which causes a landslide that can harm people and damage property.…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1850742"
    },
    {
@@ -511,6 +550,7 @@
     "amount": 80000,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "In many natural hazard scenarios, precursory information becomes available before an event. Responding to an impending hazard means that time is limited; analysis and decision-making must proceed on an accelerated timetable. This project develops methodology for responding to signals from a variety of data sources that have been interpreted as suggesting that a volcanic eruption is threatened. Prior research has attempted to elucidate how physical processes predict an eruption. For example, seismic signals, gas emissions, and tilt data have all been implicated as volcanic eruption precursors. But none of these signals have been shown to make robust predictions. This project undertakes a different approach, developing methods to integrate precursor data, decide on the likely evolution of eruption scenarios, and rapidly build simulation studies and statistical emulators, to provide timely …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1821338"
    },
    {
@@ -524,6 +564,7 @@
     "amount": 100000,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "The Oso, Washingon landslide of 2014, which resulted in 43 fatalities, and the ash plumes from the Eyjafjallajökull (Iceland) eruption of 2010, which shut down air travel in Europe, are examples of rare and catastrophic geophysical events. Their rare nature makes such events nearly impossible to forecast, if forecasts are based only on previous observations. To capture rare events, researchers must rely on complex physical and mathematical models that often require significant computational resources to exercise. Furthermore, events like these may be best described by a series of different models of different phenomena at different scales. For example, a researcher may need to combine a model of rainfall, a model of slope failure, and a model of sliding debris to create on overall model for a landslide event. The main objective of this research is the development of efficient statistical…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1622467"
    },
    {
@@ -537,6 +578,7 @@
     "amount": 73602,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "The investigators propose specific methodological advances in three areas of statistical science. Many conventional statistical methods break down for massive data sets because they do not scale well--- the amount of computational effort or memory increases as a power or even exponentially with problem size. One area is that of statistical emulation of the output of computer simulation models. Here the investigators propose to generate adaptive subdesigns automatically, carefully selecting and using only the small subset of the data that bears on each specific computational goal; and to develop what they call \"parallel partial emulation\" in which emulation is performed simultaneously in parallel with some model inputs kept at a range of fixed values. A second area is that of multiple scale stochastic models, exploiting infinitely-divisible distributions for some model features to permit …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1228265"
    }
   ],
@@ -552,6 +594,7 @@
     "amount": 189361,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "The novel coronavirus SARS-CoV-2 is responsible for the global pandemic of COVID-19. Disinfection use to kill SARS-CoV-2 on surfaces and for handwashing has increased dramatically in response to the pandemic. A large number of disinfectants have been approved for usage as SARS-CoV-2 disinfectants, many of which contain quaternary ammonium compounds (QACs). QACs will inevitably be sent to wastewater treatment plants and some will end up in receiving waters. The effect of these disinfection chemicals on the operation of wastewater treatment plants and receiving waters is largely unknown. These compounds may also contribute to the spread of antibiotic resistance microorganisms, an issue of global health importance. The goal of this project is to address these major gaps in our knowledge on QACs to provide information to help limit any environmental impact. The goal will be achieved by asses…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2051336"
    },
    {
@@ -565,6 +608,7 @@
     "amount": 216302,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "The spread of antibiotic resistance threatens public health by rendering antibiotics ineffective. Drinking water distribution systems are a source of antibiotic resistance genes, the genetic material that makes bacteria resistant to antibiotics. Water distribution systems are particularly concerning as they are a direct conveyor of antibiotic resistance genes to vulnerable populations including children, the elderly, hospital patients, and people with weakened immune systems. Metals are known to promote the development of antibiotic resistance. Some of these metals are also present in distribution systems due to pipe corrosion and the presence of corrosion inhibitors. The goal of this research is to determine which water pipe materials and corrosion inhibitor choices result in minimal antibiotic resistance. This goal will be achieved through experiments to examine the role of corrosion o…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2027288"
    }
   ],
@@ -580,6 +624,7 @@
     "amount": 50000,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "The broader impact/commercial potential of this I-Corps project is in the improvement of water reclamation operations and associated positive impacts on human and environmental health. Water reclamation facilities in the U.S. discharge billions of gallons of untreated wastewater into the environment each year due to large storms that cause overflows in their collection systems. Failures in these systems can also result in basement backups of untreated water into citizens' homes, which can cause property damage and risk of serious illnesses. To overcome these challenges, water reclamation facilities rely on sewer flow data to get a picture of what is happening within their pipe networks; however, existing sensors have several shortcomings including inaccurate data, high costs, and an inability to detect low flows. The proposed technology seeks to overcome these challenges through a machin…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2101934"
    }
   ],
@@ -600,6 +645,7 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/10875984",
+    "abstract": "PROJECT SUMMARY Species from worms to humans show a critical loss of fertility when exposed to elevated temperatures. This conserved response to temperature stress affects both males and females. Interestingly while every species tested, including humans, appear to have a thermal limit of fertility below temperatures that lead to death, even closely related species can have different thermal limits of fertility. What then could be the germline specific structure/pathway that experiences a conserved temperature sensitive failure, but that the specific temperature when it fails can be modified? Two possible such structures that are germline specific are the synaptonemal complex (SC) and germ granules. Both structures are necessary for fertility and exhibit liquid-like properties that make them inherently structurally temperature sensitive. Notably, proteins within these structures contain …",
     "role": "PI"
    },
    {
@@ -618,6 +664,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/9965184",
+    "abstract": "PROJECT SUMMARY Fertility in sexual reproducing organisms requires the formation of both sperm and oocyte. One crucial function of the female germline is the production of high-quality oocytes, which requires both an accurately replicated genome and full complement of cytoplasmic components. Infertility or progeny with diseases can be caused by poor quality of oocytes. Understanding how the female germline can respond to environmental stresses to maintain oocyte quality is important for assessing how infertility occurs in some individuals. As in the human ovary, the C. elegans hermaphrodite oogenic germline produces many more oogenic germ cells than mature oocytes. In C. elegans, >50% of oogenic nuclei are lost prior to oocyte formation through apoptosis. Apoptosis can contribute to oocyte quality through two main mechanisms: removal of low-quality germ nuclei and addition of cytoplasmic…",
+    "publications": 1,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41001826",
     "role": "PI"
    },
    {
@@ -631,6 +680,7 @@
     "amount": 251424,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "An award is made to support the acquisition of an automated Total Internal Reflection Fluorescence (TIRF) Microscope system to support the research, educational and outreach efforts at Marquette University (MU), Medical College of Wisconsin (MCW) and other research groups in the greater Milwaukee region. TIRF microscopy is an essential tool used to study, with high resolution, the mechanism and dynamics of macromolecular protein complex assembly and movement at cellular surfaces. TIRF has also been extensively adapted to study enzymes at single molecule resolution using various fluorescence-based approaches. The availability of a TIRF microscope at MU and neighboring institutions in the greater Milwaukee areas is required to provide hands-on training to undergraduate, graduate and postdoctoral researchers. The PI and co-PIs will provide training to all interested researchers, including s…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1827883"
    },
    {
@@ -649,6 +699,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/9232419",
+    "abstract": "Project Summary During development, the process of differentiation results in cells taking on the characteristics of their final forms, known as cell fate. One of the most important aspects of cell fate is the regulation of gene expression, such that the genes needed for a particular fate are turned on and other genes are turned off. Precise control of gene expression is needed to establish and maintain proper cell fate as well as to prevent dedifferentiation. Dedifferentiation happens when a cell becomes more like a stem cell and no longer only expresses genes associated with its final cell fate. Dedifferentiation occurs commonly in human cancer cells. It is especially important that genes normally expressed in germ cells (sperm and eggs) are repressed in non-germline cells, known as somatic cells. Since germ cells have special properties that allow them to continue dividing, expression…",
+    "publications": 4,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=37294778,31843805,31515206,30910798",
     "role": "PI"
    },
    {
@@ -667,6 +720,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/9062136",
+    "abstract": "PROJECT SUMMARY/ABSTRACT Development is highly regular between individuals despite growth in different environments. This maintenance of developmental consistency in different environments is called buffering. In organisms that cannot control their internal body temperature, there are differing rates of development as temperatures change and this requires mechanisms to buffer development. Gene expression and chromatin structure are two related systems that need to be regulated for buffering to be maintained. In this proposal I will investigate the molecular mechanisms that underlie the buffering of larval and germline development in C. elegans. During the mentored phase of this grant I will learn chromatin immunoprecipitation techniques and train in the programming and bioinformatic skills needed to analyze the resulting data. During my postdoc I have established a role for synMuv B tran…",
+    "publications": 4,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=37294778,31515206,30910798,25380048",
     "role": "PI"
    }
   ],
@@ -682,6 +738,7 @@
     "amount": 420958,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "The ability to maintain an internal environment that is separated and distinct from the external environment is fundamental to the survival of all organisms. This function is performed in animals by epithelial tissues, which form or synthesize barriers that are essential for structural integrity, defense against infection, and internal homeostasis. In insects and other invertebrates, epithelia perform their barrier function in part by synthesizing extracellular structures such as the cuticle, eggshell, and peritrophic matrix: durable, cross-linked matrices composed of protein, chitin, lipid, and other small molecules. This award will support research into a novel genetic pathway that is critical to the formation of epithelial barriers in the fruit fly Drosophila melanogaster. The specific conservation of drd among insects strongly suggests that the results of the planned studies will be …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1355087"
    },
    {
@@ -695,6 +752,7 @@
     "amount": 241620,
     "role": "PI",
     "institution": "Marquette University",
+    "abstract": "A Research Experience for Undergraduates (REU) Site award has been made to Marquette University that will provide research training for 8 students, for 10 weeks during the summers of 2013- 2015. This award is supported by both the NSF Directorate for Biosciences and the Department of Defense ASSURE program (thru a Memorandum of Understanding with NSF). The REU program is intended to encourage students to pursue science- and research-related careers. The focus of this program is the understanding of biological processes in organisms ranging from microbes to mammals at the level of individual cells, proteins, and genes. Students will choose from among several faculty in the Department of Biological Sciences and will design and carry out a research project under the direct supervision of their faculty mentor, thereby developing a realistic view of the demands and excitement of scientific di…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1156569"
    }
   ],
@@ -710,6 +768,7 @@
     "amount": 21000,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "This proposal seeks to fund US-based students to attend the 2026 IEEE International Conference on Computer Communications (INFOCOM), held in Tokyo, Japan on May 18-21, 2026. 2026 IEEE INFOCOM is a premier annual forum that attracts high-quality, forward-looking research contributions and provides a vibrant forum for technical and professional exchanges. 2026 IEEE INFOCOM will expose selected students to cutting-edge developments in the field and enable interactions with world-leading researchers. Students will gain feedback on their ongoing work, broaden their academic perspectives, and build lasting professional connections. INFOCOM 2026 will feature work aligned with NSF priorities, including Artificial Intelligence/Machine Learning for networking, cellular wireless broadband systems, including 6G and beyond, network security and privacy, and quantum networking. This project supports s…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2611555"
    },
    {
@@ -723,6 +782,7 @@
     "amount": 20000,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "The IEEE International Conference on Computer Communications (INFOCOM) is a premier international conference, held annually, covering a wide spectrum of theoretical and applied research in the networking field. The 2025 IEEE INFOCOM will take place in London, United Kingdom, between 19 May 2025 and 22 May 2025. This project supports students from US universities to attend 2025 IEEE INFOCOM in person. Students will have the opportunity to present their work and be exposed to the state-of-the-art developments in the field. They will also have the opportunity to interact with peers from institutions worldwide, meet with senior researchers, and participate in discussions that are likely to shape the future of the field. The requested support will cover 20 students in the United States to attend 2025 IEEE INFOCOM. This grant will target graduate students who will substantially benefit from at…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2508319"
    }
   ],
@@ -738,6 +798,7 @@
     "amount": 449626,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "AIM UP, the NSF REU site at the University of Wisconsin-Milwaukee, will host 12 undergraduates for 8 weeks each summer for the next three years. The project directors will recruit 4 freshmen or sophomores from two-year or four-year colleges and 8 juniors or rising seniors from a range of institutions, including those with limited research opportunities. Research projects spanning pure and applied mathematics, biostatistics, data science, and AI will be guided by experienced faculty and doctoral student mentors. AIM UP aims to increase undergraduate research opportunities in mathematical sciences and to train faculty and future faculty in effective mentoring. The program will enhance students' research skills, advance the science of each REU project, and demonstrate the impact of mentor training and program activities on undergraduate research and mentoring. AIM UP actualizes a four-stage…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447752"
    }
   ],
@@ -753,6 +814,7 @@
     "amount": 579603,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "Processes governing the coupling of the atmosphere and ocean occur on a range of time and space scales and modulate weather and climate variability, as well as the ocean uptake of excess heat and carbon. This project is focused on advancing understanding of atmosphere-ocean coupling on mesoscales (100-1000 km) over the Southern Ocean and its impact on the long-term, large-scale climate variability of the region. This addresses a significant gap in the current understanding of mesoscale atmosphere-ocean coupling regarding its role in decadal to multi-decadal climate variability. The Southern Ocean has some of the most continuous and significant mesoscale ocean variability on the planet, motivating the choice to focus on this region. The investigators hypothesize that mesoscale air–sea interaction related sea surface temperature anomalies lead to large-scale reorganization of the mid-latit…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2439171"
    },
    {
@@ -766,6 +828,7 @@
     "amount": 433031,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "Improved understanding of Northern Hemisphere decadal climate variability is an issue of tremendous societal importance. The goal of this project is to document simulated decadal variability and to analyze the dynamics of decadal climate shifts in global climate model simulations. Using a novel hybrid dynamical/statistical modeling framework to study the dynamics of the decadal climate shifts and relate them to climate processes operating on shorter, intraseasonal-to-interannual time scales, this work will shed insights into how various components of the climate system interact. The researchers hypothesize that decadal climate shifts - defined as abrupt changes in the climates long-term state and variability that tend to happen with decadal frequency - arise as a result of collective behavior of climate subsystems due to interplay between occurrences of synchronized states and variable c…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1408897"
    },
    {
@@ -779,6 +842,7 @@
     "amount": 260681,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "Under this project, large-scale, low-frequency modes (LFMs) will be studied in observations and simulations of state-of-the-art general circulation models (GCMs) of Earth's climate. This project will build on previous NSF- and DOE-funded work on LFMs arising from the ocean's wind-driven and overturning circulations in the Atlantic and Pacific sectors, as well as from their interactions with the atmosphere and tropical climate variability. This project will focus on: (a) improving current understanding of LFMs and interactions between them; (b) developing, revising and testing statistical methods for probabilistic decadal prediction based on these modes; and (c) using these decadal predictions in conjunction with observations and GCM simulations to gain insight into the dynamical causes of climate change and climate variability at decadal and longer time scales. This project will continue…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1243158"
    },
    {
@@ -792,6 +856,7 @@
     "amount": 680937,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "This is a study of the warming trends in surface temperatures of the Great Lakes since the mid-1980s. Great Lakes surface temperature trends have been upward during this period in all seasons, especially in summer, and the summer surface temperatures in lakes Huron and Michigan have increased by 4 degrees Celsius. This rate of warming, in excess of 1.3C per decade, is greater by a factor of 10 than regional surface air temperature trends over the same period. The warming of the lakes has a number of consequences, including a reduction in lake level due to evaporation, which historically has been a second-order effect compared to rainfall variations but has recently become comparable in magnitude due to the higher temperatures. The prevailing hypothesis for the rapid warming is that reduced winter ice cover leads to earlier springtime stratification and an increase in the number of heatin…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1236620"
    }
   ],
@@ -807,6 +872,7 @@
     "amount": 213969,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "Tropical environments worldwide are facing increasing threats, endangering biodiversity critical to global ecological balance. These regions, which host a vast array of species in diverse habitats like rainforests and coral reefs, play a crucial role in supporting economies and cultures while providing essential ecosystem services. This collaborative initiative aims to address the complex challenge of managing tropical ecosystems by integrating traditional ecological assessments with cutting-edge technologies. Focusing on Grenada, a Caribbean island exemplifying diverse conservation issues, the Grenada SURF-TURF program provides international research experience to 18 U.S. undergraduate students on coral reefs and in rainforests, building on nearly two decades of international collaboration between investigators at the University of Wisconsin-Milwaukee, Wisconsin Lutheran College, St. Ge…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2420195"
    }
   ],
@@ -822,6 +888,7 @@
     "amount": 20000,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "The Ninth International Conference on Mathematical Modeling and Analysis of Populations in Biological Systems (ICMA-IX) will be held at the University of Wisconsin - Milwaukee, on October 18 - 19, 2024. ICMA-IX builds upon the success of eight previous conferences, each of which had over 100 participants. The aim of this conference is to have participants from a wide variety of backgrounds, various career levels, and from underrepresented groups. The conference will highlight significant recent developments in mathematical biology and provide a forum for the participants to meet, to communicate their scientific discoveries, and to initiate new collaborations. By bringing together a new generation of researchers along with the established experts, the aim is to cultivate new collaborations and networks that can help junior researchers as they advance their careers. Mathematical modeling i…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2419308"
    },
    {
@@ -835,48 +902,8 @@
     "amount": 125782,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "This work will extend two mathematical models for the dissolution and release process occurring in sustained release matrix tablets. The first of these models uses random walks on the weighted contact graph of a random dense packing of spheres of multiple diameters. The second model consists of a system of partial differential equations of reaction-diffusion type for the solved and unsolved excipient and drug, respectively. We will develop new computational tools, borrowing from theories of random walks on graphs, probability density estimation, and numerical partial differential equations. The theoretical models will be implemented in fast, robust code, and model parameters will be calibrated to actual data in close collaboration with researchers in the pharmaceutical sciences. The team of investigators will develop mathematical and computational methods to predict the release kinetics …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1016214"
-   }
-  ],
-  "daniel-gervini": [
-   {
-    "agency": "NSF",
-    "id": "2412015",
-    "title": "Statistical methods for point-process time series",
-    "program": "STATISTICS",
-    "directorate": "MPS",
-    "start": "2024-07-01",
-    "end": "2027-06-30",
-    "amount": 149989,
-    "role": "PI",
-    "institution": "UW-Milwaukee",
-    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2412015"
-   },
-   {
-    "agency": "NSF",
-    "id": "1505780",
-    "title": "Semiparametric Statistical Methods for Replicated Point Processes",
-    "program": "STATISTICS",
-    "directorate": "MPS",
-    "start": "2015-08-01",
-    "end": "2019-07-31",
-    "amount": 199907,
-    "role": "PI",
-    "institution": "UW-Milwaukee",
-    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1505780"
-   },
-   {
-    "agency": "NSF",
-    "id": "1006281",
-    "title": "Dynamic Functional Regression Models",
-    "program": "STATISTICS",
-    "directorate": "MPS",
-    "start": "2010-06-01",
-    "end": "2014-05-31",
-    "amount": 149932,
-    "role": "PI",
-    "institution": "UW-Milwaukee",
-    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1006281"
    }
   ],
   "mohammad-habibur-rahman": [
@@ -891,6 +918,7 @@
     "amount": 50000,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "The broader impact of this I-Corps project is the development of wheelchair-mounted assistive robots with a semi-autonomous control system. Currently, powered wheelchair users who face challenges due to limited or no upper limb functions rely on manual assistance from caregivers, basic assistive devices, such as reachers, and/or joystick-controlled assistive robots. While these solutions provide some function, they fail to provide the desired level of independence and often lack technological sophistication. This technology is designed to assist with performing essential activities of daily living such as eating, manipulating objects, and opening or closing doors semi-autonomously. The technology may address critical personal and societal needs by empowering individuals with mobility impairments, providing an intuitive and precise user experience, and thereby improving their quality of l…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2419096"
    },
    {
@@ -904,6 +932,7 @@
     "amount": 50000,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "The broader impact/commercial potential of this I-Corps project is to identify the customer needs and develop a minimum viable robotic assistive device that will enable disabled individuals to care for themselves, improve their mobility, independence and quality of life while reducing the burden on their families and communities. There is opportunity for launching a homecare equipment market through the adaptive sports clubs and the clinical facilities. The elderly and disabled assistive devices global market was valued at $14 billion in 2015 and is expected to surpass $26 billion by 2024. The outcome of the project will further help researchers, educators, and clinicians to discover new approaches/technology to satisfy unmet needs of customers. This I-Corps project will provide hands on training and experience for an engineering undergraduate student (co-entrepreneurial lead) and gradua…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1848912"
    },
    {
@@ -922,7 +951,54 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/8546211",
+    "abstract": "DESCRIPTION (provided by applicant): Falls from ladders represent one of the leading causes of occupational injuries and fatalities. The primary factors contributing to falls from ladders are missteps and foot slips, which cause foot de-coupling from the rung leading to a fall. After a slip/misstep occurs, a person must rely on their hands as well as the foot opposite to the misstep to stop their fall and regain balance on the ladder. This response must be executed rapidly and requires coordination between the upper and lower body. Currently, there is a key gap in knowledge related to the ability of a person to recover from slips and missteps during climbing and the biomechanical response necessary to achieve this recovery using the upper or lower limbs. The overall objective of this R21 proposal is to gain quantitative knowledge on biomechanical causes and recovery response from a ladde…",
+    "publications": 6,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=39508262,30439684,29161154,28166875,26431752,25116116",
     "role": "PI"
+   }
+  ],
+  "daniel-gervini": [
+   {
+    "agency": "NSF",
+    "id": "2412015",
+    "title": "Statistical methods for point-process time series",
+    "program": "STATISTICS",
+    "directorate": "MPS",
+    "start": "2024-07-01",
+    "end": "2027-06-30",
+    "amount": 149989,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "abstract": "This research project will develop statistical models and inference methods for the analysis of random point processes. Random point processes are events that occur at random in time or space according to certain patterns; this project will provide methods for the discovery and analysis of such patterns. Examples of events that can be modelled as random point processes include cyberattacks on a computer network, earthquakes, crimes in a city, spikes of neural activity in humans and animals, car crashes in a highway, and many others. Therefore, the methods to be developed under this project will find applications in many fields, such as national security, economy, neuroscience and geosciences, among others. The project will also provide training opportunities for graduate and undergraduate students in the field of Data Science. This project will specifically develop statistical tools for …",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2412015"
+   },
+   {
+    "agency": "NSF",
+    "id": "1505780",
+    "title": "Semiparametric Statistical Methods for Replicated Point Processes",
+    "program": "STATISTICS",
+    "directorate": "MPS",
+    "start": "2015-08-01",
+    "end": "2019-07-31",
+    "amount": 199907,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "abstract": "The main goal of this project is the development of statistical tools for the analysis of points that occur at random in time or space, such as the locations of street robberies in a given city or the timings of spikes of neural activity for an individual performing a certain task. These data arise in many different fields including neuroscience, ecology, finance, astronomy, seismology, and criminology. The statistical methods to be developed under this project will then provide new data-analysis and inference tools for researchers and practitioners in diverse scientific fields. They will also be applicable to the analysis of data arising in strategic areas such as defense, public health and economy, thus contributing to the improvement of the well-being of individuals in society, the economic competitiveness of the United Stated, and national security. The educational activities related…",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1505780"
+   },
+   {
+    "agency": "NSF",
+    "id": "1006281",
+    "title": "Dynamic Functional Regression Models",
+    "program": "STATISTICS",
+    "directorate": "MPS",
+    "start": "2010-06-01",
+    "end": "2014-05-31",
+    "amount": 149932,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "abstract": "The analysis of samples of curves is a field of growing relevance in statistics. Samples of curves arise when a time-dependent process is observed on a group of individuals. Such curves present both time and amplitude variability (\"horizontal\" and \"vertical\" variability), and both types of variation have to be statistically modeled in order to draw valid inference from the data. The investigator is developing dynamic regression models, that is, models for prediction of response curves based on explanatory curves, that explicitly take into account time variability. The properties of these methods are being studied theoretically, by simulation, and by the analysis of real-life data sets. Computer software implementing these methods is also being developed. Data consisting of samples of curves include, among many others, human growth curves, time-dependent gene expression profiles, daily ai…",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1006281"
    }
   ],
   "satya-aditya-akundi": [
@@ -937,6 +1013,7 @@
     "amount": 284583,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "This project aims to serve the national interest by helping students learn the necessary skills to manage the full lifecycle for complex engineering systems in collaborative virtual environments. Model-based Systems Engineering (MBSE) is an emerging methodology that addresses the need to increase productivity, improve quality, reduce risk, and improve communications in the engineering of complex systems that include both hardware and software components. This project will help students learn how to use MBSE in each phase of the system development cycle including requirements, design, analysis, verification, and validation, by developing a new course using project-based learning. Students will work in geographically distributed teams that will include members from the University of Texas Rio Grande Valley and the University of Texas at El Paso to learn how to work in a virtual collaborati…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2412813"
    }
   ],
@@ -952,6 +1029,7 @@
     "amount": 50000,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "The broader impact/commercial potential of this I-Corps project is the development of technology to enable farmers with as little as one hectare of land to participate in global carbon and ecosystem services markets supporting their transition from traditional, degrading farming practices (e.g., monocrops and dependence on fertilizers, herbicides, and insecticides) to regenerative farming practices (e.g., agroforestry, low-till, and naturally nutritious, healthy soil) by offering companies the opportunity to meet their sustainability goals through the purchase of practice-based ecological assets. Although the market for these types of ecological assets has not yet been tested, the demand for carbon credits and other ecosystem services is growing rapidly. Current carbon credit origination costs are too expensive for small projects, only making financial sense beyond 1200 hectares in most …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2304639"
    }
   ],
@@ -967,6 +1045,7 @@
     "amount": 1100003,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "Recent investigations have shown that interactions of blood flow with blood vessel walls plays an important role in the progression of cardiovascular diseases. Accurately quantifying blood flow or hemodynamic interactions could lead to methods for patient-specific therapies that result in better treatments and reduced mortality. In this project, the researchers will develop techniques to non-invasively inferring the complex, dynamic hemodynamic behavior using a commonly used medical imaging modality that is typically used to produce static anatomical images for analyzing blood vessel structure. In this project, the researchers propose to develop a novel physics-informed model of the blood flow using a deep-learning based processing method. This will allow the researchers infer dynamic time-resolved three-dimensional blood velocity and relative pressure field. The results will be used to …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2205265"
    },
    {
@@ -980,6 +1059,7 @@
     "amount": 298509,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "Forces resulting from blood flow interaction with walls of blood vessels have major impact on the initiation and progression of vascular diseases such as aneurysms, atherosclerosis, and vasospasms. Consequently, detailed and accurate blood flow analysis could be key to prognosis and treatment of such diseases. There are two popular modalities that are currently used to study 3D blood flow. The first is based on computational fluid dynamic (CFD) simulations. The second is through direct non-invasive imaging using techniques such as phase contrast magnetic resonance imaging (a.k.a 4D-Flow MRI). CFD requires accurate vascular geometry, model parameters, and estimates of boundary flow and initial conditions. These are time consuming and very difficult, if not impossible to estimate. Furthermore, the fidelity of CFD is limited by model assumptions. On the other hand, 4D-Flow MRI directly meas…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2103560"
    }
   ],
@@ -995,6 +1075,7 @@
     "amount": 381045,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "Hurricane evacuations are a complex process involving interactions among hurricane systems, the built environment, particularly transportation systems, and the evacuation decisions and actions of individuals and households in our coastal communities. Previous research suggests that evacuation processes vary depending up on the nature of hurricanes in terms of their intensity, direction, and speed, but the research community has been lacking in approaches to link these complex systems together within a single modeling framework. This project will model the interactions among these different systems to better capture and understand the problems and issues associated with evacuations under different kinds of hurricane storms scenarios within a single framework. The resulting framework will greatly facilitate the scientific understanding of these processes helping reduce potential loss of li…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2100801"
    }
   ],
@@ -1010,6 +1091,7 @@
     "amount": 523202,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "The seasonal timing, or phenology, of many North American plant species is in flux with accelerating environmental change. The influence of factors such as temperature and precipitation on plant growth, as weather patterns change from spring to summer, vary from place-to-place, month-to-month, and for different plant species. An improved understanding of these relationships revealed by this research will support development of more accurate and diverse models of spring plant growth stages. These models may then be able to predict which trees and shrubs will be favored in different regions with future environmental change, to the benefit of many types of societal planning. Further, the project will implement national-scale, long-lead forecasts for new measures representing the spring season, which will also be relevant for annual agricultural, horticultural, and forestry management planni…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2017831"
    },
    {
@@ -1023,6 +1105,7 @@
     "amount": 74273,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "The timing of leaf senescence (coloring and subsequent fall; i.e., phenology) during autumn has potentially large impacts on energy and carbon exchange between mid-latitude land surfaces and the lower atmosphere. However, spatial variations in autumn phenological timing at the plant community level have not been widely measured or analyzed, and underlying environmental drivers are not well understood. Thus, detailed autumn phenological data offer considerable opportunities for assessing landscape-level spatial variations crucial for accurate scaling-up measurements to larger areas or downscaling information from atmospheric general circulation models. In this project, spatial variability of autumn phenological data will be measured and analyzed at the community level, compared to microclimatic, carbon flux, and remote sensing measurements, with an overall goal of contributing to increase…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1157215"
    }
   ],
@@ -1038,6 +1121,7 @@
     "amount": 375000,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "One of the grand challenges in animal biology is to understand the influence of genes on the development of phenotypic and behavioral traits. The plumage of birds encompasses a spectacular array of ornamental plumages long appreciated for their beauty, yet we know little about how the color of plumage patches or their size is influenced by genes. It is generally thought that the plumage color of male birds is a signal of quality to females choosing mates. Several hypotheses have now been proposed linking the size and color of plumage ornaments to various physiological and genetic pathways related to health, including those involved in cellular metabolism, growth, oxidative stress and immunity. Any one pathway could provide a general explanation for how bird colors signal quality in males, but these genetic pathways may interact in complex ways that can only be understood using genome-wid…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1749044"
    },
    {
@@ -1051,6 +1135,7 @@
     "amount": 18508,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "The increasing emergence and spread of pathogens are serious concerns for both human and wildlife populations. The threat is substantially greater for populations of endangered species because they often have reduced genetic diversity, which could impair immune function and increase their susceptibility to disease. However, to date no studies have directly examined diversity at immune genes and their relationship to both disease resistance and survival. In greater prairie-chickens, we previously found that diversity at a variety of immune genes was reduced in small populations, but it remains unclear how that will affect individuals. The current study will extend that research and specifically examine how immune gene diversity in individuals is related to their immune function and survival in the wild. Thus, the results from this study will provide a broader understanding of the importan…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1501347"
    },
    {
@@ -1064,6 +1149,7 @@
     "amount": 355207,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "A major question in conservation biology is why some populations with low levels of genetic variation remain relatively stable while others decline in size. Stable populations may not have lost genetic variation related to disease resistance, such as the suite of resistance genes known as the Major Histocompatibility Complex (MHC). Theory suggests that natural selection is more likely to maintain functionally important MHC variation in populations that have experienced declines in size. This study will make direct estimates of natural selection on the MHC and other immunity genes using data from both historic and contemporary populations of the greater prairie-chicken, which is one of the most threatened species of bird in North America. This project will also examine the association between variation at MHC genes and parasites, immunity and survival in two small populations that are und…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0948695"
    }
   ],
@@ -1079,6 +1165,7 @@
     "amount": 994414,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "This National Science Foundation (NSF) Scholarships in Science, Technology, Engineering, and Mathematics (S-STEM) project at the University of Wisconsin-Milwaukee will provide scholarships for talented, low-income students with demonstrated financial need pursuing bachelor's degrees in engineering and computer science. In addition to scholarships, the program will provide academic and other support to increase the persistence of academically talented, low-income students. The project aims to provide a seamless graduation pathway for academically talented yet economically disadvantaged students. In recognition of the varied types of support needed by individual students, the program will utilize a holistic framework of evidence-based effective practices to ensure that the challenges particular to each scholar are addressed. Scholarships and support for academically strong students, who ma…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1565131"
    }
   ],
@@ -1094,6 +1181,7 @@
     "amount": 91696,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "Introduction Survey research on public attitudes toward and understanding of science has been plagued by a lack of theoretical focus. The objective of this application is to develop new measures that previous surveys on this topic have yet to address. The rationale for this project is that it will create the foundation for a vibrant research community that can examine how social groups vary in their trust and their distrust of organized science. Intellectual Merit The proposed research will accomplish this objective by pursuing two aims. The first aim is to bring together scholars from multiple backgrounds to discuss the core issues related to the cultural authority of science, provide new perspectives on existing data, and suggest measures for future surveys. This aim will be completed by organizing an expert panel that will bring together scholars who possess specialized knowledge rela…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1359585"
    }
   ],
@@ -1109,6 +1197,7 @@
     "amount": 754546,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "The Integrated Undergraduate Research Experience at the Interface of Biology and Mathematics program aims to promote broader access to cross-disciplinary education in biology and mathematics with an emphasis on undergraduate research, and to strengthen the culture and academic foundation of interdisciplinary biology-mathematics education. To meet these goals it is 1) supporting four cohorts of eight undergraduate students through a two-year research immersion program involving active mentoring and collaborative learning on original research projects in the key biology-mathematics research areas of quantitative ecology, environmental health and freshwater biogeochemistry; and 2) developing new curricular components to facilitate flexible undergraduate biology-mathematics training, including both an interdisciplinary Certificate Program in Quantitative Biology, and a research-oriented biom…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1129056"
    }
   ],
@@ -1124,6 +1213,7 @@
     "amount": 114999,
     "role": "PI",
     "institution": "UW-Milwaukee",
+    "abstract": "This research project considers a class of complex stochastic systems and related stochastic control problems. The underlying systems are subject to various random forces. The specific aims and anticipated results of this project are as follows: (1) to investigate stability and ergodicity and to establish a Feynman-Kac type formula for regime-switching diffusions with jumps; (2) to develop singular stochastic control theories for regime-switching jump diffusions and to design feasible and effective numerical schemes for the associated control problems; and (3) to apply the theoretical results to biology, mathematical finance, and risk management. The expected results of this project will contribute to an in-depth understanding of a wide class of complex stochastic systems. This, in turn, will facilitate the applications of such systems in areas such as finance and biology. The mixed regu…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1108782"
    }
   ],
@@ -1139,6 +1229,7 @@
     "amount": 262147,
     "role": "PI",
     "institution": "Medical College of Wisconsin",
+    "abstract": "The degree of bio-threat associated with newly detected pathogen variants (genotypes) that are genetically similar to some known pathogens may be assessed in terms of the cross-immunity between the two variants under study. Perfect (lack of) cross-immunity between the two variants suggests that the newly detected pathogen and the known variant are identical (distinct) epidemiologically. New epidemiological models will be developed for estimating cross-immunity in a two-strain system that may allow for variable birth rate of the natural hosts, possibility of vertical transmission and finite number of contacts per subject per unit time. Similar to many popular epidemiological models, the proposed epidemiological models stipulate that the dynamics of the state vector follow some nonlinear partial differential equation (PDE). New computationally efficient estimation methods are proposed for …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1021896"
    }
   ],
@@ -1154,6 +1245,7 @@
     "amount": 999974,
     "role": "PI",
     "institution": "Milwaukee School of Engineering",
+    "abstract": "This project will contribute to the national need for well-educated scientists, mathematicians, engineers, and technicians by supporting the retention and graduation of high-achieving, low-income students with demonstrated financial need at the Milwaukee School of Engineering, an urban private, non-profit university. Over its five-year duration, the project will fund scholarships to fifteen unique full-time students who are pursuing bachelor’s degrees in Mechanical Engineering. Scholars will be selected in two cohorts of first year mechanical engineering students. The Scholars will be retained and assisted through degree completion and placement into the workforce or graduate school. In addition to scholarships, the program will provide Scholars with a robust suite of support structures that include social activities, peer tutoring, shadowing experiences, student-faculty interaction, car…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2027632"
    }
   ],
@@ -1169,6 +1261,7 @@
     "amount": 50192,
     "role": "PI",
     "institution": "Milwaukee School of Engineering",
+    "abstract": "Title: Understanding the Role of Computational Thinking in Engineering Education Abstract: The need for undergraduate engineering students to learn computing has dramatically increased as computing has become more important in engineering practice. Many engineering colleges have responded to this change by requiring their engineering students to take computing classes. Some of these classes are now central to the first year of college engineering education. Computing classes are considered to be extremely difficult by many students, especially those who have not been exposed to computing in high school. Inequities in the K-12 education system mean that some students often have less opportunity to be exposed to computing before college than others. As a result, integrating computing into engineering education may exacerbate existing inequities in engineering education and reduce diversity…",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1917352"
    }
   ],
@@ -1184,6 +1277,7 @@
     "amount": 50000,
     "role": "PI",
     "institution": "Milwaukee School of Engineering",
+    "abstract": "The broader impact/commercial potential of this I-Corps project addresses many of the concerns people may have with blood donation and transfusion, including ethical and religious reasons, as well as a number of supply chain related issues. According to the America Red Cross, approximately 36,000 units of red blood cells are needed every day in the U.S., which corresponds to a $1.5 billion annual market. Importantly, many of the risks associated with human blood can be mitigated or eliminated with an engineered product. Other issues include cost and availability of human blood and its processing, such as screening for infectious diseases or spot availability in the supply chain due to natural or other disasters. It is possible that an engineered blood product could become widely available throughout the world and be shipped in large quantities as and where needed, addressing significant …",
     "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1644585"
    }
   ],
@@ -1204,6 +1298,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10445016",
+    "abstract": "Summary/Abstract All projects in this program will make extensive use of genetically manipulated mice as the primary experimental platform. The Mouse Genetics and Genomics Core (Core D) is an essential component of the Program providing critical support to all 4 projects and to scientific cores B and C. The Core will capitalize on the infrastructure established at the University of Iowa Gene Editing Facility for the generation of genetically altered mouse models using CRISPR-Cas9 genome editing and in the Genomics Division of the Iowa Institute of Human Genetics (IIHG) to support genome wide transcriptome analysis. The goals of the Core are to: 1) provide centralized breeding, genotyping and quality control of transgenic and knockout animals for use by investigators in the program project, 2) generate new transgenic mouse models needed during the proposed budget period for Projects 2 and…",
+    "publications": 335,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42552612,41926228,40983484,40845152,40627460,40585361,40440505,40235074,40190120,39618396,39548798,39315447,39236000,38991008,38738295,38629290,38623381,38284128,38223458,38196837,38191147,38145289,38039359,37909854,37882530,37720996,37614871,37609445,37575477,37540598,37470185,37449411,37293629,37191987,37119810,36980236,36534590,36307046,36264268,36259376,36215165,36181426,35816717,35812759,35493997,35476598,35358093,35348007,35283781,35218946,35076278,35010994,34996529,34964118,34878897,34865504,34823066,34551590,34475397,34319999,34303879,34278420,34264434,34262481,34236885,34189960,34107734,34013388,33951475,33939772,33843283,33843282,33793338,33755180,33722691,33641369,33611936,33510137,33439766,33356400,33249862,33113371,33085913,33052459,33027675,32987056,32951467,32946297,32852625,32699414,32691631,32507043,32507042,32428209,32224880,32186897,32153359,32148123,32063061,31953528,31940233,31925571,31865781,31839488,31789920,31728756,31679420,31530579,31523009,31492869,31422694,31278754,31216194,31184598,31127052,31104564,31020916,31006330,30938081,30896450,30894367,30679672,30531199,30478315,30445039,30354810,30282823,30104247,30005879,29952605,29873596,29864244,29784793,29702036,29556733,29504268,29472865,29371289,29364700,29350998,29289646,29031726,28988823,28986397,28959025,28874461,28794102,28752049,28714862,28683288,28667067,28564599,28559391,28507170,28500600,28490451,28448947,28432903,28422749,28396531,28357127,28352663,28316052,28276805,28263184,28232667,28093508,27754863,27665107,27658984,27575030,27515998,27477281,27467376,27254006,27208157,27199455,27160202,27159542,27113050,27049292,27045026,27015310,26928806,26926121,26884478,26870798,26781274,26724858,26597823,26566726,26534936,26491099,26462805,26381017,26324508,26246508,26134639,26103456,26100637",
     "role": "PI"
    },
    {
@@ -1222,6 +1319,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11251730",
+    "abstract": "Project Summary The Rat Genome Database (RGD) has evolved substantially from a catalog of rat genetic markers, maps, and genes to a comprehensive resource with multiple genomic data types, extensive disease and phenotype annotations, and tools to effectively mine, analyze and visualize the available data. The goal of RGD is to enable investigators in their hypothesis-driven research. Leveraging its robust and flexible infrastructure, RGD has added data from human and other important human disease model organisms to enhance its translational aspect. RGD is also one of the founding members of the Alliance of Genome Resources (Alliance), a consortium of the major model organism databases focused on harmonizing and presenting cross-species information. Since 2019, there has been an exciting reinvigoration in the rat genomics community and research. Through collaboration with the Wellcome San…",
+    "publications": 127,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42189988,41755740,41723549,41413728,40304705,40175506,40011791,39907792,39851305,39841812,39768011,39723540,39516046,39236000,38927823,38623381,38552170,38537634,38415358,38145289,38045425,37882530,37347557,37293629,37214860,37191987,37119810,36930729,36866529,36792746,36553571,36394234,35812759,35380658,35380657,34964118,34741192,34660910,34584774,34283720,33290552,31713623,31552413,31228162,31228152,31196182,30938777,30753478,30535383,30395267,30224793,29761460,29590633,28838068,27736745,27602200,27287925,27009807,26917558,25920443,25632109,25619558,25428369,25355511,25265995,25260253,24499703,24267899,24103152,23881287,23794737,23603846,23434633,23379628,23255149,23195310,23161678,22805979,22654893,22434847,21732192,21321022,21296746,20869786,20056729,20013224,19956751,19920128,19578431,18996890,18443589,18428773,18428755,18428715,18089548,17543498,17151068,16478827,16356172,16261420,16106031,15800845,15608243,15602916,15376909,15359736,15318950,15117422,15113398,15103394,15060019,15060006,15057822,14681407,14532335,12973729,12716985,12532268,12411455,11973321,11752273,11721057,11691858,11056046,11015589,10983711,10400928",
     "role": "PI"
    }
   ],
@@ -1242,6 +1342,7 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/11214496",
+    "abstract": "Project Summary/Abstract Parents play a critical role in their adolescent children’s alcohol use decision-making. However, the relative importance and underlying mechanisms of various alcohol-specific parenting (e.g., alcohol provision, attitudes, and rules) and general parenting factors (e.g., monitoring, support) remains unclear. This knowledge gap continues to impede the advancement of theories and practices in parent-based alcohol prevention programs, reducing their potential to effectively mitigate widespread adolescent drinking and its consequences. Examining alcohol-specific cognitions (e.g., alcohol expectancies, normative beliefs) as mediators between parenting and adolescent drinking is essential for addressing this gap, as altering these cognitions may be the most efficient and effective way to influence adolescent alcohol use—supported by the empirically validated Reasoned Ac…",
     "role": "PI"
    }
   ],
@@ -1262,6 +1363,7 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/11125155",
+    "abstract": "PROJECT SUMMARY Pleiotropy, which occurs when a genetic change alters two or more phenotypes, can be observed during pathogen evolution when resistance to one treatment results in sensitivity to another treatment. Prior research suggests that bacteriophage-based alternatives to antibiotics can be more effective when phage resistance comes at a cost to bacterial virulence, but the molecular mechanisms of pleiotropy are often uncharacterized. One common phage-resistance mechanism, mucoidy, occurs through over-production of exopolysaccharide, creating a physical barrier between the cell and phage. As a virulence factor for many pathogens, mucoidy is of interest to the medical applications of phages as well as the study of naturally occurring phages. The objective of this application is to test predictions about the pleiotropic side effects of mucoid-based resistance to a candidate therapeut…",
     "role": "PI"
    }
   ],
@@ -1282,6 +1384,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10656986",
+    "abstract": "PROJECT SUMMARY/ABSTRACT In CTSA 3.0, supported by the parent award (5UL1TR001436-08) for this supplemental application, we have continued to pursue the transformation of clinical and translational research in southeastern Wisconsin. This includes the refinement of proficient and innovative infrastructure to support CT research and science, while removing impediments to the performance of high impact research. A major emphasis of our current award is on team science including the development of integrated clinical and research ensembles (ICREs) in which patients, clinical investigators, translational researchers, health system representatives, community members, and others are brought “All in Together” to translate problems identified by these individuals into testable hypotheses, novel processes, or methods that can lead to clinical/translational science studies/trials and solutions to …",
+    "publications": 663,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42938842,42835323,42821472,42787535,42782223,42742847,42736585,42716577,42693368,42646734,42626523,42592913,42528524,42497651,42465953,42465882,42465874,42445526,42322082,42314562,42164706,42088444,42051979,42051978,42008125,42003160,41982181,41962694,41953749,41953691,41953066,41907562,41902531,41846424,41830665,41822694,41794766,41756439,41701177,41685425,41675555,41646797,41637029,41602799,41550697,41455798,41441701,41427334,41423770,41409669,41405181,41378455,41297111,41282714,41241776,41238029,41154511,41147238,41140891,41086682,41062502,41019424,40983484,40983372,40972485,40953059,40909835,40891659,40881314,40858480,40857428,40854427,40829368,40817818,40799962,40778604,40762975,40736737,40672484,40644699,40642960,40585361,40551321,40502605,40385408,40342059,40334752,40313290,40291393,40262001,40230033,40210986,40203002,40200896,40187121,40176365,40175506,40172516,40169569,40153106,40067596,40066853,40041442,40028879,40013094,39988365,39920541,39890457,39848287,39846144,39823513,39802785,39716037,39689273,39664025,39659251,39613655,39610711,39596649,39576992,39548798,39539022,39537699,39524607,39433942,39414174,39380062,39363958,39360341,39316041,39315447,39262144,39236000,39181420,39158165,39099263,39077963,38993858,38984138,38978664,38972570,38947087,38937641,38926547,38917576,38890269,38867665,38857785,38855680,38845307,38814888,38746290,38736641,38719138,38690624,38683939,38623381,38601999,38587442,38560436,38535768,38453721,38441889,38429025,38411367,38404202,38381216,38377400,38375671,38348959,38343863,38336101,38326668,38318198,38295114,38284128,38278963,38257917,38222444,38218412,38206608,38204718,38191147,38185105,38184426,38179566,38158641,38146597,38145289,38137076,38135690,38133570,38106125,38095272,38091185,38070623,38059268,38057320,38054558,38048511",
     "role": "Multi-PI"
    }
   ],
@@ -1302,6 +1407,9 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/10124395",
+    "abstract": "ABSTRACT Neurodevelopmental disorders such as Autism Spectrum Disorder (ASD) and Attention Deficit Hyperactivity Disorder (ADHD) are a major source of disability and loss of potential, as well as emotional and financial hardship. Primary prevention of these disorders is of great public health importance, calling for the identification of modifiable risk factors, such as environmental chemical exposures. ASD and ADHD are both heritable but there is growing evidence that environment plays a role, and that environmental impact may be influenced by genetics. Traffic-related air pollutants, including fine particulate matter (PM2.5) and nitrogen dioxide (NO2) have biological evidence of neurotoxicity and human evidence that they may be risk factors for ASD and ADHD. Only two prior studies have considered the influence of genetics on air pollutant risk in neurodevelopmental disorders – each add…",
+    "publications": 18,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=39283002,39024025,37961212,36324994,34985833,34664785,33549739,33495439,33351671,33050963,32955354,32348643,31810593,31746968,31476415,31464107,31389973,31285074",
     "role": "PI"
    }
   ],
@@ -1322,6 +1430,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/9771401",
+    "abstract": "Abstract Solid tumors are comprise the large majority of cancers (>90%). Standard of diagnosis and care often involved serial MR imaging for monitoring tumor response. It is not well understood how heterogeneity at the cellular and molecular levels affects the macroscopic imaging characteristics of these tumors. The long-term goal of this project is to provide computation tools for understanding the histopathologic variation of solid tumors and aid the development of image guided therapies for individualizing solid tumor treatment. The overall objective is to combine radiographic imaging with histopathological samples (i.e., radio-pathomics) to create and validate predictive tools for accurately defining tumor margins and spatial molecular profiles. Our central hypothesis is that microscopic cytological features and spatially dependent molecular profiles are reliably detectable and quant…",
+    "publications": 20,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41721916,41646780,41510293,39990680,39960860,38501824,38260400,37898290,37760407,36928230,36532813,35422419,35314630,34767682,33062803,32923510,32548292,31548294,31292140,30854450",
     "role": "PI"
    }
   ],
@@ -1342,6 +1453,7 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11401689",
+    "abstract": "PROJECT SUMMARY/ABSTRACT Individuals with sickle cell disease (SCD) are at risk of developing numerous chronic complications including cardiopulmonary and renal (CPR) end organ complications, which are associated with early mortality. To better understand the risks of CPR end organ complications and outcomes of individuals with SCD and CPR end organ complications, large epidemiological studies are needed. However, given that SCD is a rare condition, there remains a lack of large epidemiological studies focused on CPR end organ damage among individuals with SCD. In this project, we propose to establish a large patient cohort leveraging existing big data sources of the electronic health record (EHR) and administrative claims to determine the risks of CPR end organ complications and factors associated with frequent acute care use among those with CPR end organ complications and SCD. In this…",
     "role": "PI"
    }
   ],
@@ -1362,6 +1474,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/11136223",
+    "abstract": "Women with positive margins after breast-conserving surgery (BCS) have a 2-fold increased risk of cancer recurrence and are recommended to undergo additional re-excision surgery to achieve negative margins. Additional surgery is associated with significant emotional, cosmetic and financial burdens for patients and their caregivers. Although radiography, frozen section, touch prep and MarginProbe are available for intraoperative margin assessment, their accuracy is variable and most, except radiographic examination, are time- and labor- intensive and not routinely used. Since publication of the 2014 SSO-ASTRO guidelines for invasive cancer recommending re-excision for positive margins only, the re-excision rates have decreased but remain substantial (14-18%) with significant variation among surgeons. Because the size of BCS specimens varies significantly (a few to >40 cm2 per margin) and …",
+    "publications": 4,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=40313564,37397361,37292087,36187258",
     "role": "PI"
    },
    {
@@ -1380,6 +1495,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/9415230",
+    "abstract": "Tumor hypoxia is an important characteristic of solid tumors and a modulator of therapeutic response. Because oxygen diffuses 100-150 m from blood vessels, fast growing tumors often have two hypoxic regions: a chronically hypoxic region in the center of the tumor and a cycling (or acute) hypoxic region within the diffusion distance. Numerous studies have found that hypoxia, especially its temporal fluctuation, leads to enhanced tumor metastasis and resistance to radiation and drugs. Strategies to reduce hypoxia by increasing delivery of oxygen and decreasing oxygen consumption within the tumor are both being explored to overcome hypoxia-induced resistance to radiation and drugs. Therefore, there is growing demand for technologies that noninvasively measure tumor oxygenation temporally in vivo to enable advances in drug screening, development and optimization. However, the relative contr…",
+    "publications": 1,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=30201710",
     "role": "PI"
    }
   ],
@@ -1400,6 +1518,9 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/10377940",
+    "abstract": "Project Summary/Abstract Clinical practice guidelines for preservation of the upper limb following spinal cord injury (SCI) are a promising tool for adults with SCI. Yet, adult manual wheelchair users following these recommendations for stroke patterns and movement strategies still have up to 84% occurrence of shoulder pain. Furthermore, as this is the only recommendation for standard of care of individuals with SCI it is currently being applied to children with SCI without sufficient evidence of effectiveness throughout the lifespan. Our long-term objective is to establish the desperately needed clinical practice guidelines for children with SCI while at the same time improving those for adults. We know that children are not just small adults due to ongoing musculoskeletal development and a maturing brain. Patient specific rehabilitation strategies, that incorporate consideration for th…",
+    "publications": 10,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41605093,39182433,38713590,37984356,36545526,35755487,35602580,34892309,34892243,34456544",
     "role": "PI"
    }
   ],
@@ -1420,6 +1541,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10220814",
+    "abstract": "PROJECT SUMMARY Concussion impacts nearly 2 million children each year. Up to 30% of these patients will experience symptoms lasting weeks to months after injury. Current practice recommends strict rest for 24-48 hours post-concussion followed by a symptom-guided return to activity. Emerging evidence shows prolonged rest may be harmful by contributing to deconditioning, impeding the brain's nascent ability to heal, and/or setting up psychological barriers to recovery. We recently published results from a randomized controlled trial (RCT) of strict rest following acute concussion and found patients who were prescribed prolonged rest experienced greater symptoms and slower recovery. We also found that this negative effect was more pronounced if patients presented with post- concussive symptoms-only in the absence of more severe signs of injury. Exercise has been reported to aid brain recov…",
+    "publications": 2,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=36847271,36252936",
     "role": "PI"
    },
    {
@@ -1438,6 +1562,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10856924",
+    "abstract": "Academic Medical Centers have the responsibility to train the next generation of biomedical scientists and physician scientists for careers in clinical and translational research. Our Scientific Teams Advancing Research Translations (START) Program will utilize a team science approach to develop the clinical and translational research skills of graduate students and MD-fellows who align with CTSA goals of advancing therapeutics, clinical interventions and behavioral modifications to improve health. The Objectives of the START Program are to provide one year of stipend for graduate and MD-PhD students and MD-fellows to conduct focused research and develop fundamental, quantitative skills involved in clinical and translational research as components of a research PhD or MS (for scholars with clinical terminal degrees) degree. Students participate in workshops that teach project development…",
+    "publications": 129,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42003160,41794766,41642232,41178056,41044911,40854427,40334752,40262001,40013094,40003454,39999359,39890457,39736998,39596649,39030714,38926547,38853944,38711866,38688869,38441889,38412683,38351365,38222444,38070623,38038848,37962988,37928910,37871776,37866629,37627583,37499955,37493042,37456610,37384640,37339014,37207314,37163072,36991027,36950336,36918156,36736018,36698662,36563983,36066493,35985530,35923222,35914810,35903110,35820509,35777782,35663476,35621855,35583887,35383334,35238074,35080466,34874448,34773214,34767682,34561028,34478884,34471656,34415915,34166045,34007988,33885990,33878374,33841340,33789179,33750040,33715212,33616753,33548597,33503336,33439675,33270449,33062803,33049742,33014237,32983626,32923510,32866266,32543650,32196097,31852729,31531799,31479597,31456477,31424295,31400337,31369656,31133877,30999166,30971949,30854450,30740039,30624425,30545834,30398625,30379629,30197836,30069952,29908785,29881650,29752739,29554014,29374012,29321823,29311786,29296794,29140899,28428836,27979584,27080726,26854207,26729807,24958578,23147967,21815184,21646572,21536953,21495162,20371788,20029951,19692147,19350642,19092571,18575097,18326831",
     "role": "PI"
    }
   ],
@@ -1458,6 +1585,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/8927087",
+    "abstract": "DESCRIPTION (provided by applicant): When data is acquired from an MRI scanner for functional and functional connectivity MRI (f(c) MRI) studies, the temporal resolution of the data is typically low, and the data is plagued with noise from various sources. Of late, parallel MRI reconstruction techniques are often used to increase temporal resolution, and the quality of the reconstructed images is \"improved\" through additional data processing operations. However, despite the attractive benefits of these techniques, the implications that each reconstruction and processing operation have on the statistical properties of the data are often unaccounted for. Depending on the operations performed, the covariance structure of processed data can be far removed from that of the original raw data, thereby potentially corrupting the assumptions made about functional activations and connectivity in f…",
+    "publications": 5,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=30294404,26988705,26612076,25597445,25132113",
     "role": "PI"
    }
   ],
@@ -1478,6 +1608,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11386476",
+    "abstract": "PROJECT SUMMARY Preterm infants are born with immature lungs and immature neural control of breathing. They rely on supplemental oxygen therapy (hyperoxia; HX). Though necessary for survival, they require HX which progressively damages the lungs and causes bronchopulmonary dysplasia (BPD), the most common respiratory complication among preterm infants. Infants with BPD have worse neural control of breathing (nCOB) than age- matched non-BPD infants, suggesting HX dose and/or duration contribute to worse breathing control. With HX used to varying amounts and durations among nearly all preterm births and with BPD infants having a greater risk for adulthood respiratory health complications, understanding the dose- and duration-dependent effects of HX on breathing acutely and chronically remains a critical knowledge gap in the management of millions of preterm infants born each year and futur…",
+    "publications": 2,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42821472,41738294",
     "role": "PI"
    }
   ],
@@ -1498,6 +1631,7 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11386512",
+    "abstract": "There is a pressing need to increase the number of skilled professionals in cancer research to better serve an increasingly distinct patient population and solve complex cancer-related health care challenges. Providing undergraduate students, a research experience and mentoring enhances retention in STEMM careers and improves academic success. Our overarching goal is to collaborate with community partners to identify and educate a group of undergraduate students who wish to develop careers in the biomedical, behavioral and clinical research fields. This program, Student-Centered Pathway to Advance Research and Cancer Careers (SPARCC), will recruit students (SPARCC scholars) from surrounding Milwaukee area institutions of higher learning. By providing financial stipends, individualized mentorship, and access to a wide professional network, SPARCC is designed to reduce barriers to particip…",
     "role": "PI"
    },
    {
@@ -1516,6 +1650,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11399920",
+    "abstract": "Improvements maternal health will require rigorous research methods and the inclusion of pregnant and lactating women in clinical trials. Early Career-CeNtered EnricHment to AdvaNce Research Careers in Maternal HEalth (ENHANCE-M) will identify and train a multidisciplinary group of graduate students, postdoctoral fellows, and early-stage investigators with a commitment to a career in maternal health research. Trainees will be recruited from the Medical College of Wisconsin and partnering institutions. The curriculum will be grounded in clinical research methodologies and community engagement. Practices will include hands-on, team-based learning, leveraging MCW U54 research projects with a focus on clinical trials design and management, and SDOH that affect maternal morbidity and mortality, recruitment and retention of participants, thriving and resilience in academia, grant writing, and …",
+    "publications": 6,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42730047,42588163,40238906,40237955,40067413,39389559",
     "role": "PI"
    },
    {
@@ -1534,6 +1671,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11389370",
+    "abstract": "PROJECT SUMMARY Invasive cervical cancer (ICC) kills nearly 311,000 women each year worldwide with an estimated 50% increase in deaths by 2040. In the U.S., ICC ranks third for average years of life lost. Women with advanced or recurrent ICC soon develop resistance to current chemotherapy options, and about 90% die within 2 years. Our intent is to define clinically relevant and targetable ICC genes and pathways to improve patients’ treatments and outcomes. Our central hypothesis is that HPV integration events—and the changes they exert on the host genome and epigenome—confer a selective advantage to disease progression and provide opportunities to pinpoint genes and pathways relevant to treating ICC. Using The Cancer Genome Atlas (TCGA) ICC cohort (CESC), we developed a pipeline to identify integration detected genes (IDGs) altered by HPV integration in some ICCs and by genomic and/or ep…",
+    "publications": 3,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=39638560,39193365,34526665",
     "role": "PI"
    },
    {
@@ -1552,6 +1692,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10042465",
+    "abstract": "PROJECT SUMMARY/ABSTRACT Integration of the human papillomavirus (HPV) into the host genome is a dominant feature of invasive cervical cancer (ICC). Genomic coordinates of integration sites have been identified in many tumors, but little is known about the nature of the cis genomic changes at these sites or how they might promote ICC. Harnessing data from The Cancer Genome Atlas (TCGA) along with patient-matched long-read sequencing of HPV integration sites will define novel genes/pathways affecting ICC outcome. Aim 1 will define HPV integration sites in the TCGA- MCW cervical cancer cohort using newly developed HPV DNA capture for long-read sequencing. Once identified, we will annotate each integration site using TCGA data sources that document complex rearrangements, copy number variation, clonality, loss-of-heterozygosity, epigenetic signature, gene expression, and chimerism. Characte…",
+    "publications": 3,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=39638560,34526665,34380633",
     "role": "PI"
    },
    {
@@ -1570,6 +1713,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10470360",
+    "abstract": "Project Summary National statistics also show sluggish growth in the recruitment of underrepresented minorities (URM) into science-centered occupations. This new R25 funding proposal will train URM students in diversity and culturally responsive care in clinical cancer research. Our overarching goal is to collaborate with 8 community partners to actively identify and educate a diverse group of students and second career seeking individuals who wish to pursue careers as clinical research professionals and/or obtain advanced degrees in cancer research. The mechanism will be an 8-week summer training program, Student-Centered Pipeline to Advance Research in Cancer Careers (SPARCC). We designed this program on a foundation of experiential learning, culturally responsive pedagogy, and principles of adult learning. In the first year, 10 underrepresented minority students will be recruited and …",
+    "publications": 1,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=35083731",
     "role": "PI"
    }
   ],
@@ -1590,6 +1736,9 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/10458045",
+    "abstract": "PROJECT SUMMARY/ABSTRACT The purpose of this project is to develop a theory-drien, voice-activated, scalable, mHealth intervention to promote self-management and patient-provider communication in patients with coexisting diabetes (DM) and hypertension (HTN). Among the 30 million Americans who have DM, more than 20 million also have HTN. Self- management of chronic conditions is a promising strategy for preventing the development of additional co- occurring diseases and resulting in reduced morbidity and mortality. Self-monitoring health indicators (e.g., blood pressure [BP], glucose) is a key component of successful self-management. Through self-monitoring, patients can recognize patterns in their health indicators, obtain more health information, and change health behaviors. To meet the self-management needs of individuals with comorbid DM and HTN, we propose to develop a voice-activate…",
+    "publications": 5,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41058926,40417574,39640180,37750107,36594906",
     "role": "PI"
    }
   ],
@@ -1610,6 +1759,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11296908",
+    "abstract": "PROJECT ABSTRACT Calcific aortic stenosis (CAS) is the most prevalent heart valve disorder affecting up to 50% of adolescents with congenital valve disease and over 25% of those over age 75, following life-long exposure to risk factors. Independent of age, outcomes are poor following the onset of aortic stenotic (AS) symptoms, unless outflow obstruction is relieved. CAS is progressive and manifests as cusp thickening with osteogenic-like remodeling, calcium deposition in regions of high mechanical demand and narrowing of the valve opening. Despite this, the mechanisms underlying these phenotypes and their contributions to the severity of AS pathogenesis are not well defined, but biomechanical stress was implicated. This is best illustrated in congenital bicuspid aortic valve (BAV) disease, causing structural narrowing of the aortic valve (AoV) opening and increased biomechanical stress o…",
+    "publications": 2,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41286387,40079140",
     "role": "Multi-PI"
    },
    {
@@ -1628,6 +1780,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11311818",
+    "abstract": "Project Summary/Abstract Coarctation of the aorta (CoA) is a congenital cardiovascular (CV) disease characterized by a severe stenosis of the main artery delivering blood from the heart to the body. CoA affects 5,000 to 8,000 births annually in the U.S. Unfortunately many CoA patients have morbidity even after successful surgery. Hypertension (HTN) is the most common form of morbidity, which is worsened by irreversible aortic remodeling and stiffening from coarctation induced mechanical stimuli. Treatment for CoA is currently based on a peak-to-peak blood pressure gradient (BPGpp) ≥20 mmHg quantified from invasive catheterization. Unfortunately, there is a lack of data for the current BPGpp treatment value. Preliminary data applied for the current research shows that a BPGpp <20 mmHg (i.e. below the current treatment threshold) alone does not avoid HTN, and can produce coarctation-induce…",
+    "publications": 15,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41286387,40111722,39982423,38995425,38501250,37961634,37961134,37509457,37221191,36430437,36122791,34288724,34124206,32153307,31002586",
     "role": "PI"
    }
   ],
@@ -1648,6 +1803,9 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/11221151",
+    "abstract": "Project Summary/Abstract: The endoplasmic reticulum (ER) provides the platform for protein folding and secretion. In cases when proteins fail to fold correctly or misfold, they accumulate inside the ER, leading to the activation of a signaling network known as the unfolded protein response (UPR). This response involves three major ER-resident sensors: activating transcription factor 6 (ATF6), inositol requiring enzyme 1 (Ire1), and protein kinase RNA-activated-like ER kinase (PERK).Each sensor activates a distinct signaling pathway that leads to the activation of specific transcription factors, which are responsible for the activation of genes encoding protein-folding enzymes. These coordinated processes enhance the protein-folding capacity of cells. Emerging biological data, such as transcriptome, proteome and interactome information, have revealed that a large-scale regulatory crosstal…",
+    "publications": 2,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41510289,34731628",
     "role": "PI"
    },
    {
@@ -1666,6 +1824,9 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/9986818",
+    "abstract": "The unfolded protein response (UPR) is a strategy to increase the protein folding capacity of cells and to maintain the proteostasis network (PN). If this strategy fails, unfolded proteins aggregate causing many human diseases, including diabetes, arthritis and certain cancers. Thus, molecular understanding of the UPR or PN is important to develop new approaches to prevent/reverse the protein folding diseases. Ire1, an endoplasmic reticulum (ER)-resident protein, activates the UPR from yeast to humans. Ire1 activates production of the protein Xbp1 in human cells or Hac1 in yeast cells by processing (cytoplasmic splicing)theirtranslationallyrepressedmRNAs.Hac1/Xbp1thenbindstoacis-regulatoryUPRelement (UPRE) and induces expression of folding enzymes and chaperons (e.g., yeast Kar2 or human BiP). Though Hac1 is thought to induce the Kar2 in yeast, it has been shown that the Kar2 level is si…",
+    "publications": 10,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41510289,35340298,35101452,34985696,34731628,34035143,33972394,30201804,30070006,25348718",
     "role": "PI"
    },
    {
@@ -1684,6 +1845,9 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/8288483",
+    "abstract": "DESCRIPTION (provided by applicant): Abstract: The active PKR kinase domain (KD) phosphorylates the Ser51 residue of translation initiation factor eIF2¿. The activation of PKR KD requires precise dimerization and autophosphorylation, including threonine-446 (T446) autophosphorylation in the activation loop. Then, the phospho-PKR (active) recognizes eIF2¿ and transfers the ¿- phosphate of ATP to the Ser51 residue of eIF2¿. We hypothesize that, in latent PKR, the activation loop collapses into the active-site cavity, and dimerization of the N-terminal double-stranded RNA binding domains of PKR would cause a precise conformational change of the C-terminal KD dimer. As a result, the activation loop residue T446 is phosphorylated by any of three mechanisms: trans-inter-dimer, cis-intra-dimer and trans- intra-dimer. We will dissect each of these mechanisms, and uncouple the role of dimerizatio…",
+    "publications": 2,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=26175153,24338483",
     "role": "PI"
    }
   ],
@@ -1704,6 +1868,9 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/9472302",
+    "abstract": "ABSTRACT Electronic cigarette (“e-­cigarette”) use has been steadily increasing in the U.S. over the past decade, particularly among adolescents and young adults. With the growing popularity of refillable e-­cigarettes, the liquid used to refill devices (“e-­liquid”) has presented itself a distinct health concern. E-­liquids most often contain nicotine, are sold in a range of appealing flavors and colors, and are purchased on a regular basis by users of refillable e-­cigarettes. As there has been no federal regulation of e-­cigarettes or e-­liquids until recently, misleading and unauthorized marketing has proliferated online. There is evidence that exposure to marketing promotes e-­cigarette use and the belief in unsubstantiated claims. At present, there is little understanding of how e-­liquids are marketed on social media or the elements of social media marketing that are most appealin…",
+    "publications": 4,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=32506949,32433737,31763987,30253933",
     "role": "PI"
    }
   ],
@@ -1724,6 +1891,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11399808",
+    "abstract": "PROJECT SUMMARY/ABSTRACT The functional interpretation of human genetic variation needs to catch up to our ability to catalog the DNA sequences of individuals. Better tools are required to interpret mutations’ effects, improving our ability to diagnose and treat diseases. Our goal is to accurately predict which mutations cause human disease by developing tools for three-dimensional and context-dependent interpretation of genetic information. We focus on genes that regulate the genome, known as epigenetic enzymes. We will specifically study the chromatin remodeler, SMARCA4, which enables the genome to be used in the right amount at the right time. SMARCA4 is critical to study because 1) it is required for normal physiology and development, 2) germline mutations define rare and undiagnosed diseases that affect people of all ethnicities and genetic ancestries, 3) somatic mutations underly c…",
+    "publications": 17,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42804670,42768124,42713681,42395401,42395384,42367973,41892368,41890907,41751966,41347230,41175859,40672303,40667354,39974886,39659251,39596086,39591473",
     "role": "PI"
    },
    {
@@ -1742,6 +1912,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10724152",
+    "abstract": "PROJECT SUMMARY The current proposal seeks to advance mechanisms of interpretation of genomic variation found in RAG2. We leverage advanced computational techniques with existing and new experimental data, to develop a novel approach for characterizing and interpreting inter-individual genetic variation, and mutations observed in patients with immunodeficiency syndromes. Our central hypothesis is that structural calculations predict functional changes for RAG2 mutations via capture of specific biochemical and molecular mechanic features. Our approach investigates RAG2 mutations in a domain-specific manner, where each Aim investigates one of the two RAG2 structured domains: 1) we interrogate the effects of β-domain mutations on the RAG heterotetramer complex across its enzymatic cycle; 2) we computationally and functionally characterize how mutations in the plant homeodomain alter stabili…",
+    "publications": 1,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=39812873",
     "role": "PI"
    }
   ],
@@ -1762,6 +1935,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/9194302",
+    "abstract": "Project Summary / Abstract Background: Competing risks endpoints are used when patients can fail therapy from several causes. Analyzing these outcomes allows one to assess the direct benefit of treatment on a primary cause of failure in a clinical trial setting. Regression models can be used in clinical trials to adjust for residual imbalances in patient characteristics, improving the power to detect treatment differences. But, more efficient clinical trial designs, such as group sequential trials and adaptive designs, have not been extensively studied with competing risks endpoints, especially when covariate adjustment is used in the analysis. This proposal aims to expand the set of design and analysis options for clinical trials with competing risks outcomes, which is limited. Specific Aims: This study will develop new competing risks methods for clinical trials including 1) a group se…",
+    "publications": 3,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=33210321,31729633,29534294",
     "role": "PI"
    }
   ],
@@ -1782,6 +1958,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11325088",
+    "abstract": "PROJECT SUMMARY Endothelial cilia are normally considered to be present on the apical side of the vessel wall. Our data shows that endothelial cilia are also found on the basolateral side of the vasculature. The significance of this cilia location is not known. We hypothesize that endothelial cilia on the basolateral side is critical for cell-cell communication with cells of the neurovascular unit such as pericytes to promote vascular stability. In this proposal, we propose that vascular stability is governed by interaction between endothelial cell (EC)-cilia and pericytes through an interaction with basement membrane that interfaces between them. Molecules at the interface namely heparan sulfate proteoglycans (HSPGs) and the modifications associated with them are responsible for binding ligands secreted by ECs such as platelet derived growth factor-BB (PDGF-BB) to promote interaction wi…",
+    "publications": 8,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42698523,42610126,42569117,42488914,42389024,41511316,41490797,41427334",
     "role": "PI"
    },
    {
@@ -1800,6 +1979,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10914078",
+    "abstract": "Project Summary The role of brain endothelial cells (ECs) and in particular the role of cilium, a microtubule flow sensor organelle expressed on the apical surface of ECs and facing the lumen has been poorly studied in the context of blood- brain-barrier (BBB) function. ECs and in turn cilia are the first line of contact with red blood cells (RBCs) in the blood. Studies from us and others suggest that cilia on ECs are critical for flow-mediated brain vessel stability. Thus, how flow relays signals to ECs via cilia and in turn to cells of the neurovascular (NVU) unit is not known. Without this knowledge, our ability to generate BBB models that mimic in vivo conditions will be hampered. The question of EC-cilia and its role in BBB function is clinically relevant given that patients with sickle cell disease (SCD) are predisposed to both overt and silent cerebral infarct, caused by sickle RB…",
+    "publications": 27,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42698523,42488914,42389024,42343907,41851829,41490797,41427334,40374167,40370318,40134129,40001496,39749114,39693224,39605741,39268086,38336101,38028541,37300771,36187473,36148055,36036621,36010580,35700757,35143420,34693102,34195162,33643074",
     "role": "PI"
    },
    {
@@ -1818,6 +2000,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10252928",
+    "abstract": "Project Summary The role of brain endothelial cells (ECs) and in particular the role of cilium, a microtubule flow sensor organelle expressed on the apical surface of ECs and facing the lumen has been poorly studied in the context of blood- brain-barrier (BBB) function. ECs and in turn cilia are the first line of contact with red blood cells (RBCs) in the blood. Studies from us and others suggest that cilia on ECs are critical for flow-mediated brain vessel stability. Thus, how flow relays signals to ECs via cilia and in turn to cells of the neurovascular (NVU) unit is not known. Without this knowledge, our ability to generate BBB models that mimic in vivo conditions will be hampered. The question of EC-cilia and its role in BBB function is clinically relevant given that patients with sickle cell disease (SCD) are predisposed to both overt and silent cerebral infarct, caused by sickle RB…",
+    "publications": 18,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42698523,42488914,42389024,40370318,40134129,40001496,39605741,38336101,38028541,37300771,36148055,36036621,36010580,35700757,35143420,34693102,34195162,33643074",
     "role": "PI"
    },
    {
@@ -1836,6 +2021,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/9762647",
+    "abstract": "SUMMARY From 2004, Vasculata conferences that fall under the auspices of the North American Vascular Biology Organization (NAVBO) have a long-standing history in assembling at academic rich venues. At the last meeting of the NAVBO Education Committee, Medical College of Wisconsin (MCW) was selected unanimously as the host of the 2019 conference. This meeting has steadily grown over the years from 60 attendees in 2004 to 120 attendees in its 2017 version at the University of Illinois at Chicago. Vasculata in a nutshell is an intense “boot camp” that introduces students and fellows to vascular (HLBS) biology. Emphasis at 2019 Vasculata MCW conference is on short seminars covering a defined curriculum, followed by workshops with topics of practical interest to the field. Contact with local faculty and fellows, including within workshops and poster sessions, followed by long-term engaging pl…",
+    "publications": 3,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=33051447,32175818,31718444",
     "role": "PI"
    },
    {
@@ -1854,6 +2042,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/9472869",
+    "abstract": "﻿ DESCRIPTION (provided by applicant): Our knowledge of coding RNAs, such as the function of mRNAs, has contributed immensely to our understanding of fundamental cellular processes such as regulation of gene expression and cell differentiation. Recently, transcripts in intergenic regions or within introns of vascular-specific genes are emerging as a new class of RNA molecules that may play a role in the intricate regulation of angiogenesis, the growth of new blood vessels from existing vasculature. These RNAs are referred to as non-coding RNAs (ncRNAs), and are classified as long (>200 bp) (lncRNAs) or short (<200 bp) (sncRNAs) depending on their sizes. Recent evidence suggests that a majority of lncRNAs in the genome do not code for proteins. They are located in the sense (S) or antisense (AS) orientation and, to date, the functional significance of these ncRNAs is poorly understood. Ou…",
+    "publications": 14,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=33318551,32968716,32937467,32387780,31875548,31718444,30910126,30571172,29724820,29503817,27270319,26746789,25914805,25568324",
     "role": "PI"
    },
    {
@@ -1872,6 +2063,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/8989143",
+    "abstract": "DESCRIPTION (provided by applicant): Vascular anomalies (VAs), inborn errors in embryonic vascular development are classified into two distinct groups: hemangiomas and vascular malformations (VMs). Current therapies for VAs are limited in efficacy and have significant complications. Therefore, to improve therapy for patients afflicted with these conditions, it is critical to find new drugs or repurpose FDA-approved drugs to target VAs. Our long-term goal is to understand the underlying mechanisms that lead to pathogenesis of VAs so that better therapeutics targeting this condition can be generated. In order to pursue that goal, the objective is to identify small molecules (SMs) that will target dual-specific phosphatase-5 (Dusp-5), a member of the mitogen-activated protein kinase (MAPK) family, which is mutated in patients with hemangiomas and VMs. We have identified a serine to proline …",
+    "publications": 34,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=33796320,31875548,31839699,31602400,30835471,30571172,29733488,29595254,29503817,29280621,28722495,28569147,28203653,28134858,27936095,27897375,27780848,27270319,26878458,26783949,26746789,26692198,26671816,26545043,26286528,25963006,25914805,25519881,24984259,24324647,24315190,24098510,23868376,23393131",
     "role": "PI"
    },
    {
@@ -1890,6 +2084,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/8701362",
+    "abstract": "DESCRIPTION (provided by applicant): Vascular anomalies (VAs), inborn errors in embryonic vascular development are classified into two distinct groups: hemangiomas and vascular malformations (VMs). Current therapies for VAs are limited in efficacy and have significant complications. Therefore, to improve therapy for patients afflicted with these conditions, it is critical to identify the underlying mechanism leading to pathogenesis of VMs and hemangiomas. Our long-term goal is to understand the underlying mechanisms that lead to pathogenesis of VAs so that better therapeutics targeting this condition can be generated. In order to pursue that goal, the objective here is to study two recently identified genes by our group namely Sucrose non-fermenting receptor kinase-1 (Snrk-1), a serine- threonine kinase, and dual-specific phosphatase-5 (Dusp-5), a mitogen-activated protein kinase (MAPK) …",
+    "publications": 27,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=40584789,31839699,30835471,29242271,28722495,28569147,27936095,27780848,26746789,26692198,26286528,25963006,25914805,25568324,25519881,24984259,24324647,24098510,23868376,23172031,20086248,19880500,19579057,18927432,18757825,18723694,17351657",
     "role": "PI"
    },
    {
@@ -1908,6 +2105,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/8235850",
+    "abstract": "ABSTRACT Over the past four decades, endothelial cells lining the vessel wall have become an intense subject of clinical interest since ease of accessibility allows for effective drug targeting. Dysregulation of vessel growth is associated with wide range of disease states such as diabetic retinopathy, wet form of age related macular degeneration, and tumor growth. Tumor growth is angiogenesis dependent. The first step in tumor angiogenesis is endothelial cell activation and directional migration of endothelial cells towards the tumor. Therefore, understanding the mechanisms of directional migration is critical for development of therapeutics that can selectively target tumor endothelial cells from taking this first step. The goal of this laboratory is to identify and study candidate genes that are selectively upregulated in tumor vasculature. Robo4 is an excellent target since it is exp…",
+    "publications": 22,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=31839699,27936095,26286528,25519881,24984259,24324647,24203696,24098510,22308435,21967244,21730073,21636859,21364913,21311100,20813898,20086248,19880500,19579057,18980679,18927432,18757825,18723694",
     "role": "PI"
    },
    {
@@ -1926,6 +2126,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11103270",
+    "abstract": "The Medical Summer Student Research Program (MSSRP) at the Medical College of Wisconsin (MCW) leverages the research and training expertise of MCW’s faculty and its substantial research infrastructure to provide robust research training opportunities for first year medical students (M1). The goal of the MSSRP is to expose M1 medical students to research and careers in biomedical science and academic medicine in cardiovascular, pulmonary and blood-related fields at a critical time in their career decision-making process. The goal is accomplished by three objectives, which are (1) to provide trainees with rigorous, hands-on, fundamental research experiences within the basic science, clinical and/or translational research laboratories of funded MCW investigators focused on diseases of heart, lung and blood; (2) To facilitate opportunities for trainees to observe how new discoveries translat…",
+    "publications": 52,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42938842,41404758,41297111,40695592,40631020,40551321,40496698,40054518,39724230,39665198,39461451,39236000,38191147,37720996,36183313,35961396,35041588,34249804,34076938,33942685,32977008,32032612,31985165,31816182,31404609,31307310,30804812,30118617,29718699,28901231,27979750,27824690,26799428,26792056,26652754,26330165,25662333,25556652,25172169,24855115,24117504,22213752,20337209,19324074,18676539,18670828,9798691,9667497,9084673,2571392,2018869,1764817",
     "role": "PI"
    }
   ],
@@ -1946,6 +2149,7 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11387802",
+    "abstract": "Project Summary / Abstract The goal of this proposal is to define a five-year plan to prepare Nicholas P. Semenkovich, M.D., Ph.D., to become an independent physician-scientist studying applications of cell-free DNA as a novel biomarker in sepsis. He obtained his M.D. and Ph.D. degrees at Washington University in St. Louis, where he studied intestinal and immune epigenetic changes induced by the gut microbiome. After clinical training in Internal Medicine at the Brigham and Women’s Hospital, Dr. Semenkovich pursued subspeciality training in Endocrinology and Metabolism, and joined the lab of Dr. Aadel Chaudhuri to focus on the applications of cell-free DNA to understudied diseases. There he has developed and applied key new techniques and deep learning algorithms for analyzing cell-free DNA using epigenetics, which serve as the basis for the aims in the proposal. Key guidance for this pr…",
     "role": "PI"
    }
   ],
@@ -1966,6 +2170,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/11372899",
+    "abstract": "Project Summary/Abstract This project is centered on the hypothesis that RNA structure and RNA-chromatin associated protein interactions play crucial roles in maintaining genome stability. It is known that non-coding RNAs (ncRNAs) interact with protein components of chromatin, thus altering the higher order genetic architecture and gene expression. A subset of these RNA-protein interactions are linked to ageing, cancer metastasis, and neuronal development. As genomic approaches begin to identify RNA-protein associations and their links to cancer, there remain key gaps in our knowledge regarding epigenetic-based RNA binding proteins. RNA can mimic DNA, form transient DNA/RNA hybrids under cell stress, and function as scaffolds to recruit protein complexes to chromatin. Further, these RNAs can interact with structured and disordered protein regions to form multivalent networks that can und…",
+    "publications": 9,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=39084460,38742921,38461301,34540901,33753203,32786413,29450823,27935277,27277658",
     "role": "PI"
    }
   ],
@@ -1986,6 +2193,7 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/11366146",
+    "abstract": "Project Summary/Abstract Social media has a complex influence on mental health. It can contribute to bullying and harassment, which may result in loneliness, depression, and suicidality, but it can also be helpful, by fostering social connections and offering resources; these influences may both harm and benefit the same individuals. Transgender youth is a highly vulnerable group, who is often subjected to bullying and are far higher risk for self-harm and suicidality than cisgender youth. An increasing number of trans adolescents are using social media. In this proposed study, we intend to understand the effect of emotionally laden social media content consumed by trans and gender non-binary adolescents (TGNB) (ages 15 - 20) and its connection to suicidality. We focus on high schoolers and emerging adults, as suicidality rates in this group of social media users is higher than among mid…",
     "role": "PI"
    },
    {
@@ -2004,6 +2212,7 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/11046891",
+    "abstract": "Project Summary/Abstract Social media has a complex influence on mental health. It can contribute to bullying and harassment, which may result in loneliness, depression, and suicidality, but it can also be helpful, by fostering social connections and offering resources; these influences may both harm and benefit the same individuals. Transgender youth is a highly vulnerable group, who is often subjected to bullying and are far higher risk for self-harm and suicidality than cisgender youth. An increasing number of trans adolescents are using social media. In this proposed study, we intend to understand the effect of emotionally laden social media content consumed by trans and gender non-binary adolescents (TGNB) (ages 15 - 20) and its connection to suicidality. We focus on high schoolers and emerging adults, as suicidality rates in this group of social media users is higher than among mid…",
     "role": "PI"
    }
   ],
@@ -2024,6 +2233,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11363817",
+    "abstract": "ABSTRACT Infection with human Cytomegalovirus (HCMV) is nearly universal; seroprevalence rates reach 90% in individuals older than 80. Although usually asymptomatic in the normal host, HCMV causes severe morbidity and mortality in transplant recipients and patients with AIDS. Congenital HCMV is the leading infectious cause of childhood deafness and mental retardation. There is no approved vaccine for the prevention of HCMV. The nucleoside analog ganciclovir (GCV) and its oral formulation val-GCV have improved the outcome of transplantation. GCV may also prevent hearing deterioration in congenitally infected children. However, prolonged courses of GCV or val-GCV result in intolerable toxicities to the bone marrow and select for resistant viral strains. The alternative drugs for GCV-resistant HCMV, foscarnet, and cidofovir, also target the viral DNA polymerase. Both are nephrotoxic agents …",
+    "publications": 1,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42439813",
     "role": "PI"
    },
    {
@@ -2042,6 +2254,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10615151",
+    "abstract": "PROJECT SUMMARY/ABSTRACT Human cytomegalovirus (HCMV) is the most common congenital infection worldwide and a major infectious complication after solid organ and bone marrow transplantation. A few antiviral agents are used for HCMV therapy, all target the viral DNA polymerase. Ganciclovir, and its oral formulation valganciclovir are the most commonly used agents. A terminase inhibitor was recently approved for HCMV prophylaxis after bone marrow transplantation. Ongoing therapeutic challenges stem from the side effects associated with the DNA polymerase inhibitors, emergence of resistant virus mutants during prolonged treatment courses, lack of antiviral combination regimens, and cases of refractory HCMV disease that are non-responsive to all current antivirals. These serious problems drive the drug development pipeline for HCMV. Identification of novel viral targets and viral-host intera…",
+    "publications": 2,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41520074,36939350",
     "role": "PI"
    },
    {
@@ -2060,6 +2275,7 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/9787505",
+    "abstract": "Crohn's disease (CD) is a multifactorial and complex disease, orchestrated by several genetic and environmental triggers. The best known genetic marker for CD is the nucleotide oligomerization domain 2 (NOD2), a cytoplasmic receptor that responds to bacterial pathogens. Mutations in NOD2 are the strongest genetic marker for CD and the only proven risk factor for stricturing phenotypes. The fact that mutations in NOD2 result in CD only in some individuals but not in others indicates that environmental factors may contribute to or trigger CD. CMV, a common viral infection, establishes life-long latency in the host including in intestinal epithelial cells. Our laboratory reported that NOD2 suppresses CMV replication, but the NOD2 mutant 3020insC, associated with severe CD, is unable to inhibit CMV replication in vitro. NOD2 activation with muramyl dipeptide (MDP) inhibits CMV replication in…",
     "role": "PI"
    },
    {
@@ -2078,6 +2294,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/9819809",
+    "abstract": "DESCRIPTION: Infection with human Cytomegalovirus (CMV) continues to be a major threat for pregnant women, solid organ transplant recipients and patients with HIV-AIDS. Congenital CMV is the leading infectious cause of mental retardation and deafness. Although therapies for CMV can suppress virus replication, their prolonged use results in serious side effects and the emergence of resistant viruses. The available CMV inhibitors share the same mechanism of action - inhibition of viral DNA polymerase. There is an absolute need to identify new CMV inhibitors and to develop treatment strategies for CMV. The development of novel therapies for CMV could reduce morbidity and mortality in congenitally-infected children and the solid organ transplant population. Identification of novel compounds for CMV therapy is now possible because of the availability of large chemical libraries formatted as h…",
+    "publications": 7,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=32191456,31726921,29560263,27336364,26895228,26154664,26079681",
     "role": "PI"
    }
   ],
@@ -2098,6 +2317,7 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11445103",
+    "abstract": "Project Summary/Abstract Allogeneic hematopoietic cell transplantation (HCT) is a potentially curative treatment for many hematologic malignancies and blood disorders. Historically, the optimal donor is a human leukocyte antigen (HLA) fully matched sibling donor; yet, such a match is only available for about 30% of patients in need of HCT. The recent increase of post-transplant cyclophosphamide (PTCy) for graft-versus-host disease (GVHD) prophylaxis has substantially improved outcomes for alternative donor options including related haplotype matched, or unrelated matched and mismatched donors. Furthermore, the characteristics of the donor such as their age, sex/child- bearing history, HLA matches/mismatches at loci A, B, C, DRB1, DQB1 and DPB1, etc. can have a positive or negative impact on the prognosis of each recipient’s outcome. However, most studies of optimal donor selection have p…",
     "role": "PI"
    }
   ],
@@ -2118,6 +2338,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/11444021",
+    "abstract": "PROJECT SUMMARY Acute Respiratory Distress Syndrome (ARDS) is a life-threatening condition with ~40% mortality, characterized by endothelial and epithelial injury, vascular hyperpermeability, and pulmonary edema. Despite extensive mo- lecular insights, clinical outcomes remain unpredictable: some patients with mild ARDS rapidly progress to se- vere disease, while others recover despite similar risk factors. The mechanistic basis for differential susceptibil- ity to severe ARDS is not well understood. Thus, mechanistically-based approaches for early risk stratification and targeted interventions for patients at risk of severe ARDS are urgently needed. Oxidative stress and mitochondrial dysfunction are central to ARDS pathogenesis. Our published work demon- strates that inhibition of mitochondrial complex I decreases ATP production and increases permeability, directly linking altered bioen…",
+    "publications": 25,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42545720,42525834,41934471,41828702,41106842,41018018,40663440,40516644,38867668,35943727,34941441,34738958,34559580,33404364,32134711,31414953,30906264,30175632,30123329,29889855,29419407,28915216,28266889,27033892,26974426",
     "role": "PI"
    },
    {
@@ -2136,6 +2359,9 @@
     ],
     "institution": "Marquette University",
     "url": "https://reporter.nih.gov/project-details/7880619",
+    "abstract": "DESCRIPTION (provided by applicant): A common initial treatment for hypoxemia in patients with lung failure secondary to chronic obstructive pulmonary diseases, pneumonia, or adult respiratory distress syndrome is elevated 02 therapy (hyperoxia). However, prolonged exposure to hyperoxia causes lung injury. The rat model of hyperoxic lung injury mimics several aspects of lung O2 toxicity observed clinically and is unique in that exposure to 85% O2 for 7 days confers tolerance to the otherwise lethal effects of 100% O2. Conversely, rats exposed to 60% O2 for 7 days become more susceptible to 100% O2. Our long-term goal is to elucidate the mechanisms of tolerance and susceptibility to 100% O2. Studies have demonstrated hyperoxia-induced changes in the activities of redox enzymes, predominantly in lung tissue homogenates, and have suggested that redox enzymes play a role in rat tolerance/sus…",
+    "publications": 67,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=31414953,24273334,23238793,23086010,22628374,22559688,22534031,21551015,21239539,20552277,18703762,17998091,17601793,16512898,16243901,15994278,15319336,15183197,12882764,12654478,12489018,11741813,11557601,11350810,11144662,10645791,10562628,10368351,10355556,9846931,9612283,9572516,9475861,9142941,9008218,8779994,8734056,8482689,8282598,8100497,7961255,7836156,7836117,7775292,7631818,7263447,7204214,7129990,6725081,6538103,6420799,6386768,4012605,3592325,3296875,3032886,3010743,2745297,2650963,2557772,2551191,2545661,2409068,2155544,1559949,1373714,1373037",
     "role": "PI"
    }
   ],
@@ -2156,6 +2382,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/10765724",
+    "abstract": "Abstract In this R01 proposal, we plan to use an integrative genomics (Omics) analysis to test two central hypotheses: 1) an environmental or cellular stimulus such as hormones induced distinct chromatin interacting foci such as enhancer-enhancer looping foci play key roles in regulating cell transformed phenotype; and 2) 3D chromatin structures play key roles in governing cell identities. The ultimate goal is to dissect the relationship between chromatin interactions and cell identities or cellular phenotypes. Using a model system of ERα in breast cancer, we will a) identify distinct types of ERα-regulated chromatin interacting foci including promoter- enhancer, enhancer-enhancer and enhancer-repressor looping foci; and b) identify 3D-regulated breast cancer cell identities and sensitive-resistant transition cell subpopulations. The successful completion of our proposed studies will be …",
+    "publications": 74,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=42779754,42650050,42026057,40986520,40706598,40667346,40449144,40399810,40178974,40112000,39333113,38927910,38235525,38232107,37771252,37717699,37066855,36186774,35950186,35879545,35696429,35682995,35672415,35505215,35394046,35301425,35240993,34943821,34732895,34535185,34446075,33462142,33201180,32787954,32459819,31815011,31522764,30995943,30944316,30936295,30799419,30548288,30389702,29351847,29233929,29091999,28885554,28684637,28649985,28620196,28505145,28499350,28424482,28419278,28357402,28066512,28008337,27842364,27807836,27569206,27478935,27458208,27214023,26941120,26924343,26852142,26743006,26605336,26300005,25735482,25719337,24272913,19676055,16173096",
     "role": "PI"
    }
   ],
@@ -2176,6 +2405,9 @@
     ],
     "institution": "Medical College of Wisconsin",
     "url": "https://reporter.nih.gov/project-details/11380946",
+    "abstract": "PROJECT SUMMARY Vascular homeostasis is essential for human health as endothelial cells (EC) perform important physiological functions such as formation of vascular barriers. EC activation occurs when hypoxic or inflammatory signals lead to EC sprouting, inflammatory gene expression, and vascular leakage, which disrupts vascular homeostasis and causes vascular dysfunction and cardiovascular diseases. Therefore, this application focuses on identifying key regulators of vascular homeostasis and understanding how they maintain normal vascular function, which forms the basis for our long-term objectives to understand how the identified key homeostasis factors confer resilience to the vasculature to prevent loss of vascular homeostasis in cardiovascular diseases. Here we focus on RNA- binding proteins (RBP) as they are essential regulators of gene expression but highly understudied in vascula…",
+    "publications": 1,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=41401976",
     "role": "PI"
    }
   ],
@@ -2196,6 +2428,9 @@
     ],
     "institution": "UW-Milwaukee",
     "url": "https://reporter.nih.gov/project-details/7940176",
+    "abstract": "DESCRIPTION (provided by applicant): Calcium has been one of the most versatile biological messengers in a cell, playing critical roles in regulating the cell's functions. In particular, the transient change of calcium concentration in cardiac muscle cells (myocytes) forms the basis of cell-wide contraction that eventually results in the whole heart contraction. Studying calcium signaling in cardiac myocytes is thus a fundamental research topic in understanding the excitation-contraction (E-C) coupling in the cells and ultimately revealing the microscopic mechanism of heart disease. The main goal of the present proposal is to utilize three-dimensional (3D) electron microscopic (EM) images and mathematical simulation techniques to explore image-based modeling of calcium signaling in ventricular myocytes to achieve a realistic understanding of the microscopic environment of heart disease. …",
+    "publications": 16,
+    "publications_url": "https://pubmed.ncbi.nlm.nih.gov/?term=24910467,24252469,24212039,24212025,24092120,23746531,23580890,23144522,22408720,22328806,22328787,22255637,21686314,21632291,19965055,19964372",
     "role": "PI"
    }
   ]

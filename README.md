@@ -59,7 +59,16 @@ similarity and keeps each person's 3 closest matches (similarity ≥ 0.12), plus
 Federal awards (`funding.py`): NSF awards whose awardee is one of the five institutions, and NIH projects searched
 by PI name at those institutions, starting 2010 or later. A person is matched when the PI or co-PI has the same first
 name (or a common nickname) and last name at the same institution. Awards won at a previous employer aren't found.
-The profile panel lists them with links to nsf.gov / reporter.nih.gov; they also feed search, tags and theme.
+The profile panel lists them with links to nsf.gov / reporter.nih.gov, each award's abstract (first 900 characters)
+and, for NIH projects, the linked papers (`/v2/publications/search`, opened as a PubMed list). Titles and
+abstracts also feed search, tags and theme. On the Collaboration Map, every cross-institution pair has
+"Plan a grant together", which opens Find an Expert with that pair as the team and their shared topics as the request.
+
+Funded projects like this (`js/grantsearch.js`): Find an Expert searches NSF and NIH live for awards from the last
+five years that mention the request's two or three most distinctive ideas (all of them, then fewer if under 3 hits),
+in Wisconsin or nationwide, and links any PI who is in the directory. NSF is called from the browser; NIH RePORTER
+refuses browser requests, so `api/nih-search.js` (a Vercel serverless function, cached a day) relays it. With
+`python -m http.server` that function doesn't run, so NIH shows a note locally.
 
 Funding opportunities (`opportunities.py`): Grants.gov `search2` for posted and forecast opportunities open to
 universities, over the topic keywords in the script, then `fetchOpportunity` for description, deadline, ceiling and
