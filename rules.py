@@ -46,7 +46,8 @@ KNOWN_COLLEGES = {
     "College of Business Administration", "College of Education", "College of Health Sciences", "College of Nursing",
     "Diederich College of Communication", "Opus College of Engineering", "Raynor Library",
     "College of Community Engagement and Professions", "College of General Studies", "Academic Affairs",
-    "Peck School of the Arts", "School of Freshwater Sciences",
+    "Peck School of the Arts", "School of Freshwater Sciences", "College of Health Professions & Sciences",
+    "Office of Research and Sponsored Programs", "Center for Peacemaking", "Law School", "School of Dentistry",
 }
 
 # --- Themes: one primary theme per person ------------------------------------------------------
@@ -59,26 +60,29 @@ THEMES = {
         "natural language", "large language model*", "LLM*", "generative AI", "agentic", "computer vision",
         "reinforcement learning", "data mining", "data science", "robot*", "autonomous", "image processing",
         "pattern recognition", "recommender", "text mining", "computer science",
+        "information retrieval", "semantic web", "metadata", "knowledge organization",
     ],
-    "Health Informatics": [
+    # Was "Health Informatics"; renamed when MCW's clinicians joined the list (Nov 2026).
+    "Health & Medicine": [
         "health informatics", "informatics", "clinical", "patient*", "electronic health record*", "EHR",
         "public health", "nursing", "health care", "healthcare", "medical", "dental", "dentistry",
         "population health", "health outcomes", "opioid", "substance use", "mental health", "epidemiolog*",
         "health sciences", "physical therapy", "exercise science", "rehabilitation",
+        "health", "medicine", "surgery", "surgical", "pediatric*", "oncology", "transplant*", "obstetric*",
+        "gynecolog*", "neonat*", "infectio*", "pulmonary", "critical care", "concussion", "perinatal",
+        "sickle cell", "physician*", "pharmac*", "nurse*",
     ],
     "Statistics & Mathematics": [
         "statistic*", "mathematic*", "probability", "stochastic", "bayesian", "time series", "regression",
         "inference", "extreme value", "random network*", "integral equations", "numerical", "applied math*",
         "biostatistic*", "survival analysis", "high-dimensional", "spatial statistics", "uncertainty quantification",
         "hypothes*", "functional data", "simulation*",
-        # physical sciences have no theme of their own; they land here (consider adding a theme)
-        "physics", "astrophysic*", "cosmology", "relativity", "astronomy",
     ],
     "Operations & Supply Chain": [
         "supply chain", "operations management", "operations research", "logistics", "inventory",
         "scheduling", "queueing", "optimi*", "decision making under uncertainty", "manufacturing",
         "production", "statistical process control", "quality control", "forecasting", "sustainable operations",
-        "revenue management", "dynamic pricing", "transportation",
+        "revenue management", "dynamic pricing", "transportation", "operations", "procurement",
     ],
     "Finance & Economics": [
         "financ*", "economic*", "accounting", "insurance", "actuarial", "risk management", "banking",
@@ -89,8 +93,6 @@ THEMES = {
         "climate", "environment*", "water", "hydrolog*", "freshwater", "ecolog*", "sustainab*", "energy",
         "pollution", "weather", "atmospher*", "geospatial", "GIS", "remote sensing", "agricultur*", "urban",
         "geograph*", "earth science*", "meteorolog*", "watershed", "geoscience",
-        # combustion / thermal-fluid engineering grouped with energy
-        "combustion", "fluid*", "thermal", "heat transfer",
     ],
     "Security & Systems": [
         "security", "cybersecurity", "privacy", "cryptograph*", "computer network*", "network security", "internet of things", "IoT",
@@ -116,6 +118,20 @@ THEMES = {
         "music", "law", "legal", "intellectual property", "ethics", "library", "archiv*", "fiction", "english",
         "writing", "syriac", "early christianity",
     ],
+    # Added Nov 2026 with MSOE's directory. Physics used to fall under Statistics & Mathematics and
+    # combustion / thermal-fluid work under Climate & Environment.
+    "Engineering & Physical Sciences": [
+        "mechanical engineering", "mechanical", "civil engineering", "civil", "structural", "construction",
+        "architectur*", "materials", "composite*", "mechanics", "industrial engineering", "control systems",
+        "physics", "astrophysic*", "cosmology", "relativity", "astronomy",
+        "combustion", "fluid*", "thermal", "heat transfer", "acoustic*", "electrical engineering",
+    ],
+}
+
+# Department names whose words mislead theme scoring, replaced by the text used for scoring.
+# MSOE's "Electrical, Computer, and Biomedical Engineering" put every electrical engineer under Biology & Biomedical.
+ORG_TEXT_OVERRIDES = {
+    "Electrical, Computer, and Biomedical Engineering": "Electrical Engineering, Computer Engineering",
 }
 
 # --- Industries: zero or more per person -------------------------------------------------------

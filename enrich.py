@@ -10,12 +10,16 @@ from collections import Counter
 from pathlib import Path
 
 import rules
+from scrape import URL_OVERRIDES
 
 DIRECTORY = Path("data/directory_raw.json")
 SCRAPED = Path("data/scraped.json")
 OUT = Path("faculty.json")
 GROUPS = Path("data/groupings.json")
 PHOTOS = Path("data/photos.json")  # from photos.py; optional
+AWARDS = Path("data/awards.json")  # from funding.py (NSF + NIH); optional
+AWARD_FIELDS = ("agency", "id", "title", "program", "directorate", "activity", "start", "end", "fiscal_years",
+                "amount", "role", "url")
 
 
 def keyword_regex(keyword):
@@ -210,7 +214,19 @@ def score_theme(research_text, org_text):
     return best, "inferred", evidence[best]
 
 
-def enrich(person, scraped, photos=None):
+def federal_funding(awards):
+    """One funding entry per agency with awards on record (NSF / NIH APIs), with the count as evidence."""
+    out = []
+    for agency in ("NSF", "NIH"):
+        mine = [a for a in awards if a["agency"] == agency]
+        if mine:
+            out.append({"name": agency, "source": agency.lower() + "_api",
+                        "evidence": f"{len(mine)} {agency} award{'s' if len(mine) > 1 else ''} on record, "
+                                    f"most recent: {mine[0]['title']}"})
+    return out
+
+
+def enrich(person, scraped, photos=None, awards=None):
     entry = scraped.get(person["id"], {})
     parsed = entry.get("parsed") or {}
     profile_research = [l for l in parsed.get("research", []) if not NOT_RESEARCH.search(l)]
@@ -222,19 +238,24 @@ def enrich(person, scraped, photos=None):
     else:
         summary, summary_source = person["directory_research"], "directory"
 
-    prose = " ".join(filter(None, [summary, person["directory_research"]]))  # full text, for tags and theme
+    my_awards = [{k: a.get(k) for k in AWARD_FIELDS if a.get(k) is not None} for a in (awards or {}).get(person["id"], [])]
+    # NSF / NIH award titles describe funded work: extra text for tags and theme (they come after the
+    # person's own words, so profile and directory research still lead).
+    award_text = " ; ".join(a["title"] for a in my_awards if a.get("title"))
+    prose = " ".join(filter(None, [summary, person["directory_research"], award_text]))  # full text, for tags and theme
     summary = shorten(summary)
     tags, tags_source = research_tags(profile_research, person["directory_research_lines"], prose)
     college, department, college_source = org_units(person)
     topical_college = None if college in rules.NON_TOPICAL_COLLEGES else college
-    org_text = " ".join(filter(None, [department, topical_college]))
+    org_text = " ".join(filter(None, [rules.ORG_TEXT_OVERRIDES.get(department, department), topical_college]))
     research_text = " ".join([prose] + tags)
 
     theme, theme_source, theme_evidence = score_theme(research_text, org_text)
     industries = [{"name": name, "source": "inferred", "evidence": found}
                   for name, keywords in rules.INDUSTRIES.items()
                   if (found := hits(keywords, research_text + " " + org_text))]
-    funding = find_funding(parsed)
+    funding = federal_funding(my_awards)
+    funding += [f for f in find_funding(parsed) if f["name"] not in {g["name"] for g in funding}]
     classes = [dict(c, source="profile") for c in parsed.get("courses", [])]
 
     return {
@@ -247,8 +268,11 @@ def enrich(person, scraped, photos=None):
         "college_raw": person["college"],
         "college_source": college_source,
         "department": department,
-        "profile_url": person["profile_url"],
-        "photo_url": (photos or {}).get(person["id"]),
+        # the corrected link when the list's is broken (scrape.URL_OVERRIDES), else the list's link
+        "profile_url": URL_OVERRIDES.get(person["id"], person["profile_url"]),
+        "photo_url": (photos or {}).get(person["id"]) or person.get("msoe_photo"),
+        "nmdsi_affiliate": person.get("nmdsi_affiliate", True),
+        "nmdsi_category": person.get("nmdsi_category"),
         "directory_research": person["directory_research"],
         "research_summary": summary,
         "research_summary_source": summary_source,
@@ -258,6 +282,7 @@ def enrich(person, scraped, photos=None):
         "industries": industries,
         "funding": funding,
         "funding_status": "named" if funding else "unknown",
+        "awards": my_awards,
         "theme": theme,
         "theme_source": theme_source,
         "theme_evidence": theme_evidence,
@@ -294,6 +319,7 @@ def build_groupings(records):
         "by_industry": group(records, lambda r: [i["name"] for i in r["industries"]] or ["(none matched)"]),
         "by_funding": group(records, lambda r: [f["name"] for f in r["funding"]] or ["unknown"]),
         "by_scrape_status": group(records, lambda r: [r["scrape_status"]]),
+        "by_listing": group(records, lambda r: ["NMDSI affiliate" if r["nmdsi_affiliate"] else "Other MSOE faculty"]),
         "presets": {rules.PRESET_NAME: {"count": len(preset_ids), "ids": preset_ids,
                                         "rule": {"themes": rules.PRESET_THEMES, "keywords": rules.PRESET_KEYWORDS}}},
     }
@@ -303,7 +329,8 @@ def main():
     people = json.loads(DIRECTORY.read_text(encoding="utf-8"))
     scraped = json.loads(SCRAPED.read_text(encoding="utf-8")) if SCRAPED.exists() else {}
     photos = json.loads(PHOTOS.read_text(encoding="utf-8")) if PHOTOS.exists() else {}
-    records = [enrich(p, scraped, photos) for p in people]
+    awards = json.loads(AWARDS.read_text(encoding="utf-8"))["awards"] if AWARDS.exists() else {}
+    records = [enrich(p, scraped, photos, awards) for p in people]
     OUT.write_text(json.dumps(records, indent=2, ensure_ascii=False), encoding="utf-8")
     groupings = build_groupings(records)
     GROUPS.write_text(json.dumps(groupings, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -315,6 +342,9 @@ def main():
     print("Funding:", {k: v["count"] for k, v in groupings["by_funding"].items()})
     print(f"Classes listed: {sum(1 for r in records if r['classes'])} people")
     print(f"Photos: {sum(1 for r in records if r['photo_url'])} people")
+    listed = [r for r in records if r["nmdsi_affiliate"]]
+    print(f"NMDSI list: {len(listed)} people, {sum(1 for r in listed if r['photo_url'])} with photos, "
+          f"{sum(1 for r in listed if r['awards'])} with NSF/NIH awards; other MSOE faculty: {len(records) - len(listed)}")
     print(f"Research summary from profile: {sum(1 for r in records if r['research_summary_source'] == 'profile')}")
     print(f"Preset '{rules.PRESET_NAME}': {groupings['presets'][rules.PRESET_NAME]['count']} people")
     few = [r["id"] for r in records if len(r["research_tags"]) < rules.MIN_TAGS]

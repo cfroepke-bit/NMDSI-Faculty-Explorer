@@ -9,6 +9,7 @@ import csv
 import json
 import os
 import random
+import re
 import sys
 import time
 from datetime import datetime, timezone
@@ -23,10 +24,11 @@ from parsers import parse_profile
 # Polite scraping: site owners can see who to contact. Set your own address before fetching, e.g.
 #   PowerShell: $env:NMDSI_CONTACT_EMAIL = "you@example.com"     bash: export NMDSI_CONTACT_EMAIL=you@example.com
 CONTACT_EMAIL = os.environ.get("NMDSI_CONTACT_EMAIL", "").strip()
-CONTACT_URL = ""  # optional: a page describing this project, e.g. a GitHub repo
+# A page describing this project. Enough on its own as the contact (no email needed).
+CONTACT_URL = os.environ.get("NMDSI_CONTACT_URL", "https://github.com/cfroepke-bit/NMDSI-Faculty-Explorer").strip()
 BOT_NAME = "NMDSI-FacultyDirectoryBot"
-USER_AGENT = (f"{BOT_NAME}/1.0 (academic directory research, low-rate; "
-              f"contact: {CONTACT_EMAIL}{'; ' + CONTACT_URL if CONTACT_URL else ''})")
+USER_AGENT = (f"{BOT_NAME}/1.0 (academic directory research, low-rate; contact: "
+              + "; ".join(filter(None, [CONTACT_EMAIL, CONTACT_URL])) + ")")
 
 DIRECTORY = Path("data/directory_raw.json")
 OUT = Path("data/scraped.json")
@@ -53,7 +55,22 @@ URL_OVERRIDES = {
     "edward-blumenthal": "https://www.marquette.edu/biology/directory/blumenthal.php",
     "jim-pokrywczynski": "https://www.marquette.edu/communication/directory/james-pokrywczynski.php",  # emeritus
     "shengtong-han": "https://www.marquette.edu/dentistry/directory/shengtong-han.php",  # PDF had a UWM link
+    # The September 2026 list's links for these are worse than the 2025 directory's, which still work.
+    "sheikh-iqbal-ahamed": "https://www.marquette.edu/computer-science/directory/iqbal-ahamed.php",  # list: a .png
+    "mark-schwartz": "https://uwm.edu/geography/people/schwartz-mark/",  # list's link 404s
+    "kristian-o-connor": "https://uwm.edu/publichealth/directory/oconnor-phd-kristian/",  # list's page blocked by robots.txt
+    "elsbeth-kalenderian": "https://www.marquette.edu/leadership/ulc-kalenderian.php",  # list: whole dental directory
 }
+MSOE_PROFILE = re.compile(r"^https?://(www\.)?msoe\.edu/directory/profile/([^/?#]+)/?$", re.I)
+
+
+def page_to_fetch(url):
+    """MSOE's profile pages are empty shells that load an ExpertFile profile in a frame; fetch that profile
+    (expertfile.com's robots.txt allows it). The dashboard still links to the MSOE page."""
+    m = MSOE_PROFILE.match(url or "")
+    return f"https://expertfile.com/embeds/people/{m.group(2)}?legacy_content_type=expert" if m else url
+
+
 DELAY_RANGE = (3, 6)
 MAX_RETRIES = 2
 TIMEOUT = 25
@@ -79,16 +96,19 @@ def robots_for(url):
     parts = urlparse(url)
     host = f"{parts.scheme}://{parts.netloc}"
     if host not in robots:
-        rp = RobotFileParser()
-        polite_wait()
-        try:
-            r = session.get(f"{host}/robots.txt", timeout=TIMEOUT)
-            if r.status_code >= 500:
-                rp = None
-            else:
+        rp = None
+        for attempt in range(3):  # a brief network hiccup shouldn't skip a whole site for the rest of the run
+            if attempt:
+                time.sleep(10 * attempt)
+            polite_wait()
+            try:
+                r = session.get(f"{host}/robots.txt", timeout=TIMEOUT)
+            except requests.RequestException:
+                continue
+            if r.status_code < 500:
+                rp = RobotFileParser()
                 rp.parse(r.text.splitlines() if r.status_code == 200 else [])
-        except requests.RequestException:
-            rp = None
+                break
         robots[host] = rp
     return robots[host]
 
@@ -134,8 +154,8 @@ def main():
                     help="no network: re-parse cached pages only (use after editing parsers.py)")
     ap.add_argument("--only", nargs="+", metavar="ID", help="only process these people, e.g. --only rina-ghose")
     args = ap.parse_args()
-    if not args.offline and not CONTACT_EMAIL:
-        sys.exit("Set NMDSI_CONTACT_EMAIL to your email before fetching pages (see the top of scrape.py), "
+    if not args.offline and not (CONTACT_EMAIL or CONTACT_URL):
+        sys.exit("Set NMDSI_CONTACT_EMAIL or NMDSI_CONTACT_URL before fetching pages (see the top of scrape.py), "
                  "or use --offline to re-parse cached pages.")
 
     people = json.loads(DIRECTORY.read_text(encoding="utf-8"))
@@ -151,7 +171,7 @@ def main():
         try:
             for person in people:
                 pid = person["id"]
-                url = URL_OVERRIDES.get(pid, person["profile_url"])
+                url = page_to_fetch(URL_OVERRIDES.get(pid, person["profile_url"]))
                 if args.only and pid not in args.only:
                     continue
                 entry = results.get(pid, {"scrape_status": "not_attempted"})

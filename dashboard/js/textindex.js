@@ -52,16 +52,18 @@
     [p => (p.research_summary || "").slice(0, 3000), 1],
     [p => p.classes.map(c => c.title).join(" ; "), 1.5],
     [p => p.department, 1],
+    [p => (p.awards || []).map(a => a.title).join(" ; "), 1.2],   // NSF/NIH award titles: areas already funded
   ];
 
   class TextIndex {
-    constructor(people) {
+    // fields: [[item => text, weight], ...]; defaults to the faculty fields above.
+    constructor(people, fields = FIELDS) {
       this.people = people;
       this.surface = new Map();          // term -> {form: count}
       this.docs = people.map(p => {
         const tf = new Map();
         let len = 0;
-        for (const [get, w] of FIELDS) {
+        for (const [get, w] of fields) {
           for (const { term, surface } of terms(get(p))) {
             tf.set(term, (tf.get(term) || 0) + w); len += w;
             const forms = this.surface.get(term) || {}; forms[surface] = (forms[surface] || 0) + 1; this.surface.set(term, forms);

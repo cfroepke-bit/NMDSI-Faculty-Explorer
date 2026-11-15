@@ -1,10 +1,30 @@
-const THEMES = ["AI/ML & NLP", "Health Informatics", "Statistics & Mathematics", "Operations & Supply Chain",
+const THEMES = ["AI/ML & NLP", "Health & Medicine", "Statistics & Mathematics", "Operations & Supply Chain",
   "Finance & Economics", "Climate & Environment", "Security & Systems", "Social Science & Policy",
-  "Biology & Biomedical", "Humanities & Communication"];
+  "Biology & Biomedical", "Humanities & Communication", "Engineering & Physical Sciences"];
 const themeColor = t => `var(--t${THEMES.indexOf(t) + 1})`;
-const UNI_SHORT = { "UW-Milwaukee": "UWM", "Marquette University": "Marquette" };
-const UNI_CLASS = { "UW-Milwaukee": "uwm", "Marquette University": "mu" };
-const UNI_LOGO = { "UW-Milwaukee": "assets/uwm-logo.svg", "Marquette University": "assets/marquette-logo.png" };
+// The five NMDSI academic partners, in display order.
+const UNI_ORDER = ["UW-Milwaukee", "Marquette University", "Medical College of Wisconsin", "Milwaukee School of Engineering",
+                   "Waukesha County Technical College"];
+const UNI_SHORT = { "UW-Milwaukee": "UWM", "Marquette University": "Marquette", "Medical College of Wisconsin": "MCW",
+                    "Milwaukee School of Engineering": "MSOE", "Waukesha County Technical College": "WCTC" };
+const UNI_CLASS = { "UW-Milwaukee": "uwm", "Marquette University": "mu", "Medical College of Wisconsin": "mcw",
+                    "Milwaukee School of Engineering": "msoe", "Waukesha County Technical College": "wctc" };
+const UNI_LOGO = { "UW-Milwaukee": "assets/uwm-logo.svg", "Marquette University": "assets/marquette-logo.png",
+                   "Medical College of Wisconsin": "assets/mcw-logo.svg", "Milwaukee School of Engineering": "assets/msoe-logo.svg",
+                   "Waukesha County Technical College": "assets/wctc-logo.svg" };
+const uniRank = u => { const i = UNI_ORDER.indexOf(u); return i < 0 ? 99 : i; };
+const LISTED = "NMDSI affiliate", NOT_LISTED = "Other MSOE faculty";
+const listing = p => p.nmdsi_affiliate === false ? NOT_LISTED : LISTED;
+const notListedBadge = p => p.nmdsi_affiliate === false
+  ? `<span class="nl-badge" title="In MSOE's faculty directory but not on the NMDSI affiliate list">Not on NMDSI list</span>` : "";
+const money = n => n >= 1e6 ? `$${(n / 1e6).toFixed(n >= 1e7 ? 0 : 1)}M` : n >= 1e3 ? `$${Math.round(n / 1e3)}K` : n ? `$${n}` : "";
+const awardYears = a => a.fiscal_years ? `${a.fiscal_years[0]}–${a.fiscal_years[1]}`
+  : [a.start, a.end].filter(Boolean).map(d => d.slice(0, 4)).filter((y, i, arr) => arr.indexOf(y) === i).join("–");
+// "NSF ×2 · NIH" for cards and match rows.
+const awardSummary = p => ["NSF", "NIH"].map(ag => [ag, (p.awards || []).filter(a => a.agency === ag).length])
+  .filter(([, n]) => n).map(([ag, n]) => n > 1 ? `${ag} ×${n}` : ag).join(" · ");
+const fundedBadge = p => p.awards?.length
+  ? `<span class="funded" title="Federal research awards on record (NSF / NIH)">Funded: ${esc(awardSummary(p))}</span>` : "";
 const uniBadge = u => `<span class="uni ${UNI_CLASS[u] || "other"}">${esc(UNI_SHORT[u] || u)}</span>`;
 const initials = p => p.name.replace(/\b(Dr|Jr|Sr|II|III)\b\.?/g, "").split(/\s+/).filter(Boolean)
   .filter((w, i, a) => i === 0 || i === a.length - 1).map(w => w[0]).join("").toUpperCase();
@@ -13,12 +33,14 @@ const avatar = (p, tag = "div") => p.photo_url
   ? `<${tag} class="avatar has-photo" aria-hidden="true">${esc(initials(p))}<img src="${esc(p.photo_url)}" alt="" loading="lazy"
       decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.classList.remove('has-photo');this.remove()"></${tag}>`
   : `<${tag} class="avatar" aria-hidden="true">${esc(initials(p))}</${tag}>`;
-const FUNDING_LABEL = { unknown: "Not stated", internal: "Internal / university", "industry partner": "Industry partner" };
+const FUNDING_LABEL = { unknown: "Not stated", internal: "Internal / university", "industry partner": "Industry partner",
+                        NSF: "NSF", NIH: "NIH" };
 const STATUS_LABEL = { ok: "Profile read", http_error: "Profile link broken", no_url: "No profile link",
                        parsed_empty: "Profile had no details", redirected_away: "Profile link redirects elsewhere" };
 
 const FACETS = [
-  { key: "university", title: "University", values: p => [p.university], label: v => v },
+  { key: "listing", title: "NMDSI list", values: p => [listing(p)], label: v => v, order: [LISTED, NOT_LISTED] },
+  { key: "university", title: "Institution", values: p => [p.university], label: v => v, order: UNI_ORDER },
   { key: "theme", title: "Research theme", values: p => [p.theme], label: v => v, dot: true },
   { key: "industry", title: "Industry", values: p => p.industries.map(i => i.name), label: v => v },
   { key: "funding", title: "Funding", values: p => p.funding.length ? p.funding.map(f => f.name) : ["unknown"],
@@ -26,7 +48,7 @@ const FACETS = [
 ];
 
 const state = { q: "", sel: Object.fromEntries(FACETS.map(f => [f.key, new Set()])),
-                preset: false, hasClasses: false, group: null, showAll: false, sort: "last", openId: null,
+                preset: false, hasClasses: false, hasAwards: false, group: null, showAll: false, sort: "last", openId: null,
                 tab: "search", related: [], exact: false, why: new Map() };
 let people = [], byId = {}, groups = {}, fuse, ix, presetName = null, presetIds = new Set();
 const TABS = ["search", "match", "network", "shortlist"];
@@ -49,10 +71,12 @@ async function load() {
   people.forEach(p => byId[p.id] = p);
   presetName = Object.keys(groups.presets || {})[0] || null;
   if (presetName) presetIds = new Set(groups.presets[presetName].ids);
-  const unis = Object.keys(groups.by_university).map(u => UNI_SHORT[u] || u).join(" & ");
-  document.getElementById("subtitle").textContent = `${people.length} affiliated faculty · ${unis}`;
-  document.getElementById("heroSub").textContent =
-    `Search ${people.length} affiliated faculty at ${Object.keys(groups.by_university).join(" and ")} by name, research topic, class, or department.`;
+  const listed = people.filter(p => p.nmdsi_affiliate !== false).length, extra = people.length - listed;
+  const nUnis = Object.keys(groups.by_university).length;
+  document.getElementById("subtitle").textContent = `${listed} NMDSI affiliated faculty · ${nUnis} institutions`
+    + (extra ? ` · plus ${extra} MSOE faculty` : "");
+  document.getElementById("heroSub").textContent = `Search ${listed} NMDSI affiliated faculty at UWM, Marquette, MCW, MSOE and WCTC`
+    + (extra ? `, plus ${extra} more MSOE faculty,` : "") + " by name, research topic, class, department, or federal grant.";
   ix = new TextIndex(people);
   // Fuzzy matching only on short fields (names, tags, class codes) so typos still work; topic relevance comes from ix.
   fuse = new Fuse(people, {
@@ -79,6 +103,7 @@ function passes(p, skip) {
   if (skip !== "views") {
     if (state.preset && !presetIds.has(p.id)) return false;
     if (state.hasClasses && !p.classes.length) return false;
+    if (state.hasAwards && !p.awards?.length) return false;
   }
   if (skip !== "group" && state.group && !state.group.ids.has(p.id)) return false;
   return true;
@@ -133,6 +158,8 @@ function buildSidebar(base) {
     count: vBase.filter(p => presetIds.has(p.id)).length, onChange: () => { state.preset = !state.preset; render(); } }));
   views.append(optionRow({ checked: state.hasClasses, label: "Has classes listed",
     count: vBase.filter(p => p.classes.length).length, onChange: () => { state.hasClasses = !state.hasClasses; render(); } }));
+  views.append(optionRow({ checked: state.hasAwards, label: "Has NSF / NIH awards",
+    count: vBase.filter(p => p.awards?.length).length, onChange: () => { state.hasAwards = !state.hasAwards; render(); } }));
   el.append(views);
 
   // Facets: counts show what you'd get if you added that option
@@ -142,7 +169,7 @@ function buildSidebar(base) {
     const all = new Map();
     people.forEach(p => f.values(p).forEach(v => all.set(v, 0)));
     fBase.forEach(p => f.values(p).forEach(v => all.set(v, all.get(v) + 1)));
-    const order = Object.keys(groups[`by_${f.key}`] || {});
+    const order = f.order || Object.keys(groups[`by_${f.key}`] || {});
     [...all.keys()].filter(v => !v.startsWith("("))
       .sort((a, b) => (order.indexOf(a) - order.indexOf(b)) || a.localeCompare(b))
       .forEach(v => sec.append(optionRow({ checked: state.sel[f.key].has(v), label: f.label(v), count: all.get(v),
@@ -164,7 +191,7 @@ function buildSidebar(base) {
     b.onclick = e => { e.preventDefault(); pick(path, label, n.ids)(); };
     return b;
   };
-  for (const [uni, u] of Object.entries(groups.by_university)) {
+  for (const [uni, u] of Object.entries(groups.by_university).sort((a, b) => uniRank(a[0]) - uniRank(b[0]))) {
     const d1 = document.createElement("details");
     d1.open = !!state.group?.path.includes(`${uni}/`) || sectionOpen[`u:${uni}`];
     d1.ontoggle = () => { sectionOpen[`u:${uni}`] = d1.open; };
@@ -225,6 +252,7 @@ function card(p, { why } = {}) {
     </div>
     <div class="org">${uniBadge(p.university)}${esc(orgLine(p) || "Department not listed")}</div>
     <div class="theme" style="color:${themeColor(p.theme)}"><span class="dot"></span>${esc(p.theme)}</div>
+    ${p.awards?.length || p.nmdsi_affiliate === false ? `<div class="badges">${fundedBadge(p)}${notListedBadge(p)}</div>` : ""}
     <div class="tags">${shown.map(t => `<span class="tag" title="${esc(t)}">${esc(t)}</span>`).join("")}${
       tags.length > 3 ? `<span class="tag more">+${tags.length - 3} more</span>` : ""}</div>
     ${whyLine(why)}
@@ -242,7 +270,7 @@ function sorted(list) {
 }
 
 function isActive() {
-  return state.showAll || state.q.trim().length >= 2 || state.preset || state.hasClasses || !!state.group
+  return state.showAll || state.q.trim().length >= 2 || state.preset || state.hasClasses || state.hasAwards || !!state.group
     || Object.values(state.sel).some(s => s.size);
 }
 function placeSearch(home) {
@@ -256,17 +284,19 @@ function placeSearch(home) {
 function buildHome() {
   const go = fn => () => { fn(); render(); window.scrollTo(0, 0); };
   const unisEl = document.getElementById("uniCards"); unisEl.innerHTML = "";
-  Object.entries(groups.by_university).forEach(([u, n]) => {
+  Object.entries(groups.by_university).sort((a, b) => uniRank(a[0]) - uniRank(b[0])).forEach(([u, n]) => {
+    const listed = people.filter(p => p.university === u && p.nmdsi_affiliate !== false).length, extra = n.count - listed;
     const b = document.createElement("button"); b.className = "uni-card";
-    b.setAttribute("aria-label", `Show ${n.count} faculty at ${u}`);
+    b.setAttribute("aria-label", `Show ${listed} NMDSI affiliated faculty at ${u}`);
     b.innerHTML = (UNI_LOGO[u] ? `<img src="${UNI_LOGO[u]}" alt="${esc(u)}">` : `<strong>${esc(u)}</strong>`)
-      + `<span class="n"><strong>${n.count}</strong> affiliated faculty</span>`;
-    b.onclick = go(() => state.sel.university.add(u));
+      + `<span class="n"><strong>${listed}</strong> affiliated faculty</span>`
+      + (extra ? `<span class="n extra">+ ${extra} more in MSOE's directory</span>` : "");
+    b.onclick = go(() => { state.sel.university.add(u); if (extra) state.sel.listing.add(LISTED); });
     unisEl.append(b);
   });
   const tiles = document.getElementById("themeChips"); tiles.innerHTML = "";
   const counts = {}; people.forEach(p => counts[p.theme] = (counts[p.theme] || 0) + 1);
-  Object.keys(groups.by_theme).forEach(t => {
+  Object.keys(groups.by_theme).sort((a, b) => (a === "Unclassified") - (b === "Unclassified")).forEach(t => {
     const b = document.createElement("button"); b.className = "tile"; b.style.setProperty("--tc", themeColor(t));
     b.innerHTML = `<span class="t">${esc(t)}</span><span class="n">${counts[t] || 0} faculty</span>`;
     b.onclick = go(() => state.sel.theme.add(t));
@@ -280,6 +310,8 @@ function buildHome() {
   };
   if (presetName) add(`★ ${presetName}`, presetIds.size, () => { state.preset = true; });
   add("Has classes listed", people.filter(p => p.classes.length).length, () => { state.hasClasses = true; });
+  add("Has NSF / NIH awards", people.filter(p => p.awards?.length).length, () => { state.hasAwards = true; });
+  add("NMDSI affiliates only", people.filter(p => p.nmdsi_affiliate !== false).length, () => { state.sel.listing.add(LISTED); });
   add("See all faculty →", people.length, () => { state.showAll = true; }, "primary");
 }
 
@@ -317,17 +349,28 @@ function buildPills() {
   if (state.q.trim()) { any = true; pill(`“${state.q.trim()}”`, () => { state.q = ""; document.getElementById("q").value = ""; render(); }); }
   if (state.preset) { any = true; pill(presetName, () => { state.preset = false; render(); }); }
   if (state.hasClasses) { any = true; pill("Has classes", () => { state.hasClasses = false; render(); }); }
+  if (state.hasAwards) { any = true; pill("Has NSF / NIH awards", () => { state.hasAwards = false; render(); }); }
   for (const f of FACETS) for (const v of state.sel[f.key]) { any = true; pill(f.label(v), () => { state.sel[f.key].delete(v); render(); }); }
   if (state.group) { any = true; pill(state.group.label, () => { state.group = null; render(); }); }
   if (any) pill("Clear all", clearAll, "clear");
 }
 function clearAll() {
   state.q = ""; document.getElementById("q").value = "";
-  state.preset = state.hasClasses = state.showAll = false; state.group = null;
+  state.preset = state.hasClasses = state.hasAwards = state.showAll = false; state.group = null;
   Object.values(state.sel).forEach(s => s.clear()); render();
 }
 
 /* ---------- detail drawer ---------- */
+// NSF / NIH awards, newest first; titles link to the official award record.
+function awardList(list, max = 8) {
+  const row = a => `<li class="award">
+      <span class="ag ${esc(a.agency.toLowerCase())}">${esc(a.agency)}</span>
+      <span class="aw-main"><a href="${esc(safeUrl(a.url) || "#")}" target="_blank" rel="noopener noreferrer">${esc(a.title)}</a>
+        <span class="small muted">${[a.role, awardYears(a), money(a.amount), a.directorate || a.program].filter(Boolean).map(esc).join(" · ")}</span></span>
+    </li>`;
+  const more = list.length - max;
+  return `<ul class="awards">${list.slice(0, max).map(row).join("")}</ul>${more > 0 ? `<p class="small muted">+ ${more} more on record</p>` : ""}`;
+}
 const sourceNote = src => src === "profile" ? "" : src === "directory" ? " (from NMDSI directory)" : " (auto-generated)";
 function openDrawer(id) {
   const p = byId[id]; if (!p) return;
@@ -339,9 +382,11 @@ function openDrawer(id) {
   const classes = p.classes.length
     ? `<ul>${p.classes.map(c => `<li>${c.code ? `<span class="code">${esc(c.code)}</span>` : ""}${esc(c.title || "")}</li>`).join("")}</ul>`
     : `<p class="muted">None listed on profile</p>`;
-  const funding = p.funding.length
-    ? `<ul>${p.funding.map(f => `<li title="${esc(f.evidence)}">${esc(FUNDING_LABEL[f.name] || f.name)}</li>`).join("")}</ul>`
+  const named = p.funding.filter(f => !/_api$/.test(f.source));
+  const funding = named.length
+    ? `<ul>${named.map(f => `<li title="${esc(f.evidence)}">${esc(FUNDING_LABEL[f.name] || f.name)}</li>`).join("")}</ul>`
     : `<p class="muted">No sponsor named on profile</p>`;
+  const awards = p.awards?.length ? awardList(p.awards) : "";
   const industries = p.industries.length
     ? `<div class="tags">${p.industries.map(i => `<span class="tag" title="Matched: ${esc(i.evidence.join(", "))}">${esc(i.name)}</span>`).join("")}</div>`
     : `<p class="muted">None matched</p>`;
@@ -354,7 +399,7 @@ function openDrawer(id) {
       <div class="who">
         <h2 id="d-name">${esc(p.name)}${p.credentials ? ` <span class="cred">${esc(p.credentials)}</span>` : ""}</h2>
         <div class="role">${esc(p.title || "Title not listed")}</div>
-        <div class="org">${esc(orgLine(p))}</div>
+        <div class="org">${esc(orgLine(p))}${p.nmdsi_affiliate === false ? " · <em>MSOE faculty, not on the NMDSI list</em>" : ""}</div>
         <div class="theme"><span class="dot" style="color:${themeColor(p.theme)}"></span>${esc(p.theme)}</div>
       </div>
       <button class="x" id="closeDrawer" aria-label="Close">×</button>
@@ -373,16 +418,20 @@ function openDrawer(id) {
       <section class="d-sec"><h3>Research tags${esc(sourceNote(p.research_tags_source))}</h3>
         <div class="tags">${p.research_tags.map(t => `<span class="tag">${esc(t)}</span>`).join("") || `<span class="muted">—</span>`}</div></section>
       ${showDirectory ? `<section class="d-sec"><h3>NMDSI directory blurb</h3><p>${esc(p.directory_research)}</p></section>` : ""}
+      ${awards ? `<section class="d-sec"><h3>Federal research awards (NSF / NIH records)</h3>
+        <p class="small muted aw-intro">Areas already funded. Awards active since 2010 at an NMDSI institution, matched by name.</p>
+        ${awards}</section>` : ""}
       <section class="d-sec"><h3>Classes</h3>${classes}</section>
       <section class="d-sec two">
         <div><h3>Industries (auto-generated)</h3>${industries}</div>
-        <div><h3>Funding</h3>${funding}</div>
+        <div><h3>Funding named on profile</h3>${funding}</div>
       </section>
       ${p.bio ? `<section class="d-sec"><h3>Bio</h3><p>${esc(p.bio)}</p></section>` : ""}
       <section class="d-sec small muted">
         ${esc(STATUS_LABEL[p.scrape_status] || p.scrape_status)}${p.last_scraped ? ` on ${esc(p.last_scraped.slice(0, 10))}` : ""}.
         ${p.theme_evidence?.length ? `Theme based on: ${esc(p.theme_evidence.join(", "))}.` : ""}
         ${!url ? "No profile link in the NMDSI directory." : ""}
+        ${p.nmdsi_category ? `NMDSI category: ${esc(p.nmdsi_category)}.` : ""}
       </section>
     </div>`;
   document.getElementById("readmore")?.addEventListener("click", e => {

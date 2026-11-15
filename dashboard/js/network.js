@@ -1,22 +1,27 @@
 // Collaboration map: faculty linked by shared research topics (TF-IDF similarity of tags, blurbs, summaries).
-// Gold links connect UWM and Marquette faculty: the cross-campus collaborations NMDSI exists to create.
+// Gold links connect faculty at different NMDSI institutions: the cross-institution collaborations NMDSI exists to create.
 const Network = (() => {
   const K = 3, MIN_SIM = 0.12, STRONG_SIM = 0.3;
-  let built = false, nodes = [], links = [], svg, gAll, zoom, selected = null;
-  const opts = { color: "theme", crossOnly: false };
-  const UNI_STROKE = { "UW-Milwaukee": "#ffbd00", "Marquette University": "#003366" };
+  let built = false, wired = false, nodes = [], links = [], svg, gAll, zoom, selected = null, included = 0;
+  const opts = { color: "theme", crossOnly: false, allMsoe: false };
+  // Institution colors (from each school's logo).
+  const UNI_STROKE = { "UW-Milwaukee": "#ffbd00", "Marquette University": "#003366", "Medical College of Wisconsin": "#1f7a6a",
+                       "Milwaukee School of Engineering": "#c5050c", "Waukesha County Technical College": "#4f8fd6" };
 
   function build() {
-    const n = people.length, best = people.map(() => []);
+    // NMDSI affiliates by default; other MSOE faculty only when asked for.
+    const idx = people.map((p, i) => i).filter(i => opts.allMsoe || people[i].nmdsi_affiliate !== false);
+    included = idx.length;
+    const best = new Map(idx.map(i => [i, []]));
     const pairs = new Map();
-    for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) {
-      const s = ix.similarity(i, j);
+    for (let a = 0; a < idx.length; a++) for (let b = a + 1; b < idx.length; b++) {
+      const i = idx[a], j = idx[b], s = ix.similarity(i, j);
       if (s.score < MIN_SIM) continue;
-      best[i].push([s.score, j, s.shared]); best[j].push([s.score, i, s.shared]);
+      best.get(i).push([s.score, j, s.shared]); best.get(j).push([s.score, i, s.shared]);
     }
-    for (let i = 0; i < n; i++) {
-      best[i].sort((a, b) => b[0] - a[0]);
-      best[i].forEach(([s, j, shared], rank) => {
+    for (const [i, list] of best) {
+      list.sort((a, b) => b[0] - a[0]);
+      list.forEach(([s, j, shared], rank) => {
         if (rank >= K && s < STRONG_SIM) return;
         const key = i < j ? `${i}-${j}` : `${j}-${i}`;
         if (!pairs.has(key)) pairs.set(key, { source: Math.min(i, j), target: Math.max(i, j), sim: s, shared });
@@ -24,8 +29,8 @@ const Network = (() => {
     }
     links = [...pairs.values()].map(l => ({ ...l, cross: people[l.source].university !== people[l.target].university,
                                              topics: ix.sharedTopics(l.shared, 3) }));
-    const deg = new Array(n).fill(0); links.forEach(l => { deg[l.source]++; deg[l.target]++; });
-    nodes = people.map((p, i) => ({ i, p, deg: deg[i] })).filter(d => d.deg > 0);
+    const deg = new Map(); links.forEach(l => { deg.set(l.source, (deg.get(l.source) || 0) + 1); deg.set(l.target, (deg.get(l.target) || 0) + 1); });
+    nodes = idx.map(i => ({ i, p: people[i], deg: deg.get(i) || 0 })).filter(d => d.deg > 0);
     const keep = new Map(nodes.map((d, k) => [d.i, d]));
     links = links.map(l => ({ ...l, source: keep.get(l.source), target: keep.get(l.target) }));
 
@@ -158,7 +163,7 @@ const Network = (() => {
         </div>
         <div class="ns-actions"><button class="chip" data-open="${esc(selected.p.id)}">View profile</button>${starBtn(selected.p)}
           <button class="chip" id="netBack">← All</button></div>
-        <h4>${mine.length} research connection${mine.length === 1 ? "" : "s"}${cross ? ` · <span class="gold-txt">${cross} cross-campus</span>` : ""}</h4>
+        <h4>${mine.length} research connection${mine.length === 1 ? "" : "s"}${cross ? ` · <span class="gold-txt">${cross} cross-institution</span>` : ""}</h4>
         <ul class="pairs">${mine.map(l => pairRow(l, selected)).join("")}</ul>`;
       document.getElementById("netBack").onclick = () => select(null);
     } else {
@@ -167,13 +172,14 @@ const Network = (() => {
       el.innerHTML = `<div class="stats">
           <div><strong>${nodes.length}</strong><span>faculty mapped</span></div>
           <div><strong>${links.length}</strong><span>research links</span></div>
-          <div class="gold"><strong>${cross.length}</strong><span>cross-campus links</span></div>
+          <div class="gold"><strong>${cross.length}</strong><span>cross-institution links</span></div>
         </div>
-        <p class="small muted">${bridged.size} faculty (${Math.round(100 * bridged.size / nodes.length)}%) share research with someone at the other university.
+        <p class="small muted">${bridged.size} faculty (${Math.round(100 * bridged.size / nodes.length)}%) share research with someone at another NMDSI institution.
           Click anyone on the map to see their connections.</p>
-        <h4>Top cross-campus opportunities</h4>
+        <h4>Top cross-institution opportunities</h4>
         <ul class="pairs">${cross.slice(0, 10).map(l => pairRow(l)).join("")}</ul>
-        ${people.length - nodes.length ? `<p class="small muted">${people.length - nodes.length} faculty aren't shown because their profiles don't list enough research detail to connect.</p>` : ""}`;
+        ${included - nodes.length ? `<p class="small muted">${included - nodes.length} faculty aren't shown because their profiles don't list enough research detail to connect.</p>` : ""}
+        ${opts.allMsoe ? "" : `<p class="small muted">Showing NMDSI affiliates. Tick “Add other MSOE faculty” to include MSOE's full directory.</p>`}`;
     }
     el.querySelectorAll("[data-net]").forEach(b => b.onclick = () => focusNode(nodes.find(d => d.i === +b.dataset.net)));
   }
@@ -190,8 +196,8 @@ const Network = (() => {
     const items = opts.color === "theme"
       ? THEMES.filter(t => nodes.some(d => d.p.theme === t)).map(t => `<span><i style="background:${themeColor(t)}"></i>${esc(t)}</span>`)
       : Object.entries(UNI_STROKE).map(([u, c]) => `<span><i style="background:${c}"></i>${esc(u)}</span>`);
-    el.innerHTML = items.join("") + `<span class="sep"></span><span><b class="ln cross"></b>Cross-campus link</span><span><b class="ln"></b>Same-campus link</span>
-      <span class="muted">Grouped by research theme · ring = university · size = connections · drag to rearrange</span>`;
+    el.innerHTML = items.join("") + `<span class="sep"></span><span><b class="ln cross"></b>Cross-institution link</span><span><b class="ln"></b>Same-institution link</span>
+      <span class="muted">Grouped by research theme · ring = institution · size = connections · drag to rearrange</span>`;
   }
 
   function show() {
@@ -200,14 +206,19 @@ const Network = (() => {
       return;
     }
     if (!built) {
+      sim?.stop(); selected = null;
       build(); draw(); side();
+      document.getElementById("netNames").innerHTML = nodes.map(d => `<option value="${esc(d.p.name)}">`).join("");
+    } else { restyle(); sim.alpha(0.15).restart(); }
+    if (!wired) {
+      wired = true;
       document.getElementById("netColor").onchange = e => { opts.color = e.target.value; restyle(); };
       document.getElementById("netCross").onchange = e => { opts.crossOnly = e.target.checked; restyle(); };
+      document.getElementById("netMsoe").onchange = e => { opts.allMsoe = e.target.checked; built = false; show(); };
       document.getElementById("netReset").onclick = () => { select(null); svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity); sim.alpha(0.6).restart(); };
       const find = document.getElementById("netFind");
-      document.getElementById("netNames").innerHTML = nodes.map(d => `<option value="${esc(d.p.name)}">`).join("");
       find.onchange = () => { const d = nodes.find(n => n.p.name.toLowerCase() === find.value.trim().toLowerCase()); if (d) focusNode(d); };
-    } else { restyle(); sim.alpha(0.15).restart(); }
+    }
   }
 
   return { show, energy: () => sim ? sim.alpha() : 0 };   // energy: how much the layout is still moving (for tests)

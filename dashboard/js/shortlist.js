@@ -60,7 +60,7 @@ const Shortlist = (() => {
           <div class="s-head">
             <button class="linkish" data-open="${esc(p.id)}"><strong>${esc(p.name)}</strong></button>
             ${p.credentials ? `<span class="cred">${esc(p.credentials)}</span>` : ""}
-            ${uniBadge(p.university)}
+            ${uniBadge(p.university)}${fundedBadge(p)}${notListedBadge(p)}
           </div>
           <div class="muted small">${esc(p.title || "")}${p.title ? " · " : ""}${esc(orgLine(p))}</div>
           <div class="theme" style="color:${themeColor(p.theme)}"><span class="dot"></span>${esc(p.theme)}</div>
@@ -81,12 +81,14 @@ const Shortlist = (() => {
   }
 
   function csv() {
-    const cols = ["Name", "Credentials", "Title", "University", "College", "Department", "Theme", "Research tags",
-                  "Classes", "Funding", "Profile URL", "Note"];
+    const cols = ["Name", "Credentials", "Title", "Institution", "On NMDSI list", "College", "Department", "Theme", "Research tags",
+                  "Classes", "Funding", "Federal awards (NSF / NIH)", "Profile URL", "Note"];
     const cell = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
-    const rows = ids.map(id => byId[id]).map(p => [p.name, p.credentials, p.title, p.university, p.college, p.department, p.theme,
+    const rows = ids.map(id => byId[id]).map(p => [p.name, p.credentials, p.title, p.university, p.nmdsi_affiliate === false ? "No" : "Yes",
+      p.college, p.department, p.theme,
       p.research_tags.join("; "), p.classes.map(c => [c.code, c.title].filter(Boolean).join(" ")).join("; "),
-      p.funding.map(f => f.name).join("; "), p.profile_url, notes[p.id]]);
+      p.funding.map(f => f.name).join("; "), (p.awards || []).map(a => `${a.agency} ${a.id}: ${a.title}`).join("; "),
+      p.profile_url, notes[p.id]]);
     const text = "﻿" + [cols, ...rows].map(r => r.map(cell).join(",")).join("\r\n");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([text], { type: "text/csv;charset=utf-8" }));
@@ -107,6 +109,7 @@ const Shortlist = (() => {
           <div class="p-org">${esc(p.title || "")}${p.title ? " · " : ""}${esc(orgLine(p))} · <strong>${esc(p.university)}</strong></div>
           <div class="p-theme">${esc(p.theme)}${p.research_tags.length ? " — " + esc(p.research_tags.slice(0, 6).join(", ")) : ""}</div>
           ${summary ? `<p>${esc(summary)}${summary.length >= 500 ? "…" : ""}</p>` : ""}
+          ${p.awards?.length ? `<div class="p-small"><strong>Federal awards:</strong> ${esc(p.awards.slice(0, 3).map(a => `${a.agency}: ${a.title}`).join("; "))}${p.awards.length > 3 ? "…" : ""}</div>` : ""}
           ${p.classes.length ? `<div class="p-small"><strong>Teaches:</strong> ${esc(p.classes.slice(0, 4).map(c => c.title).join("; "))}</div>` : ""}
           ${notes[p.id] ? `<div class="p-note"><strong>Note:</strong> ${esc(notes[p.id])}</div>` : ""}
           ${safeUrl(p.profile_url) ? `<div class="p-small">${esc(p.profile_url)}</div>` : ""}

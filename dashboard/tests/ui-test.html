@@ -35,6 +35,13 @@ document.getElementById("f").onload = async () => {
     d.querySelector("#drawer [data-star]").click(); await wait(100);
     ok(w.eval("Shortlist").ids().length === 2, "drawer button adds second person");
     d.getElementById("closeDrawer").click(); await wait(300);
+    // A person with NSF / NIH awards shows them, with links to the official records.
+    const funded = w.eval("people").find(p => p.awards?.length > 1);
+    w.eval("openDrawer")(funded.id); await wait(300);
+    ok(d.querySelectorAll("#drawer .awards li").length >= 2 && [...d.querySelectorAll("#drawer .awards a")].every(a => /nsf\.gov|reporter\.nih\.gov/.test(a.href)),
+       `profile lists federal awards for ${funded.name} (${d.querySelectorAll("#drawer .awards li").length})`);
+    d.getElementById("closeDrawer").click(); await wait(300);
+    ok(w.eval("FACETS").some(f => f.key === "listing") && d.querySelector("#sidebar").textContent.includes("Other MSOE faculty"), "sidebar has the NMDSI list filter");
     d.querySelector('button[data-tab="match"]').click(); await wait(200);
     ok(d.body.dataset.tab === "match", "switch to Find an Expert tab");
     d.getElementById("matchText").value = "forecast demand in the supply chain with machine learning";
@@ -42,6 +49,20 @@ document.getElementById("f").onload = async () => {
     const rows = d.querySelectorAll(".m-row");
     ok(rows.length >= 5, `matcher returns ${rows.length} rows; top: ${rows[0]?.querySelector("strong")?.textContent}`);
     ok(!!d.getElementById("teamAdd"), "suggested team shown: " + [...d.querySelectorAll(".team-card strong")].map(x => x.textContent).join(", "));
+    await wait(600);
+    ok(d.querySelectorAll(".fund .opp").length >= 1, `Fund it lists ${d.querySelectorAll(".fund .opp").length} opportunities; first: ${d.querySelector(".opp-title")?.textContent}`);
+    ok(d.querySelectorAll("#planBox .tl-step").length >= 4 && !!d.querySelector("#planBox .tl-step.deadline"), "a backward timeline ends at the deadline");
+    const opps = d.querySelectorAll('.fund input[name="opp"]');
+    if (opps.length > 1) { opps[1].click(); await wait(100); }
+    ok(opps.length < 2 || d.querySelectorAll(".fund .opp.on").length === 1 && d.querySelectorAll(".fund .opp")[1].classList.contains("on"), "picking another opportunity redraws the plan");
+    // Date logic: ROADS deadlines are the third Sunday of October (Oct 18, 2026; Oct 17, 2027).
+    const P = w.eval("Plan"), iso = x => `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, "0")}-${String(x.getDate()).padStart(2, "0")}`;
+    ok(iso(P.nextRoads(new Date(2026, 6, 1))) === "2026-10-18" && iso(P.nextRoads(new Date(2026, 10, 13))) === "2027-10-17", "next ROADS deadline is computed correctly");
+    const teamPU = [{ p: { university: "Marquette University" } }, { p: { university: "UW-Milwaukee" } }];
+    const far = P.build({ title: "X", agency: "NSF", close_date: "2029-02-01" }, teamPU);
+    const near = P.build({ title: "Y", agency: "NIH", close_date: "2027-04-01" }, teamPU);
+    ok(far.seed && far.steps.some(s => s.label.includes("Submit the Paving ROADS")) && far.notes.some(n => n.includes("joint")), "far deadline: plan includes a ROADS pilot and the joint track");
+    ok(!near.seed && near.notes.some(n => n.includes("Not enough time")), "near deadline: no pilot, with an explanation");
     rows[2].querySelector(".row-open").click(); await wait(300);
     ok(d.getElementById("drawer").classList.contains("show") && d.getElementById("d-name").textContent.includes(rows[2].querySelector(".m-name").textContent),
        "clicking a numbered match opens that person's profile");
@@ -52,24 +73,32 @@ document.getElementById("f").onload = async () => {
     d.getElementById("teamAdd")?.click(); await wait(100);
     ok(w.eval("Shortlist").ids().length >= 3, `team added; shortlist now ${w.eval("Shortlist").ids().length}`);
     d.getElementById("matchUni").value = "Marquette University"; d.getElementById("matchUni").dispatchEvent(new Event("change")); await wait(300);
-    ok([...d.querySelectorAll(".m-row .uni")].every(u => u.textContent === "Marquette"), "university filter limits to Marquette");
+    ok([...d.querySelectorAll(".m-row .uni")].every(u => u.textContent === "Marquette"), "institution filter limits to Marquette");
+    ok(d.getElementById("matchUni").options.length === 6, "institution filter offers all five partners");
     d.querySelector('button[data-tab="network"]').click(); await wait(1500);
     const nodes = d.querySelectorAll(".node");
     ok(nodes.length > 100, `map draws ${nodes.length} nodes, ${d.querySelectorAll(".link").length} links`);
     // Reheat the layout and confirm positions actually change (the map is live, not a fixed picture).
     // The layout is a live simulation: Reset gives it energy again so people re-settle.
-    d.getElementById("netReset").click(); await wait(50);
+    d.getElementById("netReset").click();   // read right away: headless runs can fast-forward timers
     ok(w.eval("Network").energy() > 0.3, `map layout is live (simulation energy after reset: ${w.eval("Network").energy().toFixed(2)})`);
     nodes[0].dispatchEvent(new MouseEvent("click", { bubbles: true })); await wait(200);
     ok(d.querySelectorAll(".node.dim").length > 0 && d.getElementById("netSide").textContent.includes("research connection"), "clicking a node focuses it and lists connections");
     d.getElementById("netCross").click(); await wait(100);
-    ok(d.querySelectorAll(".link.hidden").length > 0, "cross-campus-only toggle hides same-campus links");
+    ok(d.querySelectorAll(".link.hidden").length > 0, "cross-institution-only toggle hides same-institution links");
+    d.getElementById("netCross").click(); await wait(100);
+    const before = d.querySelectorAll(".node").length;
+    d.getElementById("netMsoe").click(); await wait(1500);
+    ok(d.querySelectorAll(".node").length > before, `adding other MSOE faculty grows the map (${before} -> ${d.querySelectorAll(".node").length})`);
     d.querySelector('button[data-tab="shortlist"]').click(); await wait(200);
     ok(d.querySelectorAll(".s-row").length === w.eval("Shortlist").ids().length, `shortlist tab lists ${d.querySelectorAll(".s-row").length}`);
     const note = d.querySelector(".note"); note.value = "Call next week"; note.dispatchEvent(new Event("input")); 
     ok(JSON.parse(w.localStorage.getItem("nmdsi-shortlist-notes"))[note.dataset.note] === "Call next week", "notes are saved");
     d.querySelector('button[data-tab="search"]').click(); await wait(300);
     ok(d.querySelectorAll("#cards .star.on").length >= 1, "stars stay filled after switching back");
+    d.getElementById("brand").click(); await wait(800);
+    const logos = [...d.querySelectorAll("#uniCards img")];
+    ok(logos.length === 5 && logos.every(i => i.complete && i.naturalWidth > 0), `home shows ${logos.length} institution logos, all loaded`);
     window._restore();
   } catch (e) { log.push("EXCEPTION " + e.stack); }
   log.push("page errors: " + (errs.join(" | ") || "none"));

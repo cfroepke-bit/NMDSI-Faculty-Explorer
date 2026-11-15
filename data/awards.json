@@ -1,0 +1,2203 @@
+{
+ "meta": {
+  "retrieved": "2026-11-13",
+  "first_year": 2010,
+  "sources": {
+   "NSF": "https://api.nsf.gov/services/v1/awards.json",
+   "NIH": "https://api.reporter.nih.gov/v2/projects/search"
+  }
+ },
+ "awards": {
+  "majeed-hayat": [
+   {
+    "agency": "NSF",
+    "id": "2553935",
+    "title": "Collaborative Research: Configurable Smart Spectral Imager for Data-compression and Classification",
+    "program": "CSCS: Circuits and Systems for",
+    "directorate": "ENG",
+    "start": "2026-10-01",
+    "end": "2029-09-30",
+    "amount": 288964,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2553935"
+   }
+  ],
+  "praveen-madiraju": [
+   {
+    "agency": "NSF",
+    "id": "2548034",
+    "title": "REU Site: Data Science Across Disciplines",
+    "program": "RSCH EXPER FOR UNDERGRAD SITES",
+    "directorate": "CSE",
+    "start": "2026-10-01",
+    "end": "2029-09-30",
+    "amount": 462108,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2548034"
+   },
+   {
+    "agency": "NSF",
+    "id": "1950826",
+    "title": "REU Site: Data Science Across Disciplines",
+    "program": "RSCH EXPER FOR UNDERGRAD SITES",
+    "directorate": "CSE",
+    "start": "2020-03-01",
+    "end": "2024-02-29",
+    "amount": 404683,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1950826"
+   }
+  ],
+  "cristinel-ababei": [
+   {
+    "agency": "NSF",
+    "id": "2504717",
+    "title": "Collaborative Research: OAC Core: Exploiting SmartSSD-based Computational Storage Architectures for Large Scale Similarity and Range Searches",
+    "program": "Data Cyberinfrastructure",
+    "directorate": "CSE",
+    "start": "2025-07-01",
+    "end": "2027-06-30",
+    "amount": 189426,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2504717"
+   },
+   {
+    "agency": "NSF",
+    "id": "1950082",
+    "title": "REU Site: Hardware, Embedded Software, and Analytics for Environment Quality Monitoring",
+    "program": "EWFD-Eng Workforce Development",
+    "directorate": "ENG",
+    "start": "2020-05-15",
+    "end": "2024-04-30",
+    "amount": 376717,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1950082"
+   },
+   {
+    "agency": "NSF",
+    "id": "1936494",
+    "title": "Collaborative Research: Crosslayer Optimization of Energy and Cost through Unified Modeling of User Behavior and Storage in Multiple Buildings",
+    "program": "EPCN-Energy-Power-Ctrl-Netwrks",
+    "directorate": "ENG",
+    "start": "2019-09-15",
+    "end": "2024-08-31",
+    "amount": 166650,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1936494"
+   },
+   {
+    "agency": "NSF",
+    "id": "1524909",
+    "title": "SHF: Small: Uncertainty Modeling and Design Methods for Heterogeneous Embedded Systems",
+    "program": "Software & Hardware Foundation",
+    "directorate": "CSE",
+    "start": "2015-08-01",
+    "end": "2020-07-31",
+    "amount": 251068,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1524909"
+   },
+   {
+    "agency": "NSF",
+    "id": "1360439",
+    "title": "Lifetime Reliability of Systems-on-Chip: Unified Modeling and Dynamic Reliability Management",
+    "program": "Software & Hardware Foundation",
+    "directorate": "CSE",
+    "start": "2013-09-01",
+    "end": "2016-08-31",
+    "amount": 173316,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1360439"
+   }
+  ],
+  "katherine-durben": [
+   {
+    "agency": "NSF",
+    "id": "2426787",
+    "title": "MU Postaward Optimization for Strategic Transformation (MU POST)",
+    "program": "GRANTED",
+    "directorate": "O/D",
+    "start": "2024-09-15",
+    "end": "2028-08-31",
+    "amount": 1167919,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2426787"
+   }
+  ],
+  "michael-zimmer": [
+   {
+    "agency": "NSF",
+    "id": "2419005",
+    "title": "Collaborative Research: ER2: Developing Educational Resources for the Ethical Use of Pervasive Data",
+    "program": "ER2-Ethical & Responsible Res",
+    "directorate": "SBE",
+    "start": "2024-09-01",
+    "end": "2027-08-31",
+    "amount": 79418,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2419005"
+   },
+   {
+    "agency": "NSF",
+    "id": "2232654",
+    "title": "Collaborative Research: SaTC: CORE: Small: Supporting Privacy Negotiation Among Multiple Stakeholders in Smart Environments",
+    "program": "Secure &Trustworthy Cyberspace, Special Projects - CNS",
+    "directorate": "CSE",
+    "start": "2023-07-01",
+    "end": "2027-06-30",
+    "amount": 145615,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2232654"
+   },
+   {
+    "agency": "NSF",
+    "id": "1947754",
+    "title": "CHS: Large: Collaborative Research: Pervasive Data Ethics for Computational Research",
+    "program": "HCC-Human-Centered Computing",
+    "directorate": "CSE",
+    "start": "2019-08-01",
+    "end": "2023-08-31",
+    "amount": 276945,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1947754"
+   }
+  ],
+  "dmitri-babikov": [
+   {
+    "agency": "NSF",
+    "id": "2328489",
+    "title": "ExpandQISE: Track 1: Quantum Molecular Dynamics on Quantum Computers",
+    "program": "QIS - Quantum Information Scie",
+    "directorate": "MPS",
+    "start": "2023-10-01",
+    "end": "2027-09-30",
+    "amount": 797576,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2328489"
+   },
+   {
+    "agency": "NSF",
+    "id": "2102465",
+    "title": "CDS&E: Mixed Quantum/Classical Theory for the Collisional Quenching of Interstellar Complex Organic Molecules",
+    "program": "Chem Thry, Mdls & Cmptnl Mthds",
+    "directorate": "MPS",
+    "start": "2021-06-01",
+    "end": "2026-05-31",
+    "amount": 398179,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2102465"
+   },
+   {
+    "agency": "NSF",
+    "id": "1920523",
+    "title": "Computational Study of Symmetry-Driven Isotope Effect and Oxygen Mass-Independent Fractionation (O-MIF)",
+    "program": "Atmospheric Chemistry",
+    "directorate": "GEO",
+    "start": "2019-07-01",
+    "end": "2024-06-30",
+    "amount": 404106,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1920523"
+   },
+   {
+    "agency": "NSF",
+    "id": "1338885",
+    "title": "CNIC: Benchmark Studies of Collisional Energy Transfer using Mixed Quantum/Classical Theory",
+    "program": "Catalyzing New Intl Collab",
+    "directorate": "O/D",
+    "start": "2013-09-15",
+    "end": "2014-12-31",
+    "amount": 38188,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1338885"
+   },
+   {
+    "agency": "NSF",
+    "id": "1252486",
+    "title": "Modeling Ozone Mass-Independent Fractionation (MIF) in Gas Phase and on Surfaces",
+    "program": "Atmospheric Chemistry",
+    "directorate": "GEO",
+    "start": "2013-09-01",
+    "end": "2018-08-31",
+    "amount": 305139,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1252486"
+   },
+   {
+    "agency": "NSF",
+    "id": "1012075",
+    "title": "Manipulating Quantum Information with Vibrational Qubits",
+    "program": "Chem Thry, Mdls & Cmptnl Mthds",
+    "directorate": "MPS",
+    "start": "2010-10-01",
+    "end": "2015-05-31",
+    "amount": 480482,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1012075"
+   }
+  ],
+  "joseph-a-lamanna": [
+   {
+    "agency": "NSF",
+    "id": "2310100",
+    "title": "Collaborative Research: Mechanisms driving positive and negative tree-fungal feedbacks across an abiotic-stress gradient",
+    "program": "Population & Community Ecology",
+    "directorate": "BIO",
+    "start": "2023-06-01",
+    "end": "2027-05-31",
+    "amount": 440000,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2310100"
+   },
+   {
+    "agency": "NSF",
+    "id": "2147136",
+    "title": "Collaborative Research: BIORETS: Authentic research experiences for teachers at Long-Term Ecological Research sites: climate change and biodiversity across ecosystems",
+    "program": "RES EXP FOR TEACHERS(RET)-SITE",
+    "directorate": "BIO",
+    "start": "2022-02-01",
+    "end": "2026-01-31",
+    "amount": 222051,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2147136"
+   },
+   {
+    "agency": "NSF",
+    "id": "2024903",
+    "title": "Robust methods for estimating conspecific negative density dependence",
+    "program": "Evolutionary Processes, Population & Community Ecology",
+    "directorate": "BIO",
+    "start": "2020-09-01",
+    "end": "2024-08-31",
+    "amount": 99471,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2024903"
+   }
+  ],
+  "sheikh-iqbal-ahamed": [
+   {
+    "agency": "NSF",
+    "id": "2313255",
+    "title": "Conference: Proposal for Student Participation Grant and Distinguished Speakers in Health Community",
+    "program": "Smart and Connected Health",
+    "directorate": "CSE",
+    "start": "2023-05-01",
+    "end": "2024-04-30",
+    "amount": 16000,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2313255"
+   },
+   {
+    "agency": "NSF",
+    "id": "2135031",
+    "title": "Supporting Student Participation and Distinguished Speakers in the Biomedical Engineering Research Community for IEEE International Conference on Digital Health 2021",
+    "program": "Smart and Connected Health",
+    "directorate": "CSE",
+    "start": "2021-10-01",
+    "end": "2022-09-30",
+    "amount": 12968,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2135031"
+   },
+   {
+    "agency": "NIH",
+    "id": "R21MH116726",
+    "title": "Mobile-based Care for children with Autism Spectrum Disorder using Remote Experience Sampling Method (mCARE)",
+    "program": "National Institute of Mental Health",
+    "directorate": "NIMH",
+    "activity": "R21",
+    "start": "2018-07-17",
+    "end": "2021-05-31",
+    "amount": 392737,
+    "fiscal_years": [
+     2018,
+     2019
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/9746774",
+    "role": "PI"
+   }
+  ],
+  "chelsea-cook": [
+   {
+    "agency": "NSF",
+    "id": "2212640",
+    "title": "Balancing Social and Ecological Information to Collectively Manage Dynamic Environments",
+    "program": "Animal Behavior",
+    "directorate": "BIO",
+    "start": "2023-03-01",
+    "end": "2027-02-28",
+    "amount": 753407,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2212640"
+   }
+  ],
+  "tony-gamble": [
+   {
+    "agency": "NIH",
+    "id": "R01HG013006",
+    "title": "Collaborative Research: EDGE FGT: DEVELOPMENT OF FUNCTIONAL GENETIC TOOLS IN GECKOS",
+    "program": "National Human Genome Research Institute",
+    "directorate": "NHGRI",
+    "activity": "R01",
+    "start": "2023-03-01",
+    "end": "2026-12-31",
+    "amount": 1067824,
+    "fiscal_years": [
+     2023,
+     2025
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/11009982",
+    "role": "PI"
+   },
+   {
+    "agency": "NSF",
+    "id": "2151318",
+    "title": "Sex Chromosome Evolution in Lizards and Snakes",
+    "program": "Evolution of Develp Mechanism",
+    "directorate": "BIO",
+    "start": "2022-09-01",
+    "end": "2027-08-31",
+    "amount": 1165299,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2151318"
+   },
+   {
+    "agency": "NSF",
+    "id": "1657662",
+    "title": "Collaborative Research: From Exaptation to Key Innovation   - Evolutionary Insights from Gliding Geckos",
+    "program": "Evolutionary Processes, Biodiversity: Discov &Analysis",
+    "directorate": "BIO",
+    "start": "2017-05-15",
+    "end": "2023-04-30",
+    "amount": 343493,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1657662"
+   }
+  ],
+  "gregory-ongie": [
+   {
+    "agency": "NSF",
+    "id": "2153371",
+    "title": "CRII: CIF: Coordinate-based Neural Networks for Inverse Problems in Computational Imaging",
+    "program": "Comm & Information Foundations",
+    "directorate": "CSE",
+    "start": "2022-06-01",
+    "end": "2025-05-31",
+    "amount": 173184,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2153371"
+   }
+  ],
+  "somesh-roy": [
+   {
+    "agency": "NSF",
+    "id": "2144290",
+    "title": "CAREER: A scalable multiscale modeling framework to explore soot formation in reacting flows",
+    "program": "CAREER: FACULTY EARLY CAR DEV, Unallocated Program Costs",
+    "directorate": "CSE",
+    "start": "2022-05-15",
+    "end": "2027-04-30",
+    "amount": 549699,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2144290"
+   },
+   {
+    "agency": "NSF",
+    "id": "1756005",
+    "title": "CRII:OAC: Novel techniques for improving convergence and scalability of a Monte Carlo radiation solver for large-scale combustion simulations",
+    "program": "CRII CISE Research Initiation",
+    "directorate": "CSE",
+    "start": "2018-03-01",
+    "end": "2021-08-31",
+    "amount": 174951,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1756005"
+   }
+  ],
+  "karen-andeen": [
+   {
+    "agency": "NSF",
+    "id": "2146511",
+    "title": "CAREER: Cosmic Ray Composition across Five Decades in Energy (50 TeV to 5 EeV) with the   IceCube Neutrino Observatory",
+    "program": "OFFICE OF MULTIDISCIPLINARY AC, IceCube Research Support, Particle Astrophysics-Exp",
+    "directorate": "MPS",
+    "start": "2022-04-01",
+    "end": "2027-03-31",
+    "amount": 860782,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2146511"
+   },
+   {
+    "agency": "NSF",
+    "id": "1806942",
+    "title": "Chemical Composition and Energy Spectrum of Cosmic Rays Using the IceCube Neutrino Observatory",
+    "program": "IceCube Research Support, Integrative Activities in Phys",
+    "directorate": "MPS",
+    "start": "2018-09-01",
+    "end": "2022-08-31",
+    "amount": 125000,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1806942"
+   }
+  ],
+  "elaine-spiller": [
+   {
+    "agency": "NSF",
+    "id": "2053872",
+    "title": "CDS&E: Collaborative Research: Surrogates and Reduced Order Modeling for High Dimensional Coupled Systems",
+    "program": "COMPUTATIONAL MATHEMATICS, CDS&E-MSS",
+    "directorate": "MPS",
+    "start": "2021-08-01",
+    "end": "2024-07-31",
+    "amount": 100000,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2053872"
+   },
+   {
+    "agency": "NSF",
+    "id": "1850742",
+    "title": "PREEVENTS Track 1: Coupling Uncertain Geophysical Hazards: Bringing together Geoscientists, Computational Mathematicians, and Statisticians to Advance Hazard Forecasting",
+    "program": "PREEVENTS - Prediction of and",
+    "directorate": "GEO",
+    "start": "2019-03-01",
+    "end": "2020-08-31",
+    "amount": 39490,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1850742"
+   },
+   {
+    "agency": "NSF",
+    "id": "1821338",
+    "title": "Collaborative Research: Using Precursor Information to Update Probabilistic Hazard Maps",
+    "program": "CDS&E-MSS",
+    "directorate": "MPS",
+    "start": "2018-09-01",
+    "end": "2022-08-31",
+    "amount": 80000,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1821338"
+   },
+   {
+    "agency": "NSF",
+    "id": "1622467",
+    "title": "Collaborative Research:   Advancing Statistical Surrogates for Linking Multiple Computer Models with Disparate Data for Quantifying Uncertain Hazards",
+    "program": "CDS&E-MSS",
+    "directorate": "MPS",
+    "start": "2016-08-15",
+    "end": "2019-07-31",
+    "amount": 100000,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1622467"
+   },
+   {
+    "agency": "NSF",
+    "id": "1228265",
+    "title": "Collaborative Research: Statistical and Computational Models and Methods for Extracting Knowledge from Massive Disparate Data for Quantifying Uncertain Hazards",
+    "program": "CDS&E-MSS",
+    "directorate": "MPS",
+    "start": "2012-09-01",
+    "end": "2014-08-31",
+    "amount": 73602,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1228265"
+   }
+  ],
+  "patrick-mcnamara": [
+   {
+    "agency": "NSF",
+    "id": "2051336",
+    "title": "Collaborative Research: Environmental Fate and Impacts of Quaternary Ammonium Compounds Following Increased Use During the SARS-CoV 2 Pandemic",
+    "program": "EnvE-Environmental Engineering",
+    "directorate": "ENG",
+    "start": "2021-05-15",
+    "end": "2025-04-30",
+    "amount": 189361,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2051336"
+   },
+   {
+    "agency": "NSF",
+    "id": "2027288",
+    "title": "Collaborative Research: Mitigating antibiotic resistance in drinking water by understanding the impact of corrosion inhibitors and corrosion products",
+    "program": "EnvE-Environmental Engineering",
+    "directorate": "ENG",
+    "start": "2020-08-15",
+    "end": "2024-07-31",
+    "amount": 216302,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2027288"
+   }
+  ],
+  "walter-mcdonald": [
+   {
+    "agency": "NSF",
+    "id": "2101934",
+    "title": "I-Corps: A machine learning and video-based sensor for measuring sewer flows",
+    "program": "I-Corps",
+    "directorate": "TIP",
+    "start": "2021-03-01",
+    "end": "2022-08-31",
+    "amount": 50000,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2101934"
+   }
+  ],
+  "lisa-n-petrella": [
+   {
+    "agency": "NIH",
+    "id": "R15GM154234",
+    "title": "Temperature-sensitive germline structures and temperature thresholds of fertility in Caenorhabditis nematodes",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R15",
+    "start": "2024-08-01",
+    "end": "2027-07-31",
+    "amount": 458050,
+    "fiscal_years": [
+     2024,
+     2024
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/10875984",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R15GM137256",
+    "title": "Regulation of germline function and oocyte quality under stress",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R15",
+    "start": "2020-08-01",
+    "end": "2024-07-31",
+    "amount": 459000,
+    "fiscal_years": [
+     2020,
+     2020
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/9965184",
+    "role": "PI"
+   },
+   {
+    "agency": "NSF",
+    "id": "1827883",
+    "title": "MRI: Acquisition of a Total Internal Reflection Fluorescence (TIRF)  Microscope for Research and Education at Marquette University and the Greater Milwaukee Region",
+    "program": "Major Research Instrumentation",
+    "directorate": "BIO",
+    "start": "2018-10-01",
+    "end": "2021-09-30",
+    "amount": 251424,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1827883"
+   },
+   {
+    "agency": "NIH",
+    "id": "R15GM122005",
+    "title": "Regulation of cell fate mechanisms in C. elegans development",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R15",
+    "start": "2016-09-15",
+    "end": "2020-07-31",
+    "amount": 453000,
+    "fiscal_years": [
+     2016,
+     2016
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/9232419",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R00GM098436",
+    "title": "Mechanisms of Ttemperature Buffering in C. Elegans",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R00",
+    "start": "2011-08-01",
+    "end": "2016-09-14",
+    "amount": 836006,
+    "fiscal_years": [
+     2012,
+     2015
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/9062136",
+    "role": "PI"
+   }
+  ],
+  "edward-blumenthal": [
+   {
+    "agency": "NSF",
+    "id": "1355087",
+    "title": "Regulation of epithelial barrier formation in Drosophila",
+    "program": "Physiol Mechs & Biomechanics",
+    "directorate": "BIO",
+    "start": "2014-05-15",
+    "end": "2019-04-30",
+    "amount": 420958,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1355087"
+   },
+   {
+    "agency": "NSF",
+    "id": "1156569",
+    "title": "REU Site: Undergraduate Summer Research in Molecular and Cellular Biology",
+    "program": "RSCH EXPER FOR UNDERGRAD SITES",
+    "directorate": "BIO",
+    "start": "2012-01-15",
+    "end": "2015-12-31",
+    "amount": 241620,
+    "role": "PI",
+    "institution": "Marquette University",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1156569"
+   }
+  ],
+  "zhen-zeng": [
+   {
+    "agency": "NSF",
+    "id": "2611555",
+    "title": "Conference: NSF Student Travel Grant for 2026 IEEE International Conference on Computer Communications (INFOCOM)",
+    "program": "Networking Technology and Syst",
+    "directorate": "CSE",
+    "start": "2026-03-15",
+    "end": "2027-02-28",
+    "amount": 21000,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2611555"
+   },
+   {
+    "agency": "NSF",
+    "id": "2508319",
+    "title": "Conference: NSF Student Travel Grant for 2025 IEEE International Conference on Computer Communications (INFOCOM)",
+    "program": "Networking Technology and Syst",
+    "directorate": "CSE",
+    "start": "2025-05-01",
+    "end": "2026-04-30",
+    "amount": 20000,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2508319"
+   }
+  ],
+  "suzanne-boyd": [
+   {
+    "agency": "NSF",
+    "id": "2447752",
+    "title": "REU Site: Access to Inquiry in Mathematics Undergraduate Program",
+    "program": "RSCH EXPER FOR UNDERGRAD SITES",
+    "directorate": "MPS",
+    "start": "2025-07-01",
+    "end": "2028-06-30",
+    "amount": 449626,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447752"
+   }
+  ],
+  "sergey-kravtsov": [
+   {
+    "agency": "NSF",
+    "id": "2439171",
+    "title": "Collaborative Research: Role of Mesoscale Air-Sea Coupling in Climate Variability over the Southern Ocean",
+    "program": "Coupled & Large-Scale Dynamics",
+    "directorate": "GEO",
+    "start": "2025-06-15",
+    "end": "2028-05-31",
+    "amount": 579603,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2439171"
+   },
+   {
+    "agency": "NSF",
+    "id": "1408897",
+    "title": "Decadal Variability of Interacting Climate Subsystems in the Northern Hemisphere",
+    "program": "Climate & Large-Scale Dynamics",
+    "directorate": "GEO",
+    "start": "2014-07-01",
+    "end": "2018-06-30",
+    "amount": 433031,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1408897"
+   },
+   {
+    "agency": "NSF",
+    "id": "1243158",
+    "title": "Collaborative Research: EaSM 2: Stochastic Simulation and Decadal Prediction of Large-Scale Climate",
+    "program": "CR, Earth System Models",
+    "directorate": "GEO",
+    "start": "2013-02-15",
+    "end": "2017-01-31",
+    "amount": 260681,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1243158"
+   },
+   {
+    "agency": "NSF",
+    "id": "1236620",
+    "title": "Role of Low-Level Clouds in the Accelerated Warming of the Great Lakes - A Dual Observational and Regional Modeling Assessment",
+    "program": "Climate & Large-Scale Dynamics",
+    "directorate": "GEO",
+    "start": "2012-07-15",
+    "end": "2016-12-31",
+    "amount": 680937,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1236620"
+   }
+  ],
+  "emily-latch": [
+   {
+    "agency": "NSF",
+    "id": "2420195",
+    "title": "IRES: Collaborative Research: Grenada SURF-TURF: Summer Undergraduate Research Fellows - Teaming Up on Reefs and in Forests",
+    "program": "Intl Rsrch Exp for Stds (IRES)",
+    "directorate": "O/D",
+    "start": "2024-11-01",
+    "end": "2027-10-31",
+    "amount": 213969,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2420195"
+   }
+  ],
+  "peter-hinow": [
+   {
+    "agency": "NSF",
+    "id": "2419308",
+    "title": "Conference: Ninth International Conference on Mathematical Modeling and Analysis of Populations in Biological Systems",
+    "program": "MATHEMATICAL BIOLOGY",
+    "directorate": "MPS",
+    "start": "2024-08-01",
+    "end": "2025-07-31",
+    "amount": 20000,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2419308"
+   },
+   {
+    "agency": "NSF",
+    "id": "1016214",
+    "title": "Collaborative Research: Predicting the Release Kinetics of Matrix Tablets",
+    "program": "COMPUTATIONAL MATHEMATICS",
+    "directorate": "MPS",
+    "start": "2010-08-15",
+    "end": "2014-07-31",
+    "amount": 125782,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1016214"
+   }
+  ],
+  "daniel-gervini": [
+   {
+    "agency": "NSF",
+    "id": "2412015",
+    "title": "Statistical methods for point-process time series",
+    "program": "STATISTICS",
+    "directorate": "MPS",
+    "start": "2024-07-01",
+    "end": "2027-06-30",
+    "amount": 149989,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2412015"
+   },
+   {
+    "agency": "NSF",
+    "id": "1505780",
+    "title": "Semiparametric Statistical Methods for Replicated Point Processes",
+    "program": "STATISTICS",
+    "directorate": "MPS",
+    "start": "2015-08-01",
+    "end": "2019-07-31",
+    "amount": 199907,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1505780"
+   },
+   {
+    "agency": "NSF",
+    "id": "1006281",
+    "title": "Dynamic Functional Regression Models",
+    "program": "STATISTICS",
+    "directorate": "MPS",
+    "start": "2010-06-01",
+    "end": "2014-05-31",
+    "amount": 149932,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1006281"
+   }
+  ],
+  "mohammad-habibur-rahman": [
+   {
+    "agency": "NSF",
+    "id": "2419096",
+    "title": "I-Corps:  Translation Potential of a Semiautonomous Control System for Wheelchair-mounted Assistive Robots",
+    "program": "I-Corps",
+    "directorate": "TIP",
+    "start": "2024-07-01",
+    "end": "2026-06-30",
+    "amount": 50000,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2419096"
+   },
+   {
+    "agency": "NSF",
+    "id": "1848912",
+    "title": "I-Corps: Wheelchair Mounted Robotic Assistive Arm",
+    "program": "I-Corps",
+    "directorate": "TIP",
+    "start": "2018-09-15",
+    "end": "2022-08-31",
+    "amount": 50000,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1848912"
+   },
+   {
+    "agency": "NIH",
+    "id": "R21OH010038",
+    "title": "Quantifying the Recovery Response and Role of Hand Strength During Ladder Falls",
+    "program": "National Institute for Occupational Safety and Health",
+    "directorate": "NIOSH",
+    "activity": "R21",
+    "start": "2012-09-01",
+    "end": "2015-08-31",
+    "amount": 190767,
+    "fiscal_years": [
+     2013,
+     2013
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/8546211",
+    "role": "PI"
+   }
+  ],
+  "satya-aditya-akundi": [
+   {
+    "agency": "NSF",
+    "id": "2412813",
+    "title": "Improving Students’ Modeling Skills for Engineering Complex Systems",
+    "program": "IUSE",
+    "directorate": "EDU",
+    "start": "2023-10-01",
+    "end": "2027-01-31",
+    "amount": 284583,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2412813"
+   }
+  ],
+  "nathaniel-stern": [
+   {
+    "agency": "NSF",
+    "id": "2304639",
+    "title": "I-Corps: Ecological Asset Tradeoffs",
+    "program": "I-Corps",
+    "directorate": "TIP",
+    "start": "2023-02-15",
+    "end": "2024-07-31",
+    "amount": 50000,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2304639"
+   }
+  ],
+  "roshan-d-souza": [
+   {
+    "agency": "NSF",
+    "id": "2205265",
+    "title": "SCH: A physics-informed machine learning approach to dynamic blood flow analysis from static subtraction computed tomographic angiography imaging",
+    "program": "Smart and Connected Health",
+    "directorate": "CSE",
+    "start": "2022-09-01",
+    "end": "2027-08-31",
+    "amount": 1100003,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2205265"
+   },
+   {
+    "agency": "NSF",
+    "id": "2103560",
+    "title": "Collaborative Research: Enhanced 4D-Flow MRI through Deep Data Assimilation for Hemodynamic Analysis of Cardiovascular Flows",
+    "program": "CSCS: Circuits and Systems for",
+    "directorate": "ENG",
+    "start": "2021-08-15",
+    "end": "2025-07-31",
+    "amount": 298509,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2103560"
+   }
+  ],
+  "paul-roebber": [
+   {
+    "agency": "NSF",
+    "id": "2100801",
+    "title": "Collaborative Research: An Agent-Based Investigation of Hurricane Evacuation Dynamics: Key Factors, Connections, and Emergent Behaviors",
+    "program": "HDBE-Humans, Disasters, and th",
+    "directorate": "ENG",
+    "start": "2021-09-01",
+    "end": "2024-08-31",
+    "amount": 381045,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2100801"
+   }
+  ],
+  "mark-schwartz": [
+   {
+    "agency": "NSF",
+    "id": "2017831",
+    "title": "Collaborative Research: MRA: Quantifying phenological coherence and seasonal predictability across NEON and USA-NPN monitoring sites",
+    "program": "MacroSysBIO & NEON-Enabled Sci",
+    "directorate": "BIO",
+    "start": "2021-01-01",
+    "end": "2024-12-31",
+    "amount": 523202,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2017831"
+   },
+   {
+    "agency": "NSF",
+    "id": "1157215",
+    "title": "Bridging Spatial Scales Using Phenological Measurements to Improve Understanding of Autumn Atmosphere-Biosphere Interactions",
+    "program": "Geography and Spatial Sciences",
+    "directorate": "SBE",
+    "start": "2012-07-01",
+    "end": "2014-12-31",
+    "amount": 74273,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1157215"
+   }
+  ],
+  "peter-dunn": [
+   {
+    "agency": "NSF",
+    "id": "1749044",
+    "title": "Collaborative Research:  Functional genomics of plumage ornaments in a warbler",
+    "program": "Animal Behavior",
+    "directorate": "BIO",
+    "start": "2018-04-15",
+    "end": "2022-03-31",
+    "amount": 375000,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1749044"
+   },
+   {
+    "agency": "NSF",
+    "id": "1501347",
+    "title": "DISSERTATION RESEARCH: Effects of immune gene diversity on immune function and survival in an endangered bird",
+    "program": "EVOLUTIONARY GENETICS",
+    "directorate": "BIO",
+    "start": "2015-07-01",
+    "end": "2017-06-30",
+    "amount": 18508,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1501347"
+   },
+   {
+    "agency": "NSF",
+    "id": "0948695",
+    "title": "Collaborative Research: Balancing selection and MHC variation in an endangered bird",
+    "program": "EVOLUTIONARY ECOLOGY",
+    "directorate": "BIO",
+    "start": "2010-03-15",
+    "end": "2014-08-31",
+    "amount": 355207,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0948695"
+   }
+  ],
+  "wilkistar-otieno": [
+   {
+    "agency": "NSF",
+    "id": "1565131",
+    "title": "Preparing Engineers and Computer Scientists (PECS)",
+    "program": "S-STEM-Schlr Sci Tech Eng&Math",
+    "directorate": "EDU",
+    "start": "2016-07-01",
+    "end": "2022-06-30",
+    "amount": 994414,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1565131"
+   }
+  ],
+  "gordon-gauchat": [
+   {
+    "agency": "NSF",
+    "id": "1359585",
+    "title": "The Cultural Authority of Science in the Public Sphere: Creating Data Streams for Further Advances",
+    "program": "Sociology, STS-Sci, Tech & Society, S&E Indicators",
+    "directorate": "SBE",
+    "start": "2013-08-19",
+    "end": "2015-01-31",
+    "amount": 91696,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1359585"
+   }
+  ],
+  "gabriella-pinter": [
+   {
+    "agency": "NSF",
+    "id": "1129056",
+    "title": "UBM-Institutional: Integrated Undergraduate Research Experiences in Biological and Mathematical Sciences",
+    "program": "Transforming Undergrad Bio Ed, UBM, INTERDISC TRNG IN BIO & MATH",
+    "directorate": "EDU",
+    "start": "2011-10-01",
+    "end": "2017-09-30",
+    "amount": 754546,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1129056"
+   }
+  ],
+  "chao-zhu": [
+   {
+    "agency": "NSF",
+    "id": "1108782",
+    "title": "Complex Stochastic Systems: Analysis, Control and Applications",
+    "program": "APPLIED MATHEMATICS",
+    "directorate": "MPS",
+    "start": "2011-09-01",
+    "end": "2014-08-31",
+    "amount": 114999,
+    "role": "PI",
+    "institution": "UW-Milwaukee",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1108782"
+   }
+  ],
+  "kwang-woo-ahn": [
+   {
+    "agency": "NSF",
+    "id": "1021896",
+    "title": "ATD Collaborative Research: A computational analysis of multi-strain structure in genetically diverse bacterial populations in a natural host environment",
+    "program": "COFFES",
+    "directorate": "MPS",
+    "start": "2010-10-01",
+    "end": "2014-09-30",
+    "amount": 262147,
+    "role": "PI",
+    "institution": "Medical College of Wisconsin",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1021896"
+   }
+  ],
+  "mohammad-mahinfalah": [
+   {
+    "agency": "NSF",
+    "id": "2027632",
+    "title": "Scholarships to Support Retention, Academic Success, and Career Pathways in Mechanical Engineering",
+    "program": "S-STEM-Schlr Sci Tech Eng&Math",
+    "directorate": "EDU",
+    "start": "2020-10-01",
+    "end": "2026-04-30",
+    "amount": 999974,
+    "role": "PI",
+    "institution": "Milwaukee School of Engineering",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2027632"
+   }
+  ],
+  "russell-meier": [
+   {
+    "agency": "NSF",
+    "id": "1917352",
+    "title": "Research in Improving Computational Thinking in the Formation of Engineers, a Multi-Institutional Initiative.",
+    "program": "EngEd-Engineering Education",
+    "directorate": "ENG",
+    "start": "2019-09-01",
+    "end": "2024-08-31",
+    "amount": 50192,
+    "role": "PI",
+    "institution": "Milwaukee School of Engineering",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1917352"
+   }
+  ],
+  "wujie-zhang": [
+   {
+    "agency": "NSF",
+    "id": "1644585",
+    "title": "I-Corps: A Natural Polymer-Based Engineered Red Blood Cell Product",
+    "program": "I-Corps",
+    "directorate": "TIP",
+    "start": "2016-08-01",
+    "end": "2017-01-31",
+    "amount": 50000,
+    "role": "PI",
+    "institution": "Milwaukee School of Engineering",
+    "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1644585"
+   }
+  ],
+  "anne-kwitek": [
+   {
+    "agency": "NIH",
+    "id": "P01HL084207",
+    "title": "Core D: Mouse Genetics and Genomics Core",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "P01",
+    "start": "2007-06-01",
+    "end": "2024-06-30",
+    "amount": 900402,
+    "fiscal_years": [
+     2019,
+     2022
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10445016",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01HL064541",
+    "title": "Rat Genome Database",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "1999-09-30",
+    "end": "2026-12-31",
+    "amount": 14093848,
+    "fiscal_years": [
+     2020,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11251730",
+    "role": "PI"
+   }
+  ],
+  "ai-bo": [
+   {
+    "agency": "NIH",
+    "id": "R21AA032575",
+    "title": "Mechanisms of parenting on adolescent alcohol use: A meta-analytic structural equation modeling study",
+    "program": "National Institute on Alcohol Abuse and Alcoholism",
+    "directorate": "NIAAA",
+    "activity": "R21",
+    "start": "2026-07-16",
+    "end": "2028-06-30",
+    "amount": 413383,
+    "fiscal_years": [
+     2026,
+     2026
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/11214496",
+    "role": "PI"
+   }
+  ],
+  "alita-burmeister": [
+   {
+    "agency": "NIH",
+    "id": "R15GM159330",
+    "title": "Evolution of pleiotropic consequences via mucoid phage resistance in Escherichia coli populations",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R15",
+    "start": "2025-09-01",
+    "end": "2028-08-31",
+    "amount": 572553,
+    "fiscal_years": [
+     2025,
+     2025
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/11125155",
+    "role": "PI"
+   }
+  ],
+  "anai-kothari": [
+   {
+    "agency": "NIH",
+    "id": "UL1TR001436",
+    "title": "Clinical and Translational Science Award",
+    "program": "National Center for Advancing Translational Sciences",
+    "directorate": "NCATS",
+    "activity": "UL1",
+    "start": "2022-09-08",
+    "end": "2023-08-31",
+    "amount": 87330,
+    "fiscal_years": [
+     2022,
+     2022
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10656986",
+    "role": "Multi-PI"
+   }
+  ],
+  "amy-kalkbrenner": [
+   {
+    "agency": "NIH",
+    "id": "R01ES026993",
+    "title": "Air-pollution risk for Autism and ADHD - cross-disorder insights and genetic liability",
+    "program": "National Institute of Environmental Health Sciences",
+    "directorate": "NIEHS",
+    "activity": "R01",
+    "start": "2017-04-01",
+    "end": "2024-02-29",
+    "amount": 2437642,
+    "fiscal_years": [
+     2017,
+     2021
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/10124395",
+    "role": "PI"
+   }
+  ],
+  "anjishnu-banerjee": [
+   {
+    "agency": "NIH",
+    "id": "R21CA231892",
+    "title": "Bayesian learning algorithms for identifying and classifying heterogeneity of cell types in variety of solid tumors",
+    "program": "National Cancer Institute",
+    "directorate": "NCI",
+    "activity": "R21",
+    "start": "2018-09-01",
+    "end": "2021-08-31",
+    "amount": 362415,
+    "fiscal_years": [
+     2018,
+     2019
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/9771401",
+    "role": "PI"
+   }
+  ],
+  "ashima-singh": [
+   {
+    "agency": "NIH",
+    "id": "K01HL169309",
+    "title": "Using machine learning to understand cardiopulmonary and renal end organ complications for individuals with SCD",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "K01",
+    "start": "2025-09-01",
+    "end": "2029-06-30",
+    "amount": 295435,
+    "fiscal_years": [
+     2025,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11401689",
+    "role": "PI"
+   }
+  ],
+  "bing-yu": [
+   {
+    "agency": "NIH",
+    "id": "R01EB033806",
+    "title": "Deep learning enabled, deep ultraviolet scanning microscopy for intraoperative assessment of margin status during breast cancer surgery",
+    "program": "National Institute of Biomedical Imaging and Bioengineering",
+    "directorate": "NIBIB",
+    "activity": "R01",
+    "start": "2022-09-06",
+    "end": "2027-05-31",
+    "amount": 1531845,
+    "fiscal_years": [
+     2022,
+     2025
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/11136223",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R15CA202605",
+    "title": "Longitudinal Assessment of Tumor Hypoxia in vivo Using Near-Infrared Spectroscopy",
+    "program": "National Cancer Institute",
+    "directorate": "NCI",
+    "activity": "R15",
+    "start": "2016-02-11",
+    "end": "2020-01-31",
+    "amount": 399062,
+    "fiscal_years": [
+     2016,
+     2016
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/9415230",
+    "role": "PI"
+   }
+  ],
+  "brooke-slavens": [
+   {
+    "agency": "NIH",
+    "id": "R01HD098698",
+    "title": "Prediction of Shoulder Injury for Disease Prevention in Children and Adults with Spinal Cord Injury Using Advanced Biomechanical Modeling and Diagnostic Imaging",
+    "program": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
+    "directorate": "NICHD",
+    "activity": "R01",
+    "start": "2019-07-01",
+    "end": "2025-03-31",
+    "amount": 2470713,
+    "fiscal_years": [
+     2019,
+     2023
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/10377940",
+    "role": "PI"
+   }
+  ],
+  "danny-thomas": [
+   {
+    "agency": "NIH",
+    "id": "U01CE002944",
+    "title": "Active Injury Management (AIM) after Pediatric Concussion",
+    "program": "National Center for Injury Prevention and Control",
+    "directorate": "NCIPC",
+    "activity": "U01",
+    "start": "2018-09-30",
+    "end": "2022-09-29",
+    "amount": 2199984,
+    "fiscal_years": [
+     2018,
+     2021
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10220814",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "TL1TR001437",
+    "title": "J. NRSA Training Core",
+    "program": "National Center for Advancing Translational Sciences",
+    "directorate": "NCATS",
+    "activity": "TL1",
+    "start": "2015-08-18",
+    "end": "2025-07-31",
+    "amount": 1508909,
+    "fiscal_years": [
+     2021,
+     2024
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10856924",
+    "role": "PI"
+   }
+  ],
+  "daniel-b-rowe": [
+   {
+    "agency": "NIH",
+    "id": "R21NS087450",
+    "title": "Improving f(c)MRI Accuracy by Accounting for the Implications of Data Processing",
+    "program": "National Institute of Neurological Disorders and Stroke",
+    "directorate": "NINDS",
+    "activity": "R21",
+    "start": "2014-09-15",
+    "end": "2017-08-31",
+    "amount": 385698,
+    "fiscal_years": [
+     2014,
+     2015
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/8927087",
+    "role": "PI"
+   }
+  ],
+  "gary-mouradian": [
+   {
+    "agency": "NIH",
+    "id": "R01HL179101",
+    "title": "Pulmonary vagal sensory neurons in chronic lung disease",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "2025-08-15",
+    "end": "2030-05-31",
+    "amount": 964960,
+    "fiscal_years": [
+     2025,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11386476",
+    "role": "PI"
+   }
+  ],
+  "janet-rader": [
+   {
+    "agency": "NIH",
+    "id": "R25CA298917",
+    "title": "Student-Centered Pathway to Advance Research and Cancer Careers",
+    "program": "National Cancer Institute",
+    "directorate": "NCI",
+    "activity": "R25",
+    "start": "2025-08-07",
+    "end": "2030-08-31",
+    "amount": 648000,
+    "fiscal_years": [
+     2025,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11386512",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "U54HD113408",
+    "title": "Early Career-CeNtered EnricHment to AdvaNce Research Careers in Maternal HEalth  -ENHANCE-M",
+    "program": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
+    "directorate": "NICHD",
+    "activity": "U54",
+    "start": "2023-08-17",
+    "end": "2030-07-31",
+    "amount": 903824,
+    "fiscal_years": [
+     2023,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11399920",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01CA262198",
+    "title": "Enlisting HPV integration events to illuminate drivers and target treatment in invasive cervical cancer",
+    "program": "National Cancer Institute",
+    "directorate": "NCI",
+    "activity": "R01",
+    "start": "2022-07-15",
+    "end": "2027-06-30",
+    "amount": 2108136,
+    "fiscal_years": [
+     2022,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11389370",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R21CA241013",
+    "title": "Defining HPV integration sites of unknown significance in invasive cervical cancer",
+    "program": "National Cancer Institute",
+    "directorate": "NCI",
+    "activity": "R21",
+    "start": "2020-09-01",
+    "end": "2022-08-31",
+    "amount": 401115,
+    "fiscal_years": [
+     2020,
+     2020
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10042465",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R25CA221715",
+    "title": "Student-Centered Pipeline to Advance Research in Cancer Careers (SPARCC) for Underrepresented Minority Students",
+    "program": "National Cancer Institute",
+    "directorate": "NCI",
+    "activity": "R25",
+    "start": "2018-09-18",
+    "end": "2023-08-31",
+    "amount": 943311,
+    "fiscal_years": [
+     2018,
+     2022
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10470360",
+    "role": "PI"
+   }
+  ],
+  "hyunkyoung-oh": [
+   {
+    "agency": "NIH",
+    "id": "R21NR019707",
+    "title": "Self-Monitoring Support Application for Adults with Diabetes and Hypertension",
+    "program": "National Institute of Nursing Research",
+    "directorate": "NINR",
+    "activity": "R21",
+    "start": "2021-07-28",
+    "end": "2024-06-30",
+    "amount": 441152,
+    "fiscal_years": [
+     2021,
+     2022
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/10458045",
+    "role": "PI"
+   }
+  ],
+  "john-ladisa": [
+   {
+    "agency": "NIH",
+    "id": "R01HL172851",
+    "title": "Bicuspid Aortic Valve Biomechanics and Calcification",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "2024-03-01",
+    "end": "2028-02-29",
+    "amount": 1412511,
+    "fiscal_years": [
+     2024,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11296908",
+    "role": "Multi-PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01HL142955",
+    "title": "Mechanisms of morbidity after correcting aortic coarctations of varying severity",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "2018-07-01",
+    "end": "2028-04-30",
+    "amount": 3196486,
+    "fiscal_years": [
+     2018,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11311818",
+    "role": "PI"
+   }
+  ],
+  "madhusudan-dey": [
+   {
+    "agency": "NIH",
+    "id": "R15GM159328",
+    "title": "Regulators of The Unfolded Protein Response Signaling",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R15",
+    "start": "2025-09-01",
+    "end": "2028-08-31",
+    "amount": 563880,
+    "fiscal_years": [
+     2025,
+     2025
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/11221151",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01GM124183",
+    "title": "Regulating the Unfolded Protein Response in Yeast",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R01",
+    "start": "2017-09-15",
+    "end": "2023-07-31",
+    "amount": 1317113,
+    "fiscal_years": [
+     2017,
+     2020
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/9986818",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R15GM101575",
+    "title": "Molecular Insights into Activation and Substrate Recognition of Protein Kinase R",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R15",
+    "start": "2012-06-01",
+    "end": "2016-05-31",
+    "amount": 334541,
+    "fiscal_years": [
+     2012,
+     2012
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/8288483",
+    "role": "PI"
+   }
+  ],
+  "linnea-laestadius": [
+   {
+    "agency": "NIH",
+    "id": "R03CA216528",
+    "title": "Refilling addiction: Investigating marketing for e-liquid on Instagram",
+    "program": "National Cancer Institute",
+    "directorate": "NCI",
+    "activity": "R03",
+    "start": "2017-05-01",
+    "end": "2020-04-30",
+    "amount": 217771,
+    "fiscal_years": [
+     2017,
+     2018
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/9472302",
+    "role": "PI"
+   }
+  ],
+  "michael-zimmermann": [
+   {
+    "agency": "NIH",
+    "id": "R35GM153740",
+    "title": "Advancing Genomic Interpretation for Chromatin Remodeling Enzymes",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R35",
+    "start": "2024-09-15",
+    "end": "2029-08-31",
+    "amount": 1170000,
+    "fiscal_years": [
+     2024,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11399808",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R03TR004589",
+    "title": "3D Methodology for Interpreting Disease-Associated Genomic Variation in RAG2",
+    "program": "National Center for Advancing Translational Sciences",
+    "directorate": "NCATS",
+    "activity": "R03",
+    "start": "2023-09-01",
+    "end": "2024-08-31",
+    "amount": 156000,
+    "fiscal_years": [
+     2023,
+     2023
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10724152",
+    "role": "PI"
+   }
+  ],
+  "michael-martens": [
+   {
+    "agency": "NIH",
+    "id": "F31HL134317",
+    "title": "Competing Risks Analysis Methods for Group Sequential and Adaptive Designs",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "F31",
+    "start": "2016-09-16",
+    "end": "2017-04-17",
+    "amount": 33059,
+    "fiscal_years": [
+     2016,
+     2016
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/9194302",
+    "role": "PI"
+   }
+  ],
+  "ramani-ramchandran": [
+   {
+    "agency": "NIH",
+    "id": "R01HL179583",
+    "title": "Basolateral brain endothelial cilia and its role in promoting vascular stability",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "2025-05-01",
+    "end": "2029-03-31",
+    "amount": 1296376,
+    "fiscal_years": [
+     2025,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11325088",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R33HL154254",
+    "title": "Cilia as a biomarker of CNS vascular health",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R33",
+    "start": "2020-09-03",
+    "end": "2025-08-31",
+    "amount": 1882292,
+    "fiscal_years": [
+     2022,
+     2024
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10914078",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R61HL154254",
+    "title": "Cilia as a biomarker of CNS vascular health",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R61",
+    "start": "2020-09-03",
+    "end": "2022-08-31",
+    "amount": 1302589,
+    "fiscal_years": [
+     2020,
+     2021
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10252928",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R13HL147501",
+    "title": "R13 Vasculata Conference 2019",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R13",
+    "start": "2019-07-01",
+    "end": "2021-06-30",
+    "amount": 20000,
+    "fiscal_years": [
+     2019,
+     2019
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/9762647",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01HL123338",
+    "title": "Delta like-4 long non-coding RNA function in angiogenesis and vascular anomalies",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "2015-07-01",
+    "end": "2020-04-30",
+    "amount": 1819073,
+    "fiscal_years": [
+     2015,
+     2018
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/9472869",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01HL112639",
+    "title": "Targeting DUSP-5 to Treat Vascular Anomalies",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "2012-02-21",
+    "end": "2017-12-31",
+    "amount": 2552877,
+    "fiscal_years": [
+     2012,
+     2016
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/8989143",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01HL102745",
+    "title": "Snrk-1 and Dusp-5 co-ordinately regulate vascular development in vertebrates",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "2011-08-01",
+    "end": "2015-12-31",
+    "amount": 1474500,
+    "fiscal_years": [
+     2011,
+     2014
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/8701362",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01HL090712",
+    "title": "Roundabout4 signaling in endothelial cells",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "2009-03-16",
+    "end": "2014-02-28",
+    "amount": 1121250,
+    "fiscal_years": [
+     2010,
+     2012
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/8235850",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "T35HL072483",
+    "title": "Medical Student Summer Research Training Program",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "T35",
+    "start": "1980-06-01",
+    "end": "2027-05-31",
+    "amount": 976074,
+    "fiscal_years": [
+     2018,
+     2025
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11103270",
+    "role": "PI"
+   }
+  ],
+  "nicholas-semenkovich": [
+   {
+    "agency": "NIH",
+    "id": "K08GM150038",
+    "title": "Liquid biopsy cell-free DNA analysis to monitor sepsis",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "K08",
+    "start": "2024-08-01",
+    "end": "2028-07-31",
+    "amount": 498612,
+    "fiscal_years": [
+     2024,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11387802",
+    "role": "PI"
+   }
+  ],
+  "nicholas-j-reiter": [
+   {
+    "agency": "NIH",
+    "id": "R01GM120572",
+    "title": "Structural transitions and RNA-mediated mechanisms of LSD1",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R01",
+    "start": "2017-08-15",
+    "end": "2027-07-31",
+    "amount": 3097392,
+    "fiscal_years": [
+     2017,
+     2026
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/11372899",
+    "role": "PI"
+   }
+  ],
+  "priya-nambisan": [
+   {
+    "agency": "NIH",
+    "id": "RF1MH135498",
+    "title": "Using digital photovoice to explore the relationships between social media content and suicidality among transgender adolescents",
+    "program": "National Institute of Mental Health",
+    "directorate": "NIMH",
+    "activity": "RF1",
+    "start": "2024-09-05",
+    "end": "2027-07-31",
+    "amount": 892328,
+    "fiscal_years": [
+     2025,
+     2025
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/11366146",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01MH135498",
+    "title": "Using digital photovoice to explore the relationships between social media content and suicidality among transgender adolescents",
+    "program": "National Institute of Mental Health",
+    "directorate": "NIMH",
+    "activity": "R01",
+    "start": "2024-09-05",
+    "end": "2025-07-31",
+    "amount": 423369,
+    "fiscal_years": [
+     2024,
+     2024
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/11046891",
+    "role": "PI"
+   }
+  ],
+  "ravit-boger": [
+   {
+    "agency": "NIH",
+    "id": "R56AI192693",
+    "title": "Discovery and development of novel HCMV inhibitors",
+    "program": "National Institute of Allergy and Infectious Diseases",
+    "directorate": "NIAID",
+    "activity": "R56",
+    "start": "2025-09-01",
+    "end": "2027-08-31",
+    "amount": 762983,
+    "fiscal_years": [
+     2025,
+     2025
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11363817",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R21AI164033",
+    "title": "Autophagy activation – a novel strategy for inhibition of human cytomegalovirus",
+    "program": "National Institute of Allergy and Infectious Diseases",
+    "directorate": "NIAID",
+    "activity": "R21",
+    "start": "2022-05-01",
+    "end": "2025-04-30",
+    "amount": 418000,
+    "fiscal_years": [
+     2022,
+     2023
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10615151",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R21DK119989",
+    "title": "Contribution of Cytomegalovirus to Crohn's disease complications and recurrences",
+    "program": "National Institute of Diabetes and Digestive and Kidney Diseases",
+    "directorate": "NIDDK",
+    "activity": "R21",
+    "start": "2018-09-20",
+    "end": "2022-08-31",
+    "amount": 434282,
+    "fiscal_years": [
+     2018,
+     2019
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/9787505",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01DC013550",
+    "title": "High Throughput Screening for Identification of Human Cytomegalovirus Inhibitors",
+    "program": "National Institute on Deafness and Other Communication Disorders",
+    "directorate": "NIDCD",
+    "activity": "R01",
+    "start": "2014-06-13",
+    "end": "2019-05-31",
+    "amount": 205481,
+    "fiscal_years": [
+     2016,
+     2016
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/9819809",
+    "role": "PI"
+   }
+  ],
+  "rodney-sparapani": [
+   {
+    "agency": "NIH",
+    "id": "R21HL189374",
+    "title": "Optimal donor selection for hematopoietic cell transplant in the cyclophosphamide prophylaxis era by Bayesian machine learning with progressive illness-death data",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R21",
+    "start": "2026-09-01",
+    "end": "2028-08-31",
+    "amount": 238710,
+    "fiscal_years": [
+     2026,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11445103",
+    "role": "PI"
+   }
+  ],
+  "said-audi": [
+   {
+    "agency": "NIH",
+    "id": "R15HL129209",
+    "title": "Experimental and Computational Investigation of NOX4-Dependent Mechanisms in ARDS Susceptibility",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R15",
+    "start": "2026-08-15",
+    "end": "2028-05-31",
+    "amount": 1760526,
+    "fiscal_years": [
+     2015,
+     2026
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/11444021",
+    "role": "PI"
+   },
+   {
+    "agency": "NIH",
+    "id": "R01HL024349",
+    "title": "Lung Metabolism: Multiple Indicator Dilution",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "1979-08-01",
+    "end": "2012-06-30",
+    "amount": 249696,
+    "fiscal_years": [
+     2010,
+     2010
+    ],
+    "institution": "Marquette University",
+    "url": "https://reporter.nih.gov/project-details/7880619",
+    "role": "PI"
+   }
+  ],
+  "victor-jin": [
+   {
+    "agency": "NIH",
+    "id": "R01GM114142",
+    "title": "Omics analysis of three-dimensional transcriptional regulation",
+    "program": "National Institute of General Medical Sciences",
+    "directorate": "NIGMS",
+    "activity": "R01",
+    "start": "2015-04-13",
+    "end": "2026-11-30",
+    "amount": 962397,
+    "fiscal_years": [
+     2022,
+     2024
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/10765724",
+    "role": "PI"
+   }
+  ],
+  "ziqing-liu": [
+   {
+    "agency": "NIH",
+    "id": "R01HL180613",
+    "title": "Post-transcriptional regulation of vascular homeostasis by RNA-binding proteins",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R01",
+    "start": "2025-08-01",
+    "end": "2030-05-31",
+    "amount": 1221260,
+    "fiscal_years": [
+     2025,
+     2026
+    ],
+    "institution": "Medical College of Wisconsin",
+    "url": "https://reporter.nih.gov/project-details/11380946",
+    "role": "PI"
+   }
+  ],
+  "zeyun-yu": [
+   {
+    "agency": "NIH",
+    "id": "R15HL103497",
+    "title": "Image-Based Modeling of Ca2+ Signaling in Ventricular Myocytes",
+    "program": "National Heart Lung and Blood Institute",
+    "directorate": "NHLBI",
+    "activity": "R15",
+    "start": "2010-04-21",
+    "end": "2013-09-30",
+    "amount": 364218,
+    "fiscal_years": [
+     2010,
+     2010
+    ],
+    "institution": "UW-Milwaukee",
+    "url": "https://reporter.nih.gov/project-details/7940176",
+    "role": "PI"
+   }
+  ]
+ }
+}

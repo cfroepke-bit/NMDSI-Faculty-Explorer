@@ -24,7 +24,8 @@ OUT = Path("data/photos.json")
 # Checked against the image file name only (e.g. "lubar-people-default.png", "reiter-labgrp.png").
 SKIP = re.compile(r"logo|icon|sprite|banner|header|footer|social|facebook|twitter|linkedin|instagram|youtube|"
                   r"placeholder|default|no[-_]?photo|lab[-_]?gr(ou)?p|fig[-_]?\d|silhouette|\bseal\b|wordmark|"
-                  r"pixel|badge|button|\barrow|map[-_]|campus|building|\bhall\b|group|\bteam\b|classroom",
+                  r"pixel|badge|button|\barrow|map[-_]|campus|building|\bhall\b|group|\bteam\b|classroom|"
+                  r"intro[-_]component|lab[-_]intro",
                   re.I)
 # Image descriptions that mean "not a headshot" (narrower: alt text like "Social Work Professor Ai Bo" is fine).
 ALT_SKIP = re.compile(r"\blogo\b|\bicon\b|\bmenu\b|\bsearch\b|\barrow\b|\bbanner\b|\bseal\b|wordmark|"
@@ -82,6 +83,7 @@ def find_photo(html_bytes, page_url, name):
             elif 0.6 <= w / h <= 1.4 or h > w: score += 1         # portrait or square
             if w < 60 or h < 60: score -= 5                       # thumbnails, icons
         if score > best_score:
+            src = re.sub(r"\s+\d+[wx]$", "", src.strip())  # a srcset entry keeps its " 400w" size: drop it
             best, best_score = urljoin(page_url, src.replace("&amp;", "&")), score
     # Must match the person's name or be the page's marked featured image.
     return best if best_score >= 4 else None
@@ -94,7 +96,8 @@ def main():
     for p in people:
         entry = scraped.get(p["id"]) or {}
         cache_file = CACHE / f"{p['id']}.html"
-        if entry.get("scrape_status") != "ok" or not cache_file.exists():
+        # parsed_empty pages (contact cards, login-walled databases) can still show a headshot
+        if entry.get("scrape_status") not in ("ok", "parsed_empty") or not cache_file.exists():
             continue
         url = entry.get("final_url") or entry.get("url") or p.get("profile_url")
         photo = find_photo(cache_file.read_bytes(), url, p["name"])

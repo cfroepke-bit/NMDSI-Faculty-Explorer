@@ -5,6 +5,8 @@ __pycache__/
 
 # Not published: source PDF and saved copies of university web pages
 nmdsi_directory.pdf
+affiliated_2026-09.pdf
+data/affiliated_2026-09.xlsx
 cache/
 scrape_run.txt
 

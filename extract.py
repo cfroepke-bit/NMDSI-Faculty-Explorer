@@ -1,7 +1,14 @@
-"""Step 1: extract faculty rows + profile links from the NMDSI directory PDF.
+"""Step 1: build data/directory_raw.json from the NMDSI affiliated-faculty list.
 
-Usage: python extract.py [path/to/nmdsi_directory.pdf]
-Writes data/directory_raw.json and prints a parse report.
+Usage:
+  python extract.py                     read the current list, data/affiliated_2026-09.xlsx (September 2026)
+  python extract.py --pdf [file.pdf]    the old October 2025 PDF directory (nmdsi_directory.pdf)
+
+The 2026 spreadsheet has no college or department columns, so those are carried over from the 2025 directory
+(data/directory_2025.json) for returning faculty, taken from MSOE's directory for MSOE faculty, or read from
+MCW profile links. Returning faculty keep their old id, so saved shortlists and share links keep working.
+All MSOE faculty in data/msoe_directory.json (from msoe_directory.py) who aren't on the list are added with
+nmdsi_affiliate = false. Email addresses in the list are not copied: the published data has no emails.
 """
 import json
 import re
@@ -9,9 +16,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-import pdfplumber
 
-PDF_PATH = Path(sys.argv[1] if len(sys.argv) > 1 else "nmdsi_directory.pdf")
 OUT_PATH = Path("data/directory_raw.json")
 
 # Column boundaries (PDF points). Names start at x~40, university at x~190, research at x~420.
@@ -152,9 +157,10 @@ def build_record(row):
     }
 
 
-def main():
+def main_pdf(pdf_path):
+    import pdfplumber
     rows, unmatched_links, empty_links = [], [], 0
-    with pdfplumber.open(PDF_PATH) as pdf:
+    with pdfplumber.open(pdf_path) as pdf:
         for page_no, page in enumerate(pdf.pages, start=1):
             links = [l for l in page.hyperlinks if l.get("uri")]
             for l in links:
@@ -224,5 +230,210 @@ def main():
         print("  ", f)
 
 
+# ---------------------------------------------------------------------------------------------------------
+# September 2026 list (spreadsheet)
+# ---------------------------------------------------------------------------------------------------------
+XLSX_PATH = Path("data/affiliated_2026-09.xlsx")
+OLD_DIRECTORY = Path("data/directory_2025.json")
+MSOE_DIRECTORY = Path("data/msoe_directory.json")
+
+UNIVERSITY_NAMES = {
+    "university of wisconsin-milwaukee": "UW-Milwaukee",
+    "marquette university": "Marquette University",
+    "medical college of wisconsin": "Medical College of Wisconsin",
+    "milwaukee school of engineering": "Milwaukee School of Engineering",
+    "waukesha county technical college": "Waukesha County Technical College",
+}
+# Obvious typos in the list, checked against the person's own profile page.
+NAME_FIXES = {"Micheal Zimmermann": "Michael Zimmermann"}  # MCW page: Michael T. Zimmermann
+# MCW profile links name the department: /departments/<slug>/ or a department subdomain.
+MCW_DEPT_HOSTS = {"obgyn.mcw.edu": "Obstetrics and Gynecology"}
+
+
+def fold(text):
+    return re.sub(r"[^a-z]", "", unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode().lower())
+
+
+def name_key(name):
+    """(first name, last name), ignoring middle names, initials, suffixes and nicknames in parentheses.
+    The full first name is compared: "Somesh Roy" and "Sudeshna Roy" are different people. Nicknames
+    ("Tony" Gamble) are matched by profile link instead."""
+    words = [w for w in re.sub(r"\([^)]*\)", " ", name).replace(".", " ").replace(",", " ").split()
+             if len(w) > 1 and w.lower() not in ("jr", "sr", "ii", "iii", "iv")]
+    return (fold(words[0]), fold(words[-1])) if words else ("", "")
+
+
+def norm_url(url):
+    return re.sub(r"^https?://(www\.)?", "", (url or "").strip().lower()).rstrip("/")
+
+
+# College / department named by the first part of a UWM or Marquette profile link, for people the list
+# gives no department (the 2026 list has none; returning faculty keep their 2025 values).
+URL_UNITS = {
+    # UWM: uwm.edu/<unit>/...
+    "uwm.edu/business": ("Lubar College of Business", None),
+    "uwm.edu/math": ("College of Letters & Science", "Department of Mathematical Sciences"),
+    "uwm.edu/informationstudies": ("College of Community Engagement and Professions", "School of Information Studies"),
+    "uwm.edu/engineering": ("College of Engineering & Applied Science", None),
+    "uwm.edu/freshwater": ("School of Freshwater Sciences", None),
+    "uwm.edu/communication": ("College of Letters & Science", "Department of Communication"),
+    "uwm.edu/physics": ("College of Letters & Science", "Department of Physics"),
+    "uwm.edu/english": ("College of Letters & Science", "Department of English"),
+    "uwm.edu/sociology": ("College of Letters & Science", "Department of Sociology"),
+    "uwm.edu/drug-discovery": ("College of Letters & Science", "Milwaukee Institute for Drug Discovery"),
+    "uwm.edu/publichealth": ("Zilber College of Public Health", None),
+    "uwm.edu/nursing": ("College of Nursing", None),
+    "uwm.edu/academicaffairs": ("Academic Affairs", None),
+    "uwm.edu/biomedical-sciences-healthcare-administration":
+        ("College of Health Professions & Sciences", "Biomedical Sciences & Healthcare Administration"),
+    # Marquette: marquette.edu/<unit>/...
+    "law.marquette.edu": ("Law School", None),
+    "marquette.edu/mathematical-and-statistical-sciences":
+        ("Klingler College of Arts and Sciences", "Department of Mathematical and Statistical Sciences"),
+    "marquette.edu/business": ("College of Business Administration", None),
+    "marquette.edu/communication": ("Diederich College of Communication", None),
+    "marquette.edu/dentistry": ("School of Dentistry", None),
+    "marquette.edu/physical-therapy": ("College of Health Sciences", "Department of Physical Therapy"),
+    "marquette.edu/nursing": ("College of Nursing", None),
+    "marquette.edu/library": ("Raynor Library", None),
+    "marquette.edu/research-sponsored-programs": ("Office of Research and Sponsored Programs", None),
+    "marquette.edu/peacemaking": ("Center for Peacemaking", None),
+}
+
+
+def url_units(url):
+    path = norm_url(url)
+    for prefix, units in URL_UNITS.items():
+        if path == prefix or path.startswith(prefix + "/"):
+            return units
+    return None, None
+
+
+def mcw_department(url):
+    host = re.sub(r"^https?://", "", url or "").split("/")[0].lower()
+    if host in MCW_DEPT_HOSTS:
+        return MCW_DEPT_HOSTS[host]
+    m = re.search(r"mcw\.edu/departments/([a-z0-9-]+)/", url or "")
+    if not m:
+        return None
+    words = m.group(1).split("-")
+    small = {"and", "of", "for", "the", "in"}
+    return " ".join(w if i and w in small else w.capitalize() for i, w in enumerate(words))
+
+
+def match_old(row, old, overrides):
+    """The 2025 record for this person: same id, same profile link (or override), or same first + last name
+    at the same university."""
+    by_id = {o["id"]: o for o in old}
+    if row["id"] in by_id:
+        return by_id[row["id"]]
+    url = norm_url(row["profile_url"])
+    if url:
+        for o in old:
+            if url in (norm_url(o["profile_url"]), norm_url(overrides.get(o["id"]))):
+                return o
+    key = name_key(row["name"])
+    same = [o for o in old if name_key(o["name"]) == key and o["university"] == row["university"]]
+    return same[0] if len(same) == 1 else None
+
+
+def main_xlsx():
+    import openpyxl
+    from scrape import URL_OVERRIDES
+
+    old = json.loads(OLD_DIRECTORY.read_text(encoding="utf-8")) if OLD_DIRECTORY.exists() else []
+    msoe = json.loads(MSOE_DIRECTORY.read_text(encoding="utf-8")) if MSOE_DIRECTORY.exists() else []
+    msoe_by_key = {name_key(m["name"]): m for m in msoe}
+    sheet = openpyxl.load_workbook(XLSX_PATH, read_only=True).active
+
+    records, seen, carried, report = [], {}, 0, {"duplicates": [], "no_link": [], "fixed_names": []}
+    for row_no, row in enumerate(sheet.iter_rows(values_only=True), start=1):
+        first, last, _email, cred, uni, title, research, category, url = (list(row) + [None] * 9)[:9]
+        if not (first or last):
+            continue
+        name = " ".join(f"{first or ''} {last or ''}".split())
+        if name in NAME_FIXES:
+            report["fixed_names"].append(f"{name} -> {NAME_FIXES[name]}")
+            name = NAME_FIXES[name]
+        url = (url or "").strip() or None
+        university = UNIVERSITY_NAMES.get((uni or "").strip().lower(), (uni or "").strip())
+        rec = {
+            "id": slugify(name), "name": name, "credentials": (cred or "").strip() or None,
+            "title": " ".join((title or "").split()) or None, "university": university,
+            "college": None, "department": None, "profile_url": url,
+            "directory_research": " ".join((research or "").split()) or None,
+            "directory_research_lines": [l.strip() for l in (research or "").splitlines() if l.strip()],
+            "nmdsi_category": (category or "").strip() or None,
+            "nmdsi_affiliate": True, "source_row": row_no,
+        }
+        prev = match_old(rec, old, URL_OVERRIDES)
+        if prev:
+            carried += 1
+            rec["id"] = prev["id"]
+            rec["college"], rec["department"] = prev["college"], prev["department"]
+            rec["directory_research"] = rec["directory_research"] or prev["directory_research"]
+            rec["directory_research_lines"] = rec["directory_research_lines"] or prev["directory_research_lines"]
+            rec["title"] = rec["title"] or prev["title"]
+        if university == "Medical College of Wisconsin" and not rec["department"]:
+            rec["department"] = mcw_department(url)
+        if university in ("UW-Milwaukee", "Marquette University") and not rec["department"]:
+            college, department = url_units(url)
+            rec["college"] = rec["college"] or college
+            rec["department"] = department
+        if university == "Milwaukee School of Engineering":
+            m = msoe_by_key.get(name_key(name))
+            if m:
+                rec["department"] = rec["department"] or m["department"]
+                rec["msoe_photo"] = m["photo_url"]
+                if not url or "/directory/?" in url:  # list gave a directory search page, not a profile
+                    rec["profile_url"] = m["profile_url"]
+        if rec["id"] in seen:  # listed twice (e.g. two email addresses): keep the first, fill gaps from the second
+            first_rec = seen[rec["id"]]
+            report["duplicates"].append(f"{name} (rows {first_rec['source_row']} and {row_no})")
+            for k, v in rec.items():
+                if first_rec.get(k) in (None, [], "") and v:
+                    first_rec[k] = v
+            continue
+        seen[rec["id"]] = rec
+        records.append(rec)
+
+    listed = len(records)
+    listed_keys = {name_key(r["name"]) for r in records if r["university"] == "Milwaukee School of Engineering"}
+    for m in msoe:
+        if name_key(m["name"]) in listed_keys:
+            continue
+        rid = slugify(m["name"])
+        if rid in seen:
+            rid += "-msoe"
+        rec = {"id": rid, "name": m["name"], "credentials": None, "title": m["title"],
+               "university": "Milwaukee School of Engineering", "college": None, "department": m["department"],
+               "profile_url": m["profile_url"], "directory_research": None, "directory_research_lines": [],
+               "nmdsi_category": None, "nmdsi_affiliate": False, "msoe_photo": m["photo_url"]}
+        seen[rid] = rec
+        records.append(rec)
+
+    for rec in records:
+        if not rec["profile_url"]:
+            report["no_link"].append(rec["name"])
+    OUT_PATH.write_text(json.dumps(records, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    from collections import Counter
+    print(f"Read {XLSX_PATH}: {listed} people on the NMDSI list, plus {len(records) - listed} other MSOE faculty "
+          f"= {len(records)} records (wrote {OUT_PATH})")
+    print("NMDSI list by institution:", dict(Counter(r["university"] for r in records if r["nmdsi_affiliate"])))
+    print(f"Returning from the 2025 directory (id, college, department kept): {carried}")
+    new_ids = {r["id"] for r in records}
+    print(f"In the 2025 directory but not on the 2026 list: {[o['id'] for o in old if o['id'] not in new_ids]}")
+    print(f"Listed twice, merged: {report['duplicates']}")
+    print(f"Names corrected: {report['fixed_names']}")
+    print(f"No profile link: {report['no_link']}")
+    print(f"No department: {[r['id'] for r in records if r['nmdsi_affiliate'] and not r['department']]}")
+
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == "--pdf":
+        main_pdf(Path(sys.argv[2] if len(sys.argv) > 2 else "nmdsi_directory.pdf"))
+    else:
+        main_xlsx()
+
+

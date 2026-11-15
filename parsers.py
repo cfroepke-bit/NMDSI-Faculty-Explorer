@@ -149,7 +149,25 @@ def parse_generic(soup):
     return collect_sections(root), root
 
 
+def parse_expertfile(soup):
+    """MSOE's profile pages embed an ExpertFile profile: h2 sections, each followed by one block.
+    Keeps only Areas of Expertise (one tag per item) and Biography; awards and media lists are not research."""
+    sections = {}
+    for h in soup.find_all("h2"):
+        title = clean(h.get_text(" "))
+        block = h.find_next_sibling()
+        if not block:
+            continue
+        if title == "Areas of Expertise":
+            sections[title] = [clean(d.get_text(" ")) for d in block.find_all("div") if not d.find("div") and clean(d.get_text(" "))]
+        elif title == "Biography":
+            text = block.get_text("\n")
+            sections[title] = [clean(p) for p in re.split(r"\n\s*\n|\n", text) if clean(p)]
+    return sections, soup.body or soup
+
+
 PARSERS = [
+    (re.compile(r"(^|\.)expertfile\.com$"), "expertfile", parse_expertfile),
     (re.compile(r"(^|\.)law\.marquette\.edu$"), "law", parse_law),
     (re.compile(r"^(www\.|mcw\.)?marquette\.edu$"), "marquette", parse_marquette),
     (re.compile(r"^(www\.)?uwm\.edu$"), "uwm", parse_uwm),
@@ -278,4 +296,11 @@ def parse_profile(html_bytes, url):
     if not out["courses"]:
         out["courses"] = courses_from_prose(out["bio"] + out["research"])
     out["full_text"] = clean(root.get_text(" ")) if root else ""
+    # data/scraped.json is published: keep page text, drop email addresses (public on the pages, but not needed here)
+    for kind in ("full_text",):
+        out[kind] = re.sub(r"[\w.+-]+@[\w-]+(\.[\w-]+)+", "[email]", out[kind])
+    for kind in ("research", "bio", "grants"):
+        out[kind] = [re.sub(r"[\w.+-]+@[\w-]+(\.[\w-]+)+", "[email]", line) for line in out[kind]]
+    out["sections"] = {h: [re.sub(r"[\w.+-]+@[\w-]+(\.[\w-]+)+", "[email]", line) if isinstance(line, str) else line
+                           for line in lines] for h, lines in out["sections"].items()}
     return out

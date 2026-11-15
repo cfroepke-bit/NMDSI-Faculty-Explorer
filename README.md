@@ -1,7 +1,10 @@
 # NMDSI Affiliated Faculty Explorer
 
-A searchable, enriched directory of the Northwestern Mutual Data Science Institute affiliated faculty
-(Marquette University + UW-Milwaukee), built from `nmdsi_directory.pdf` (updated 1 October 2025).
+A searchable, enriched directory of the Northwestern Mutual Data Science Institute affiliated faculty at its five
+academic partners (UW-Milwaukee, Marquette, Medical College of Wisconsin, MSOE and Waukesha County Technical College),
+built from NMDSI's September 2026 affiliated-faculty list (`data/affiliated_2026-09.xlsx`, 235 people; not published because it lists email addresses), plus all
+401 other MSOE faculty from MSOE's public directory (NMDSI said all MSOE faculty may be included; they are marked
+"not on NMDSI list"). Each person's NSF and NIH awards are added, and Grants.gov opportunities are matched to teams.
 
 ## Setup
 
@@ -11,9 +14,8 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Before fetching profiles, set a contact email so site owners know who is crawling:
-`$env:NMDSI_CONTACT_EMAIL = "you@example.com"` (PowerShell) or `export NMDSI_CONTACT_EMAIL=you@example.com`.
-`scrape.py --offline` doesn't need it.
+The scrapers identify themselves with this project's GitHub page (`CONTACT_URL` in `scrape.py`). You can add an
+email too: `$env:NMDSI_CONTACT_EMAIL = "you@example.com"` (PowerShell) or `export NMDSI_CONTACT_EMAIL=you@example.com`.
 
 **What's in the repo:** the code, the dashboard, and the generated data (`faculty.json`, `data/*.json`,
 `scrape_log.csv`), so the site runs as-is. Not included: the source PDF (`nmdsi_directory.pdf`, put your copy in the
@@ -25,9 +27,12 @@ project root to rerun `extract.py`) and `cache/` (saved profile pages; `scrape.p
 
 | Step | Command | Output |
 |---|---|---|
-| 1. Extract the PDF | `python extract.py` | `data/directory_raw.json` + a parse report |
+| 0. MSOE directory | `python msoe_directory.py` (all MSOE faculty, ~2 min) | `data/msoe_directory.json` |
+| 1. Read the list | `python extract.py` (`--pdf` reads the old 2025 PDF instead) | `data/directory_raw.json` + a report |
 | 2. Scrape profiles | `python scrape.py --limit 5` (trial), then `python scrape.py` | `cache/<id>.html`, `scrape_log.csv`, `data/scraped.json` |
 | 2b. Find headshots | `python photos.py` (reads the saved pages; no new fetching) | `data/photos.json` |
+| 2c. Federal awards | `python funding.py` (NSF + NIH APIs, ~20 min; cached after) | `data/awards.json` |
+| 2d. Opportunities | `python opportunities.py` (Grants.gov, ~15 min; cached after) | `data/opportunities.json` |
 | 3–4. Enrich + group | `python enrich.py` | `faculty.json`, `data/groupings.json` + a report |
 | 5. Dashboard | `python -m http.server 8000`, then open <http://localhost:8000/dashboard/> | |
 
@@ -41,8 +46,8 @@ Four tabs, all running in the browser (no server-side code, no paid APIs):
 | Tab | What it does | Code |
 |---|---|---|
 | **Search** | Opens on a search page; results appear after 2+ characters, a theme/quick view, or "See all faculty". Smart search ranks by topic relevance and adds related terms ("fraud" also matches "forensic accounting"; "AI" also matches "machine learning"). Each card shows why it matched. Untick "Include related terms" for exact matching. | `js/app.js` |
-| **Find an Expert** | Paste a project description in plain language. Faculty are ranked with a match strength and reasons (matching tags, classes they teach, words in their research). A **suggested team** of up to 3 people covers the most of the request, preferring both universities. | `js/match.js` |
-| **Collaboration Map** | Live, draggable network of faculty linked by shared research, grouped by theme. Gold lines connect UWM and Marquette. Drag anyone to pull their connections along, click to see who they link to; the side panel lists the top cross-campus opportunities. | `js/network.js` |
+| **Find an Expert** | Paste a project description in plain language. Faculty are ranked with a match strength and reasons (matching tags, classes they teach, words in their research or grant titles). A **suggested team** of up to 3 people covers the most of the request, preferring more than one institution; each member shows whether they've been federally funded in that area before. **Fund it** lists open and forecast Grants.gov opportunities that cover at least half of the request and draws a timeline backward from the chosen deadline, with a Paving ROADS seed-fund pilot as the middle step when there's time (otherwise it says why not). | `js/match.js`, `js/plan.js` |
+| **Collaboration Map** | Live, draggable network of faculty linked by shared research, grouped by theme. Gold lines connect people at different institutions; NMDSI affiliates by default, with a box to add the other MSOE faculty. Drag anyone to pull their connections along, click to see who they link to; the side panel lists the top cross-campus opportunities. | `js/network.js` |
 | **Shortlist** | Star people anywhere. Add notes, export a spreadsheet (CSV), print or save a one-page PDF, or copy a share link. Saved in the browser. | `js/shortlist.js` |
 
 How matching works (`js/textindex.js`): text is split into stemmed words and two-word phrases, weighted by field
@@ -50,6 +55,18 @@ How matching works (`js/textindex.js`): text is split into stemmed words and two
 cover more of the query's distinct ideas rank higher, with rare words counting more. Related terms come from
 `js/synonyms.js`; edit that list freely, no pipeline rerun needed. The map compares people with TF-IDF cosine
 similarity and keeps each person's 3 closest matches (similarity ≥ 0.12), plus any pair ≥ 0.3.
+
+Federal awards (`funding.py`): NSF awards whose awardee is one of the five institutions, and NIH projects searched
+by PI name at those institutions, starting 2010 or later. A person is matched when the PI or co-PI has the same first
+name (or a common nickname) and last name at the same institution. Awards won at a previous employer aren't found.
+The profile panel lists them with links to nsf.gov / reporter.nih.gov; they also feed search, tags and theme.
+
+Funding opportunities (`opportunities.py`): Grants.gov `search2` for posted and forecast opportunities open to
+universities, over the topic keywords in the script, then `fetchOpportunity` for description, deadline, ceiling and
+eligibility. Kept: research agencies only (no embassy or State Department calls), no training grants, fellowships or
+career awards, nothing already closed. Paving ROADS facts in `js/plan.js` come from
+<https://www.nmdsi.org/center-of-excellence/paving-roads-seed-fund> (2027 round due Oct 18, 2026; up to $50,000,
+joint Marquette-UWM up to $100,000; 18-month projects). Later deadlines are assumed to be the third Sunday of October.
 
 Shareable links: a search (`/dashboard/?q=supply%20chain`), an expert query (`/dashboard/?tab=match&mq=fraud%20detection`),
 a shortlist (`/dashboard/?tab=shortlist&ids=joseph-wall,layth-alwan`), or a profile (`/dashboard/#satya-aditya-akundi`).
@@ -65,7 +82,7 @@ photo, the initials come back automatically.
 
 Libraries load from a CDN: Fuse.js (typo-tolerant name search) and d3 (the map), so the map needs an internet connection.
 
-Logos live in `dashboard/assets/`: `nmdsi-mark.svg` (redrawn from the NMDSI logo; colors navy #0d497a, gold #fdb81b,
+Logos live in `dashboard/assets/` (MCW, MSOE and WCTC logos were taken unaltered from each school's website, Nov 2026): `nmdsi-mark.svg` (redrawn from the NMDSI logo; colors navy #0d497a, gold #fdb81b,
 sky #81d3f1, gray #bababa), `uwm-logo.svg` (Wikimedia Commons, UWM-logo-2024.svg) and `marquette-logo.png`
 (Marquette news-center media kit). The school logos are used unaltered on white backgrounds, per brand guidelines.
 
@@ -127,7 +144,20 @@ Every derived field says where it came from: `research_summary_source`, `researc
 `theme_source`, and `source` on each industry, class and funding item. Values are `profile` (read off the profile page),
 `directory` (from the PDF) or `inferred` (keyword rules). The dashboard's profile panel marks non-profile values as "auto-generated" or "from NMDSI directory".
 
-## Known data quirks in the PDF
+## Known data quirks in the September 2026 list
+
+- No college or department columns. Returning faculty keep their 2025 values; others get them from their profile
+  link (`URL_UNITS` in `extract.py`), MCW link paths, or MSOE's directory.
+- Gabriella Pinter and Shevaun Watson are listed twice (two email addresses each); merged.
+- "Micheal Zimmermann" is corrected to Michael (his MCW page). Sarah Lerret's link is for "Stacee Lerret": kept as listed.
+- No profile link: Amy Burger, Denise Uyar, Suhas Sreehari. Several WCTC links are LinkedIn pages, which aren't
+  scraped (robots.txt), and five MCW links go to the login-walled Faculty Collaboration Database: their research
+  comes from the list's blurb only.
+- Four links are worse than 2025's (a .png, a 404, a robots-blocked page, the whole dental directory); the 2025
+  links are restored in `URL_OVERRIDES`.
+- 12 people from the 2025 directory are not on the 2026 list and were dropped (mostly the ones flagged as departed).
+
+## Known data quirks in the 2025 PDF
 
 - Mehdi Maadooliat is listed twice (pages 17 and 18). The duplicate is merged.
 - No profile link: Jacob Rice, Deepak Babu, Mumin Cebe, Laira Anne Stark.
