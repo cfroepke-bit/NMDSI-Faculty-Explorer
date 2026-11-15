@@ -137,11 +137,13 @@ const Match = (() => {
     </li>`;
   }
 
-  // The request's most distinctive ideas for an NSF/NIH keyword search: known phrases kept whole
-  // ("machine learning"), rarest first.
+  // The request's most distinctive ideas for an NSF/NIH keyword search: known phrases ("natural language
+  // processing") first, then single words, rarest first. The search drops terms from the end when nothing
+  // matches them all, so a lone odd word ("note") is never what's left.
   function searchTerms(text, concepts, cWeight) {
     const weight = ph => Math.max(0, ...textTerms(ph).filter(k => !k.includes(" ")).map(k => cWeight.get(k) ?? ix.idf(k)));
-    return lookingFor(text, concepts).filter(t => t.length >= 3).sort((a, b) => weight(b) - weight(a)).slice(0, 3);
+    return lookingFor(text, concepts).filter(t => t.length >= 3)
+      .sort((a, b) => (b.includes(" ") - a.includes(" ")) || weight(b) - weight(a)).slice(0, 3);
   }
 
   // A team chosen elsewhere (the map): what each person brings is the request ideas their text covers.
